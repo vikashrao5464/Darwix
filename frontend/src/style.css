@@ -1,0 +1,24 @@
+:root { font-family: system-ui, sans-serif; color: #18212b; background: #f5f6f8; }
+main { max-width: 850px; margin: 32px auto; padding: 24px; background: white; border: 1px solid #d9dfe5; }
+nav { display: flex; gap: 24px; margin-bottom: 24px; }
+a { color: #165aab; }
+p { line-height: 1.6; }
+.notice { padding: 12px; background: #fff2d6; }
+label { display: block; font-weight: 600; margin-bottom: 8px; }
+textarea { box-sizing: border-box; width: 100%; min-height: 85px; padding: 12px; font: inherit; }
+button { padding: 10px 16px; margin: 12px 0; font: inherit; cursor: pointer; }
+button:disabled { cursor: wait; }
+article { padding: 12px 0; border-top: 1px solid #d9dfe5; }
+code { overflow-wrap: anywhere; }
+.checkbox { font-weight: normal; }
+.checkbox input { margin-right: 8px; }
+.muted { font-size: .9rem; color: #445363; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; }
+table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+td, th { text-align: left; padding: 8px; border-bottom: 1px solid #d9dfe5; }
+details { margin: 16px 0; }
+summary { cursor: pointer; font-weight: 600; }
+.knowledge { margin-top: 32px; border-top: 1px solid #d9dfe5; padding-top: 20px; }
+select { max-width: 100%; padding: 8px; font: inherit; }
+meter { width: 100%; height: 18px; }
+.microphone { padding: 12px; border: 1px solid #d9dfe5; margin: 12px 0; }

@@ -1,0 +1,59 @@
+{
+  "browser": "Chrome headless",
+  "input": "Synthetic WAV through fake microphone; human validation separate",
+  "checks": [
+    "Synthetic microphone WAV -> browser PCM -> configured ASR -> actual cited KB answer",
+    "Unsupported question visibly falls back",
+    "Spoken output, redacted transcript, mock escalation and consented downloadable WAV"
+  ],
+  "page_errors": [],
+  "voice_http_responses": [
+    {
+      "path": "/api/voice/calls",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_abbe1b4ad54b4b34a51f01d08a766035",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_abbe1b4ad54b4b34a51f01d08a766035/turn",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_abbe1b4ad54b4b34a51f01d08a766035",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_abbe1b4ad54b4b34a51f01d08a766035/audio-turn",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_abbe1b4ad54b4b34a51f01d08a766035",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_abbe1b4ad54b4b34a51f01d08a766035/turn",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_abbe1b4ad54b4b34a51f01d08a766035",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_abbe1b4ad54b4b34a51f01d08a766035/turn",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_abbe1b4ad54b4b34a51f01d08a766035",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_abbe1b4ad54b4b34a51f01d08a766035/recording",
+      "status": 200
+    }
+  ],
+  "asr_transcript": "What is the processing fee?",
+  "asr_confidence": 0.6645891929461111,
+  "recording_bytes": 4038700
+}

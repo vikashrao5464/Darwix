@@ -1,0 +1,5 @@
+[
+  {"title":"Business loan purpose","content":"The synthetic business loan funds working capital, inventory purchases and equipment purchases. Personal holiday expenses are outside the demo product scope."},
+  {"title":"Loan amount limits","content":"The synthetic loan amount ranges from INR 100000 to INR 2000000. Requested amounts outside these limits require a human review and cannot be automatically qualified."},
+  {"title":"Repayment term","content":"The synthetic repayment term ranges from 12 to 36 months. The final repayment schedule requires a written offer from a human representative."}
+]

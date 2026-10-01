@@ -1,0 +1,433 @@
+{
+  "fixture_id": "objection_unknown_human",
+  "scenario_ids": [
+    "B",
+    "D",
+    "E"
+  ],
+  "turns": [
+    {
+      "text": "Yes"
+    },
+    {
+      "text": "I do not want to share documents.",
+      "check": "objection_citation"
+    },
+    {
+      "text": "What cashback applies to lunar tourism?",
+      "check": "unknown_fallback"
+    },
+    {
+      "text": "I want a human representative",
+      "check": "escalation"
+    }
+  ],
+  "call_id": "q1_objection_unknown_human_5fa0457f",
+  "audio": "data/audio/q1/objection_unknown_human.wav",
+  "audio_kind": "Synthesized scripted dialogue; not a human microphone call",
+  "audio_duration_ms": 59344.69,
+  "audio_sha256": "4674ccc0f5c13dff6e8a6395349c7e5cb90834c956c0d07afac283314d9a671d",
+  "audio_timeline": [
+    {
+      "speaker": "agent",
+      "text": "Hello. I am a synthetic-demo business-loan assistant. May I collect a few business details to assess preliminary qualification?",
+      "start_ms": 0,
+      "end_ms": 9738
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes",
+      "start_ms": 9988,
+      "end_ms": 11327
+    },
+    {
+      "speaker": "agent",
+      "text": "What loan amount would you like to request, in INR?",
+      "start_ms": 11577,
+      "end_ms": 15781
+    },
+    {
+      "speaker": "customer",
+      "text": "I do not want to share documents.",
+      "start_ms": 16031,
+      "end_ms": 18755
+    },
+    {
+      "speaker": "agent",
+      "text": "Synthetic demo information: If a customer does not want to share documents, acknowledge the concern. Explain that required documents support verification and offer a human callback. Never ask the customer to send identity or bank documents over an unverified channel.",
+      "start_ms": 19005,
+      "end_ms": 37406
+    },
+    {
+      "speaker": "customer",
+      "text": "What cashback applies to lunar tourism?",
+      "start_ms": 37656,
+      "end_ms": 40695
+    },
+    {
+      "speaker": "agent",
+      "text": "I don't have verified information for that in the available business knowledge base. I can connect you with a human representative.",
+      "start_ms": 40945,
+      "end_ms": 49072
+    },
+    {
+      "speaker": "customer",
+      "text": "I want a human representative",
+      "start_ms": 49322,
+      "end_ms": 51802
+    },
+    {
+      "speaker": "agent",
+      "text": "I recorded a mock human-assistance request. No representative has been contacted by this demo.",
+      "start_ms": 52052,
+      "end_ms": 59095
+    }
+  ],
+  "persisted_redacted_transcript": [
+    {
+      "speaker": "agent",
+      "text": "Hello. I am a synthetic-demo business-loan assistant. May I collect a few business details to assess preliminary qualification?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "Consent granted.",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "What loan amount would you like to request, in INR?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "I do not want to share documents.",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "Synthetic demo information: If a customer does not want to share documents, acknowledge the concern. Explain that required documents support verification and offer a human callback. Never ask the customer to send identity or bank documents over an unverified channel.",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "What cashback applies to lunar tourism?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "I don't have verified information for that in the available business knowledge base. I can connect you with a human representative.",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "I want a human representative",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "I recorded a mock human-assistance request. No representative has been contacted by this demo.",
+      "start_ms": 0,
+      "end_ms": 0
+    }
+  ],
+  "exchanges": [
+    {
+      "customer_text": "Yes",
+      "input_mode": "scripted_text",
+      "expected_check": null,
+      "observed_reply": {
+        "call_id": "q1_objection_unknown_human_5fa0457f",
+        "turn_id": "turn_1",
+        "text": "What loan amount would you like to request, in INR?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 3
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "I do not want to share documents.",
+      "input_mode": "scripted_text",
+      "expected_check": "objection_citation",
+      "observed_reply": {
+        "call_id": "q1_objection_unknown_human_5fa0457f",
+        "turn_id": "turn_2",
+        "text": "Synthetic demo information: If a customer does not want to share documents, acknowledge the concern. Explain that required documents support verification and offer a human callback. Never ask the customer to send identity or bank documents over an unverified channel.",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [
+          {
+            "record_id": "kb_demo_objections_72ece91ba4bfc2b4",
+            "source": "data/raw/demo_objections.md",
+            "source_type": "markdown",
+            "page": null,
+            "section": "Do not want to share documents",
+            "version": "1.0",
+            "synthetic": true
+          }
+        ],
+        "tools_called": [
+          "search_knowledge"
+        ],
+        "grounded": true,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 4
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "What cashback applies to lunar tourism?",
+      "input_mode": "scripted_text",
+      "expected_check": "unknown_fallback",
+      "observed_reply": {
+        "call_id": "q1_objection_unknown_human_5fa0457f",
+        "turn_id": "turn_3",
+        "text": "I don't have verified information for that in the available business knowledge base. I can connect you with a human representative.",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [
+          "search_knowledge"
+        ],
+        "grounded": false,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 5
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "I want a human representative",
+      "input_mode": "scripted_text",
+      "expected_check": "escalation",
+      "observed_reply": {
+        "call_id": "q1_objection_unknown_human_5fa0457f",
+        "turn_id": "turn_4",
+        "text": "I recorded a mock human-assistance request. No representative has been contacted by this demo.",
+        "status": "escalated",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [
+          "request_human_escalation"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": "esc_064f2cf68be15738a7db92c1a49ac58d",
+        "recording_allowed": false,
+        "revision": 6
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

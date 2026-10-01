@@ -1,0 +1,75 @@
+{
+  "synthetic": true,
+  "description": "Synthetic assessment rules; not Darwix policies.",
+  "rules": [
+    {
+      "rule_id": "amount_min",
+      "field": "requested_amount",
+      "operator": ">=",
+      "value": 100000,
+      "source_record_id": "kb_demo_product_0aad20353d0a42b9",
+      "source_version": "1.0",
+      "source_checksum": "sha256:357f511540e77f159d45e3f24263b98cdc355016ac82e602c9e301c284e5bb05",
+      "explanation": "The requested amount is below the synthetic minimum.",
+      "source_quote": "The synthetic loan amount ranges from INR 100000 to INR 2000000. Requested amounts outside these limits require a human review and cannot be automatically qualified."
+    },
+    {
+      "rule_id": "amount_max",
+      "field": "requested_amount",
+      "operator": "<=",
+      "value": 2000000,
+      "source_record_id": "kb_demo_product_0aad20353d0a42b9",
+      "source_version": "1.0",
+      "source_checksum": "sha256:357f511540e77f159d45e3f24263b98cdc355016ac82e602c9e301c284e5bb05",
+      "explanation": "The requested amount exceeds the synthetic maximum.",
+      "source_quote": "The synthetic loan amount ranges from INR 100000 to INR 2000000. Requested amounts outside these limits require a human review and cannot be automatically qualified."
+    },
+    {
+      "rule_id": "business_age",
+      "field": "business_age_months",
+      "operator": ">=",
+      "value": 24,
+      "source_record_id": "kb_demo_eligibility_3c7bd80d110b4eda",
+      "source_version": "1.0",
+      "source_checksum": "sha256:fa61a2f122d4c2303b903037b9ffb929d885e4e674c9dc9735bcd4a7429b5067",
+      "explanation": "Business age does not meet the synthetic minimum.",
+      "source_quote": "The minimum business age is 24 months (two years) of operation. A business operating for 12 months does not meet this synthetic preliminary qualification rule."
+    },
+    {
+      "rule_id": "turnover",
+      "field": "annual_turnover",
+      "operator": ">=",
+      "value": 1200000,
+      "source_record_id": "kb_demo_eligibility_c8bf37db0fb9f9ce",
+      "source_version": "1.0",
+      "source_checksum": "sha256:94e9977b194f283141a9e03b00c8736c4f9c957bd6ca033758d30ee2dbec8b27",
+      "explanation": "Annual turnover does not meet the synthetic minimum.",
+      "source_quote": "The minimum annual turnover is INR 1200000. Turnover must be confirmed by the applicant and verified against documents before a final lending decision."
+    },
+    {
+      "rule_id": "location",
+      "field": "city",
+      "operator": "in",
+      "value": [
+        "Demo City",
+        "Sample City"
+      ],
+      "source_record_id": "kb_demo_eligibility_ad9313a75fc59067",
+      "source_version": "1.0",
+      "source_checksum": "sha256:c21275d7a06aca7c176f8f60594ce458f9585dc41f8d5bbfb4fbf22bf4f87b85",
+      "explanation": "Service availability in this city requires human review.",
+      "source_quote": "The demo accepts businesses located in Demo City or Sample City. A location outside these cities requires human review because service availability is unverified."
+    },
+    {
+      "rule_id": "borrowing",
+      "field": "existing_loan",
+      "operator": "review_if_true",
+      "value": true,
+      "source_record_id": "kb_demo_eligibility_611da9a631937d97",
+      "source_version": "1.0",
+      "source_checksum": "sha256:6f7e274c1486c4d5cb92c48f108bebcee8195a902f7a2023875a9946e13047a3",
+      "explanation": "Existing borrowing requires a human affordability review.",
+      "source_quote": "An existing loan does not automatically disqualify an applicant. Existing borrowing and repayment obligations must be disclosed for a human affordability review."
+    }
+  ]
+}

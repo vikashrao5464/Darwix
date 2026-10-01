@@ -1,0 +1,4 @@
+title,content
+Human escalation,"A customer may request human assistance at any point. Offer a human callback; the demo does not guarantee an immediate live transfer."
+Callback preference,"For a callback request, confirm the preferred callback day and time and the purpose of the callback. No callback is scheduled automatically by the knowledge base."
+Contact redaction example,"Synthetic contact example: support@example.invalid; +91 98765 43210. These fake contact details must be redacted before indexing and are not support channels."

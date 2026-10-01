@@ -1,0 +1,77 @@
+{
+  "audio_kind": "synthetic speech, not human accuracy benchmark",
+  "results": [
+    {
+      "model": "base.en",
+      "sample": "probe_1.wav",
+      "result": {
+        "text": "Yes.",
+        "confidence": 0.47016527298841326
+      },
+      "request_ms": 1680
+    },
+    {
+      "model": "base.en",
+      "sample": "probe_2.wav",
+      "result": {
+        "text": "500,000.",
+        "confidence": 0.48519635443557024
+      },
+      "request_ms": 1703
+    },
+    {
+      "model": "base.en",
+      "sample": "probe_4.wav",
+      "result": {
+        "text": "48 months",
+        "confidence": 0.4921733938019857
+      },
+      "request_ms": 1664
+    },
+    {
+      "model": "base.en",
+      "sample": "probe_5.wav",
+      "result": {
+        "text": "What is the processing fee?",
+        "confidence": 0.7131813782385571
+      },
+      "request_ms": 1787
+    },
+    {
+      "model": "small.en",
+      "sample": "probe_1.wav",
+      "result": {
+        "text": "Yes.",
+        "confidence": 0.5545871971368687
+      },
+      "request_ms": 3894
+    },
+    {
+      "model": "small.en",
+      "sample": "probe_2.wav",
+      "result": {
+        "text": "500,000",
+        "confidence": 0.6411101530721873
+      },
+      "request_ms": 3774
+    },
+    {
+      "model": "small.en",
+      "sample": "probe_4.wav",
+      "result": {
+        "text": "48 months.",
+        "confidence": 0.6146735119758139
+      },
+      "request_ms": 3766
+    },
+    {
+      "model": "small.en",
+      "sample": "probe_5.wav",
+      "result": {
+        "text": "What is the processing fee?",
+        "confidence": 0.74169172898233
+      },
+      "request_ms": 3977
+    }
+  ]
+}

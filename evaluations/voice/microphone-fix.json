@@ -1,0 +1,351 @@
+{
+  "provider": "whisper",
+  "model": "small.en",
+  "threshold": 0.37,
+  "score_kind": "decoder evidence, not calibrated accuracy",
+  "audio_kind": "Synthetic WAV probes; human microphone validation separate",
+  "results": [
+    {
+      "case": "consent",
+      "source": "data/audio/q1/probe_1.wav",
+      "amplitude_factor": 1,
+      "expected": "active",
+      "passed": true,
+      "request_ms": 4524,
+      "observed": {
+        "accepted": true,
+        "confidence": 0.5545871971368687,
+        "audio": {
+          "audio_duration_ms": 1274,
+          "audio_rms_dbfs": -26.2,
+          "audio_peak_dbfs": -2.9,
+          "clipping_fraction": 0.0,
+          "normalization_gain": 1.25
+        },
+        "transcript": "Yes.",
+        "reply": {
+          "call_id": "call_78b6d953583f42abbce3e1c0db211219",
+          "turn_id": "probe",
+          "text": "What loan amount would you like to request, in INR?",
+          "status": "active",
+          "qualification": {
+            "fields": {
+              "requested_amount": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_type": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_age_months": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "annual_turnover": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "existing_loan": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "city": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "callback_preference": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              }
+            }
+          },
+          "next_field": "requested_amount",
+          "citations": [],
+          "tools_called": [],
+          "grounded": null,
+          "eligibility": null,
+          "lead_id": null,
+          "callback_id": null,
+          "escalation_id": null,
+          "recording_allowed": false,
+          "revision": 3
+        }
+      }
+    },
+    {
+      "case": "quiet_consent",
+      "source": "data/audio/q1/probe_1.wav",
+      "amplitude_factor": 0.04,
+      "expected": "active",
+      "passed": true,
+      "request_ms": 3964,
+      "observed": {
+        "accepted": true,
+        "confidence": 0.5781577103656409,
+        "audio": {
+          "audio_duration_ms": 1274,
+          "audio_rms_dbfs": -54.2,
+          "audio_peak_dbfs": -30.8,
+          "clipping_fraction": 0.0,
+          "normalization_gain": 8.0
+        },
+        "transcript": "Yes.",
+        "reply": {
+          "call_id": "call_7e58d477926747c38e6724bcaec88381",
+          "turn_id": "probe",
+          "text": "What loan amount would you like to request, in INR?",
+          "status": "active",
+          "qualification": {
+            "fields": {
+              "requested_amount": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_type": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_age_months": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "annual_turnover": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "existing_loan": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "city": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "callback_preference": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              }
+            }
+          },
+          "next_field": "requested_amount",
+          "citations": [],
+          "tools_called": [],
+          "grounded": null,
+          "eligibility": null,
+          "lead_id": null,
+          "callback_id": null,
+          "escalation_id": null,
+          "recording_allowed": false,
+          "revision": 3
+        }
+      }
+    },
+    {
+      "case": "quiet_faq",
+      "source": "data/audio/q1/probe_5.wav",
+      "amplitude_factor": 0.04,
+      "expected": "grounded",
+      "passed": true,
+      "request_ms": 8318,
+      "observed": {
+        "accepted": true,
+        "confidence": 0.675491253512057,
+        "audio": {
+          "audio_duration_ms": 2224,
+          "audio_rms_dbfs": -49.5,
+          "audio_peak_dbfs": -28.4,
+          "clipping_fraction": 0.0,
+          "normalization_gain": 8.0
+        },
+        "transcript": "What is the processing fee?",
+        "reply": {
+          "call_id": "call_f11b1f9ab5c84df781313c0c4116d1bc",
+          "turn_id": "probe",
+          "text": "Synthetic demo information: The synthetic processing fee is 2 percent of the approved loan amount. Any applicable taxes must be confirmed in a verified written offer.",
+          "status": "active",
+          "qualification": {
+            "fields": {
+              "requested_amount": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_type": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_age_months": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "annual_turnover": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "existing_loan": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "city": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "callback_preference": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              }
+            }
+          },
+          "next_field": "requested_amount",
+          "citations": [
+            {
+              "record_id": "kb_demo_policy_1d4a44c67a60c2ea",
+              "source": "data/raw/demo_policy.pdf",
+              "source_type": "pdf",
+              "page": 1,
+              "section": "Processing fees",
+              "version": "1.0",
+              "synthetic": true
+            }
+          ],
+          "tools_called": [
+            "search_knowledge"
+          ],
+          "grounded": true,
+          "eligibility": null,
+          "lead_id": null,
+          "callback_id": null,
+          "escalation_id": null,
+          "recording_allowed": false,
+          "revision": 4
+        }
+      }
+    },
+    {
+      "case": "amount",
+      "source": "data/audio/q1/probe_2.wav",
+      "amplitude_factor": 1,
+      "expected": "amount",
+      "passed": true,
+      "request_ms": 3973,
+      "observed": {
+        "accepted": true,
+        "confidence": 0.6411101530721873,
+        "audio": {
+          "audio_duration_ms": 2254,
+          "audio_rms_dbfs": -20.3,
+          "audio_peak_dbfs": -0.5,
+          "clipping_fraction": 0.0,
+          "normalization_gain": 0.95
+        },
+        "transcript": "500,000",
+        "reply": {
+          "call_id": "call_60b1685309b14401aec4bcef310bfb40",
+          "turn_id": "probe",
+          "text": "You mentioned 500000 for requested amount. Please confirm that value or provide a correction.",
+          "status": "active",
+          "qualification": {
+            "fields": {
+              "requested_amount": {
+                "value": 500000,
+                "status": "tentative",
+                "source_turn_id": "probe",
+                "candidates": []
+              },
+              "business_type": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_age_months": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "annual_turnover": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "existing_loan": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "city": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "callback_preference": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              }
+            }
+          },
+          "next_field": "requested_amount",
+          "citations": [],
+          "tools_called": [
+            "update_qualification"
+          ],
+          "grounded": null,
+          "eligibility": null,
+          "lead_id": null,
+          "callback_id": null,
+          "escalation_id": null,
+          "recording_allowed": false,
+          "revision": 4
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,910 @@
+{
+  "fixture_id": "conflict_callback",
+  "scenario_ids": [
+    "C",
+    "E"
+  ],
+  "turns": [
+    {
+      "text": "Yes"
+    },
+    {
+      "text": "I don't know",
+      "check": "missing_amount"
+    },
+    {
+      "text": "Maybe 500000",
+      "check": "tentative_amount"
+    },
+    {
+      "text": "Yes",
+      "check": "confirmed_amount"
+    },
+    {
+      "text": "Requested amount is 600000",
+      "check": "conflicting_amount"
+    },
+    {
+      "text": "600000",
+      "check": "resolved_amount"
+    },
+    {
+      "text": "Call me back"
+    },
+    {
+      "text": "Tomorrow at three PM",
+      "check": "callback"
+    },
+    {
+      "text": "I want a human representative",
+      "check": "escalation"
+    }
+  ],
+  "call_id": "q1_conflict_callback_5fa0457f",
+  "audio": "data/audio/q1/conflict_callback.wav",
+  "audio_kind": "Synthesized scripted dialogue; not a human microphone call",
+  "audio_duration_ms": 87427.14,
+  "audio_sha256": "4c596af72eb567a9b87e67d80bbdcd3e341daa3ccb37758f66944632940189c0",
+  "audio_timeline": [
+    {
+      "speaker": "agent",
+      "text": "Hello. I am a synthetic-demo business-loan assistant. May I collect a few business details to assess preliminary qualification?",
+      "start_ms": 0,
+      "end_ms": 9738
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes",
+      "start_ms": 9988,
+      "end_ms": 11327
+    },
+    {
+      "speaker": "agent",
+      "text": "What loan amount would you like to request, in INR?",
+      "start_ms": 11577,
+      "end_ms": 15781
+    },
+    {
+      "speaker": "customer",
+      "text": "I don't know",
+      "start_ms": 16031,
+      "end_ms": 17520
+    },
+    {
+      "speaker": "agent",
+      "text": "I need an explicit value to avoid guessing. What loan amount would you like to request, in INR?",
+      "start_ms": 17770,
+      "end_ms": 25334
+    },
+    {
+      "speaker": "customer",
+      "text": "Maybe 500000",
+      "start_ms": 25584,
+      "end_ms": 28058
+    },
+    {
+      "speaker": "agent",
+      "text": "You mentioned 500000 for requested amount. Please confirm that value or provide a correction.",
+      "start_ms": 28308,
+      "end_ms": 35721
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes",
+      "start_ms": 35971,
+      "end_ms": 37311
+    },
+    {
+      "speaker": "agent",
+      "text": "What type of business do you operate?",
+      "start_ms": 37561,
+      "end_ms": 40385
+    },
+    {
+      "speaker": "customer",
+      "text": "Requested amount is 600000",
+      "start_ms": 40635,
+      "end_ms": 43734
+    },
+    {
+      "speaker": "agent",
+      "text": "I have conflicting values for requested amount: 500000, 600000. Please confirm the correct value.",
+      "start_ms": 43984,
+      "end_ms": 53646
+    },
+    {
+      "speaker": "customer",
+      "text": "600000",
+      "start_ms": 53896,
+      "end_ms": 56091
+    },
+    {
+      "speaker": "agent",
+      "text": "What type of business do you operate?",
+      "start_ms": 56341,
+      "end_ms": 59165
+    },
+    {
+      "speaker": "customer",
+      "text": "Call me back",
+      "start_ms": 59415,
+      "end_ms": 61094
+    },
+    {
+      "speaker": "agent",
+      "text": "What day and time would you prefer for a mock callback?",
+      "start_ms": 61344,
+      "end_ms": 65013
+    },
+    {
+      "speaker": "customer",
+      "text": "Tomorrow at three PM",
+      "start_ms": 65263,
+      "end_ms": 67422
+    },
+    {
+      "speaker": "agent",
+      "text": "The mock callback time preference is recorded. A coordinator would need to confirm the appointment. What type of business do you operate?",
+      "start_ms": 67672,
+      "end_ms": 77155
+    },
+    {
+      "speaker": "customer",
+      "text": "I want a human representative",
+      "start_ms": 77405,
+      "end_ms": 79884
+    },
+    {
+      "speaker": "agent",
+      "text": "I recorded a mock human-assistance request. No representative has been contacted by this demo.",
+      "start_ms": 80134,
+      "end_ms": 87177
+    }
+  ],
+  "persisted_redacted_transcript": [
+    {
+      "speaker": "agent",
+      "text": "Hello. I am a synthetic-demo business-loan assistant. May I collect a few business details to assess preliminary qualification?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "Consent granted.",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "What loan amount would you like to request, in INR?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "I don't know",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "I need an explicit value to avoid guessing. What loan amount would you like to request, in INR?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "Maybe 500000",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "You mentioned 500000 for requested amount. Please confirm that value or provide a correction.",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "What type of business do you operate?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "Requested amount is 600000",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "I have conflicting values for requested amount: 500000, 600000. Please confirm the correct value.",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "600000",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "What type of business do you operate?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "Call me back",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "What day and time would you prefer for a mock callback?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "Tomorrow at three PM",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "The mock callback time preference is recorded. A coordinator would need to confirm the appointment. What type of business do you operate?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "I want a human representative",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "I recorded a mock human-assistance request. No representative has been contacted by this demo.",
+      "start_ms": 0,
+      "end_ms": 0
+    }
+  ],
+  "exchanges": [
+    {
+      "customer_text": "Yes",
+      "input_mode": "scripted_text",
+      "expected_check": null,
+      "observed_reply": {
+        "call_id": "q1_conflict_callback_5fa0457f",
+        "turn_id": "turn_1",
+        "text": "What loan amount would you like to request, in INR?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 3
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "I don't know",
+      "input_mode": "scripted_text",
+      "expected_check": "missing_amount",
+      "observed_reply": {
+        "call_id": "q1_conflict_callback_5fa0457f",
+        "turn_id": "turn_2",
+        "text": "I need an explicit value to avoid guessing. What loan amount would you like to request, in INR?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 4
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "Maybe 500000",
+      "input_mode": "scripted_text",
+      "expected_check": "tentative_amount",
+      "observed_reply": {
+        "call_id": "q1_conflict_callback_5fa0457f",
+        "turn_id": "turn_3",
+        "text": "You mentioned 500000 for requested amount. Please confirm that value or provide a correction.",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": 500000,
+              "status": "tentative",
+              "source_turn_id": "turn_3",
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [
+          "update_qualification"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 5
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "Yes",
+      "input_mode": "scripted_text",
+      "expected_check": "confirmed_amount",
+      "observed_reply": {
+        "call_id": "q1_conflict_callback_5fa0457f",
+        "turn_id": "turn_4",
+        "text": "What type of business do you operate?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": 500000,
+              "status": "confirmed",
+              "source_turn_id": "turn_4",
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "business_type",
+        "citations": [],
+        "tools_called": [
+          "update_qualification"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 6
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "Requested amount is 600000",
+      "input_mode": "scripted_text",
+      "expected_check": "conflicting_amount",
+      "observed_reply": {
+        "call_id": "q1_conflict_callback_5fa0457f",
+        "turn_id": "turn_5",
+        "text": "I have conflicting values for requested amount: 500000, 600000. Please confirm the correct value.",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": 500000,
+              "status": "conflicting",
+              "source_turn_id": "turn_4",
+              "candidates": [
+                500000,
+                600000
+              ]
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [
+          "update_qualification"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 7
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "600000",
+      "input_mode": "scripted_text",
+      "expected_check": "resolved_amount",
+      "observed_reply": {
+        "call_id": "q1_conflict_callback_5fa0457f",
+        "turn_id": "turn_6",
+        "text": "What type of business do you operate?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": 600000,
+              "status": "confirmed",
+              "source_turn_id": "turn_6",
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "business_type",
+        "citations": [],
+        "tools_called": [
+          "update_qualification"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 8
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "Call me back",
+      "input_mode": "scripted_text",
+      "expected_check": null,
+      "observed_reply": {
+        "call_id": "q1_conflict_callback_5fa0457f",
+        "turn_id": "turn_7",
+        "text": "What day and time would you prefer for a mock callback?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": 600000,
+              "status": "confirmed",
+              "source_turn_id": "turn_6",
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "business_type",
+        "citations": [],
+        "tools_called": [],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 9
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "Tomorrow at three PM",
+      "input_mode": "scripted_text",
+      "expected_check": "callback",
+      "observed_reply": {
+        "call_id": "q1_conflict_callback_5fa0457f",
+        "turn_id": "turn_8",
+        "text": "The mock callback time preference is recorded. A coordinator would need to confirm the appointment. What type of business do you operate?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": 600000,
+              "status": "confirmed",
+              "source_turn_id": "turn_6",
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "business_type",
+        "citations": [],
+        "tools_called": [
+          "schedule_callback"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": "cb_5558a3bc26905292a041820f454f22a3",
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 10
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "I want a human representative",
+      "input_mode": "scripted_text",
+      "expected_check": "escalation",
+      "observed_reply": {
+        "call_id": "q1_conflict_callback_5fa0457f",
+        "turn_id": "turn_9",
+        "text": "I recorded a mock human-assistance request. No representative has been contacted by this demo.",
+        "status": "escalated",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": 600000,
+              "status": "confirmed",
+              "source_turn_id": "turn_6",
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "business_type",
+        "citations": [],
+        "tools_called": [
+          "request_human_escalation"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": "esc_5558a3bc26905292a041820f454f22a3",
+        "recording_allowed": false,
+        "revision": 11
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

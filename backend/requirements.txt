@@ -1,0 +1,14 @@
+fastapi>=0.115,<1
+uvicorn>=0.35,<1
+pydantic-settings>=2.6,<3
+SQLAlchemy>=2.0,<3
+qdrant-client>=1.15,<2
+PyMuPDF>=1.26,<2
+beautifulsoup4>=4.13,<5
+openai>=1.100,<3
+httpx>=0.28,<1
+pytest>=8,<10
+faster-whisper==1.2.1
+# faster-whisper 1.2.1 uses the decoding API removed in PyAV 19.
+av==16.1.0
+numpy>=1.26,<3

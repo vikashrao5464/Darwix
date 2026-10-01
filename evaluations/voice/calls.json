@@ -1,0 +1,20 @@
+[
+  {"fixture_id":"cooperative","scenario_ids":["A"],"turns":[
+    {"text":"Yes"}, {"text":"500000"}, {"text":"Retail"}, {"text":"48 months"},
+    {"text":"2400000"}, {"text":"No"}, {"text":"Demo City"},
+    {"text":"No","check":"preliminary_outcome"}, {"text":"Yes","check":"mock_lead"}
+  ]},
+  {"fixture_id":"objection_unknown_human","scenario_ids":["B","D","E"],"turns":[
+    {"text":"Yes"}, {"text":"I do not want to share documents.","check":"objection_citation"},
+    {"text":"What cashback applies to lunar tourism?","check":"unknown_fallback"},
+    {"text":"I want a human representative","check":"escalation"}
+  ]},
+  {"fixture_id":"conflict_callback","scenario_ids":["C","E"],"turns":[
+    {"text":"Yes"}, {"text":"I don't know","check":"missing_amount"},
+    {"text":"Maybe 500000","check":"tentative_amount"}, {"text":"Yes","check":"confirmed_amount"},
+    {"text":"Requested amount is 600000","check":"conflicting_amount"},
+    {"text":"600000","check":"resolved_amount"}, {"text":"Call me back"},
+    {"text":"Tomorrow at three PM","check":"callback"},
+    {"text":"I want a human representative","check":"escalation"}
+  ]}
+]

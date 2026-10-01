@@ -1,0 +1,10 @@
+[
+  {"document_id":"demo_product","path":"data/raw/demo_product.json","source_type":"json","product":"business_loan","version":"1.0","language":"en","category":"product","synthetic":true},
+  {"document_id":"demo_eligibility","path":"data/raw/demo_eligibility.md","source_type":"markdown","product":"business_loan","version":"1.0","language":"en","category":"qualification","synthetic":true},
+  {"document_id":"demo_policy","path":"data/raw/demo_policy.pdf","source_type":"pdf","product":"business_loan","version":"1.0","language":"en","category":"policy","synthetic":true},
+  {"document_id":"demo_faq","path":"data/raw/demo_faq.html","source_type":"html","product":"business_loan","version":"1.0","language":"en","category":"faq","synthetic":true},
+  {"document_id":"demo_objections","path":"data/raw/demo_objections.md","source_type":"markdown","product":"business_loan","version":"1.0","language":"en","category":"objection","synthetic":true},
+  {"document_id":"demo_support","path":"data/raw/demo_support.csv","source_type":"csv","product":"business_loan","version":"1.0","language":"en","category":"support","synthetic":true},
+  {"document_id":"demo_rates","path":"data/raw/demo_rates.txt","source_type":"text","product":"business_loan","version":"1.0","language":"en","category":"policy","synthetic":true},
+  {"document_id":"demo_duplicate","path":"data/raw/demo_duplicate.md","source_type":"markdown","product":"business_loan","version":"1.0","language":"en","category":"qualification","synthetic":true}
+]

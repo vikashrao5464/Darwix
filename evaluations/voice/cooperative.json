@@ -1,0 +1,1051 @@
+{
+  "fixture_id": "cooperative",
+  "scenario_ids": [
+    "A"
+  ],
+  "turns": [
+    {
+      "text": "Yes"
+    },
+    {
+      "text": "500000"
+    },
+    {
+      "text": "Retail"
+    },
+    {
+      "text": "48 months"
+    },
+    {
+      "text": "2400000"
+    },
+    {
+      "text": "No"
+    },
+    {
+      "text": "Demo City"
+    },
+    {
+      "text": "No",
+      "check": "preliminary_outcome"
+    },
+    {
+      "text": "Yes",
+      "check": "mock_lead"
+    }
+  ],
+  "call_id": "q1_cooperative_5fa0457f",
+  "audio": "data/audio/q1/cooperative.wav",
+  "audio_kind": "Synthesized scripted dialogue; not a human microphone call",
+  "audio_duration_ms": 71915.12,
+  "audio_sha256": "60fad4b5720000d01b6e66c018b1b0331cbe60ee9a54742f6d89aea84735f92d",
+  "audio_timeline": [
+    {
+      "speaker": "agent",
+      "text": "Hello. I am a synthetic-demo business-loan assistant. May I collect a few business details to assess preliminary qualification?",
+      "start_ms": 0,
+      "end_ms": 9738
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes",
+      "start_ms": 9988,
+      "end_ms": 11327
+    },
+    {
+      "speaker": "agent",
+      "text": "What loan amount would you like to request, in INR?",
+      "start_ms": 11577,
+      "end_ms": 15781
+    },
+    {
+      "speaker": "customer",
+      "text": "500000",
+      "start_ms": 16031,
+      "end_ms": 18175
+    },
+    {
+      "speaker": "agent",
+      "text": "What type of business do you operate?",
+      "start_ms": 18425,
+      "end_ms": 21249
+    },
+    {
+      "speaker": "customer",
+      "text": "Retail",
+      "start_ms": 21499,
+      "end_ms": 22899
+    },
+    {
+      "speaker": "agent",
+      "text": "How many months or years has your business been operating?",
+      "start_ms": 23149,
+      "end_ms": 27027
+    },
+    {
+      "speaker": "customer",
+      "text": "48 months",
+      "start_ms": 27277,
+      "end_ms": 29242
+    },
+    {
+      "speaker": "agent",
+      "text": "What is your annual business turnover, in INR?",
+      "start_ms": 29492,
+      "end_ms": 33581
+    },
+    {
+      "speaker": "customer",
+      "text": "2400000",
+      "start_ms": 33831,
+      "end_ms": 37360
+    },
+    {
+      "speaker": "agent",
+      "text": "Does your business currently have an existing loan?",
+      "start_ms": 37610,
+      "end_ms": 40959
+    },
+    {
+      "speaker": "customer",
+      "text": "No",
+      "start_ms": 41209,
+      "end_ms": 42343
+    },
+    {
+      "speaker": "agent",
+      "text": "In which city is your business located?",
+      "start_ms": 42593,
+      "end_ms": 45522
+    },
+    {
+      "speaker": "customer",
+      "text": "Demo City",
+      "start_ms": 45772,
+      "end_ms": 47331
+    },
+    {
+      "speaker": "agent",
+      "text": "Would you like a mock callback request recorded?",
+      "start_ms": 47581,
+      "end_ms": 50870
+    },
+    {
+      "speaker": "customer",
+      "text": "No",
+      "start_ms": 51120,
+      "end_ms": 52255
+    },
+    {
+      "speaker": "agent",
+      "text": "Your confirmed details meet the synthetic preliminary criteria; this is not final approval. Would you like a mock lead created?",
+      "start_ms": 52505,
+      "end_ms": 61258
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes",
+      "start_ms": 61508,
+      "end_ms": 62847
+    },
+    {
+      "speaker": "agent",
+      "text": "I created a mock lead with the preliminary assessment. This demo has not submitted a loan application or made an approval decision.",
+      "start_ms": 63097,
+      "end_ms": 71665
+    }
+  ],
+  "persisted_redacted_transcript": [
+    {
+      "speaker": "agent",
+      "text": "Hello. I am a synthetic-demo business-loan assistant. May I collect a few business details to assess preliminary qualification?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "Consent granted.",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "What loan amount would you like to request, in INR?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "500000",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "What type of business do you operate?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "Retail",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "How many months or years has your business been operating?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "48 months",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "What is your annual business turnover, in INR?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "2400000",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "Does your business currently have an existing loan?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "No",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "In which city is your business located?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "Demo City",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "Would you like a mock callback request recorded?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "No",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "Your confirmed details meet the synthetic preliminary criteria; this is not final approval. Would you like a mock lead created?",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes",
+      "start_ms": 0,
+      "end_ms": 0
+    },
+    {
+      "speaker": "agent",
+      "text": "I created a mock lead with the preliminary assessment. This demo has not submitted a loan application or made an approval decision.",
+      "start_ms": 0,
+      "end_ms": 0
+    }
+  ],
+  "exchanges": [
+    {
+      "customer_text": "Yes",
+      "input_mode": "scripted_text",
+      "expected_check": null,
+      "observed_reply": {
+        "call_id": "q1_cooperative_5fa0457f",
+        "turn_id": "turn_1",
+        "text": "What loan amount would you like to request, in INR?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 3
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "500000",
+      "input_mode": "scripted_text",
+      "expected_check": null,
+      "observed_reply": {
+        "call_id": "q1_cooperative_5fa0457f",
+        "turn_id": "turn_2",
+        "text": "What type of business do you operate?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": 500000,
+              "status": "confirmed",
+              "source_turn_id": "turn_2",
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "business_type",
+        "citations": [],
+        "tools_called": [
+          "update_qualification"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 4
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "Retail",
+      "input_mode": "scripted_text",
+      "expected_check": null,
+      "observed_reply": {
+        "call_id": "q1_cooperative_5fa0457f",
+        "turn_id": "turn_3",
+        "text": "How many months or years has your business been operating?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": 500000,
+              "status": "confirmed",
+              "source_turn_id": "turn_2",
+              "candidates": []
+            },
+            "business_type": {
+              "value": "Retail",
+              "status": "confirmed",
+              "source_turn_id": "turn_3",
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "business_age_months",
+        "citations": [],
+        "tools_called": [
+          "update_qualification"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 5
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "48 months",
+      "input_mode": "scripted_text",
+      "expected_check": null,
+      "observed_reply": {
+        "call_id": "q1_cooperative_5fa0457f",
+        "turn_id": "turn_4",
+        "text": "What is your annual business turnover, in INR?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": 500000,
+              "status": "confirmed",
+              "source_turn_id": "turn_2",
+              "candidates": []
+            },
+            "business_type": {
+              "value": "Retail",
+              "status": "confirmed",
+              "source_turn_id": "turn_3",
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": 48,
+              "status": "confirmed",
+              "source_turn_id": "turn_4",
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "annual_turnover",
+        "citations": [],
+        "tools_called": [
+          "update_qualification"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 6
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "2400000",
+      "input_mode": "scripted_text",
+      "expected_check": null,
+      "observed_reply": {
+        "call_id": "q1_cooperative_5fa0457f",
+        "turn_id": "turn_5",
+        "text": "Does your business currently have an existing loan?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": 500000,
+              "status": "confirmed",
+              "source_turn_id": "turn_2",
+              "candidates": []
+            },
+            "business_type": {
+              "value": "Retail",
+              "status": "confirmed",
+              "source_turn_id": "turn_3",
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": 48,
+              "status": "confirmed",
+              "source_turn_id": "turn_4",
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": 2400000,
+              "status": "confirmed",
+              "source_turn_id": "turn_5",
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "existing_loan",
+        "citations": [],
+        "tools_called": [
+          "update_qualification"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 7
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "No",
+      "input_mode": "scripted_text",
+      "expected_check": null,
+      "observed_reply": {
+        "call_id": "q1_cooperative_5fa0457f",
+        "turn_id": "turn_6",
+        "text": "In which city is your business located?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": 500000,
+              "status": "confirmed",
+              "source_turn_id": "turn_2",
+              "candidates": []
+            },
+            "business_type": {
+              "value": "Retail",
+              "status": "confirmed",
+              "source_turn_id": "turn_3",
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": 48,
+              "status": "confirmed",
+              "source_turn_id": "turn_4",
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": 2400000,
+              "status": "confirmed",
+              "source_turn_id": "turn_5",
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": false,
+              "status": "confirmed",
+              "source_turn_id": "turn_6",
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "city",
+        "citations": [],
+        "tools_called": [
+          "update_qualification"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 8
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "Demo City",
+      "input_mode": "scripted_text",
+      "expected_check": null,
+      "observed_reply": {
+        "call_id": "q1_cooperative_5fa0457f",
+        "turn_id": "turn_7",
+        "text": "Would you like a mock callback request recorded?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": 500000,
+              "status": "confirmed",
+              "source_turn_id": "turn_2",
+              "candidates": []
+            },
+            "business_type": {
+              "value": "Retail",
+              "status": "confirmed",
+              "source_turn_id": "turn_3",
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": 48,
+              "status": "confirmed",
+              "source_turn_id": "turn_4",
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": 2400000,
+              "status": "confirmed",
+              "source_turn_id": "turn_5",
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": false,
+              "status": "confirmed",
+              "source_turn_id": "turn_6",
+              "candidates": []
+            },
+            "city": {
+              "value": "Demo City",
+              "status": "confirmed",
+              "source_turn_id": "turn_7",
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "callback_preference",
+        "citations": [],
+        "tools_called": [
+          "update_qualification"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 9
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "No",
+      "input_mode": "scripted_text",
+      "expected_check": "preliminary_outcome",
+      "observed_reply": {
+        "call_id": "q1_cooperative_5fa0457f",
+        "turn_id": "turn_8",
+        "text": "Your confirmed details meet the synthetic preliminary criteria; this is not final approval. Would you like a mock lead created?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": 500000,
+              "status": "confirmed",
+              "source_turn_id": "turn_2",
+              "candidates": []
+            },
+            "business_type": {
+              "value": "Retail",
+              "status": "confirmed",
+              "source_turn_id": "turn_3",
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": 48,
+              "status": "confirmed",
+              "source_turn_id": "turn_4",
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": 2400000,
+              "status": "confirmed",
+              "source_turn_id": "turn_5",
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": false,
+              "status": "confirmed",
+              "source_turn_id": "turn_6",
+              "candidates": []
+            },
+            "city": {
+              "value": "Demo City",
+              "status": "confirmed",
+              "source_turn_id": "turn_7",
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": false,
+              "status": "confirmed",
+              "source_turn_id": "turn_8",
+              "candidates": []
+            }
+          }
+        },
+        "next_field": null,
+        "citations": [
+          {
+            "record_id": "kb_demo_product_0aad20353d0a42b9",
+            "source": "data/raw/demo_product.json",
+            "source_type": "json",
+            "page": null,
+            "section": "Loan amount limits",
+            "version": "1.0",
+            "synthetic": true
+          },
+          {
+            "record_id": "kb_demo_eligibility_3c7bd80d110b4eda",
+            "source": "data/raw/demo_eligibility.md",
+            "source_type": "markdown",
+            "page": null,
+            "section": "Minimum business age",
+            "version": "1.0",
+            "synthetic": true
+          },
+          {
+            "record_id": "kb_demo_eligibility_c8bf37db0fb9f9ce",
+            "source": "data/raw/demo_eligibility.md",
+            "source_type": "markdown",
+            "page": null,
+            "section": "Annual turnover",
+            "version": "1.0",
+            "synthetic": true
+          },
+          {
+            "record_id": "kb_demo_eligibility_ad9313a75fc59067",
+            "source": "data/raw/demo_eligibility.md",
+            "source_type": "markdown",
+            "page": null,
+            "section": "Business location",
+            "version": "1.0",
+            "synthetic": true
+          },
+          {
+            "record_id": "kb_demo_eligibility_611da9a631937d97",
+            "source": "data/raw/demo_eligibility.md",
+            "source_type": "markdown",
+            "page": null,
+            "section": "Existing borrowing",
+            "version": "1.0",
+            "synthetic": true
+          }
+        ],
+        "tools_called": [
+          "update_qualification",
+          "evaluate_preliminary_eligibility"
+        ],
+        "grounded": null,
+        "eligibility": {
+          "status": "preliminarily_qualified",
+          "reasons": [
+            "The confirmed details meet the synthetic preliminary rules. This is not final approval."
+          ],
+          "missing_fields": [],
+          "rules": [
+            {
+              "rule_id": "amount_min",
+              "field": "requested_amount",
+              "outcome": "pass",
+              "explanation": "The requested amount is below the synthetic minimum.",
+              "citation": {
+                "record_id": "kb_demo_product_0aad20353d0a42b9",
+                "source": "data/raw/demo_product.json",
+                "source_type": "json",
+                "page": null,
+                "section": "Loan amount limits",
+                "version": "1.0",
+                "synthetic": true
+              }
+            },
+            {
+              "rule_id": "amount_max",
+              "field": "requested_amount",
+              "outcome": "pass",
+              "explanation": "The requested amount exceeds the synthetic maximum.",
+              "citation": {
+                "record_id": "kb_demo_product_0aad20353d0a42b9",
+                "source": "data/raw/demo_product.json",
+                "source_type": "json",
+                "page": null,
+                "section": "Loan amount limits",
+                "version": "1.0",
+                "synthetic": true
+              }
+            },
+            {
+              "rule_id": "business_age",
+              "field": "business_age_months",
+              "outcome": "pass",
+              "explanation": "Business age does not meet the synthetic minimum.",
+              "citation": {
+                "record_id": "kb_demo_eligibility_3c7bd80d110b4eda",
+                "source": "data/raw/demo_eligibility.md",
+                "source_type": "markdown",
+                "page": null,
+                "section": "Minimum business age",
+                "version": "1.0",
+                "synthetic": true
+              }
+            },
+            {
+              "rule_id": "turnover",
+              "field": "annual_turnover",
+              "outcome": "pass",
+              "explanation": "Annual turnover does not meet the synthetic minimum.",
+              "citation": {
+                "record_id": "kb_demo_eligibility_c8bf37db0fb9f9ce",
+                "source": "data/raw/demo_eligibility.md",
+                "source_type": "markdown",
+                "page": null,
+                "section": "Annual turnover",
+                "version": "1.0",
+                "synthetic": true
+              }
+            },
+            {
+              "rule_id": "location",
+              "field": "city",
+              "outcome": "pass",
+              "explanation": "Service availability in this city requires human review.",
+              "citation": {
+                "record_id": "kb_demo_eligibility_ad9313a75fc59067",
+                "source": "data/raw/demo_eligibility.md",
+                "source_type": "markdown",
+                "page": null,
+                "section": "Business location",
+                "version": "1.0",
+                "synthetic": true
+              }
+            },
+            {
+              "rule_id": "borrowing",
+              "field": "existing_loan",
+              "outcome": "pass",
+              "explanation": "Existing borrowing requires a human affordability review.",
+              "citation": {
+                "record_id": "kb_demo_eligibility_611da9a631937d97",
+                "source": "data/raw/demo_eligibility.md",
+                "source_type": "markdown",
+                "page": null,
+                "section": "Existing borrowing",
+                "version": "1.0",
+                "synthetic": true
+              }
+            }
+          ],
+          "synthetic": true
+        },
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 10
+      },
+      "passed": true
+    },
+    {
+      "customer_text": "Yes",
+      "input_mode": "scripted_text",
+      "expected_check": "mock_lead",
+      "observed_reply": {
+        "call_id": "q1_cooperative_5fa0457f",
+        "turn_id": "turn_9",
+        "text": "I created a mock lead with the preliminary assessment. This demo has not submitted a loan application or made an approval decision.",
+        "status": "completed",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": 500000,
+              "status": "confirmed",
+              "source_turn_id": "turn_2",
+              "candidates": []
+            },
+            "business_type": {
+              "value": "Retail",
+              "status": "confirmed",
+              "source_turn_id": "turn_3",
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": 48,
+              "status": "confirmed",
+              "source_turn_id": "turn_4",
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": 2400000,
+              "status": "confirmed",
+              "source_turn_id": "turn_5",
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": false,
+              "status": "confirmed",
+              "source_turn_id": "turn_6",
+              "candidates": []
+            },
+            "city": {
+              "value": "Demo City",
+              "status": "confirmed",
+              "source_turn_id": "turn_7",
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": false,
+              "status": "confirmed",
+              "source_turn_id": "turn_8",
+              "candidates": []
+            }
+          }
+        },
+        "next_field": null,
+        "citations": [],
+        "tools_called": [
+          "create_lead"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": "lead_b59b75fbab4357239d031d1db8372d60",
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 11
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,446 @@
+{
+  "generated_at": "2026-10-01T17:49:17.714121+00:00",
+  "base_url": "http://127.0.0.1:8000",
+  "calls": [
+    {
+      "fixture_id": "cooperative",
+      "scenario_ids": [
+        "A"
+      ],
+      "passed": true,
+      "audio": "data/audio/q1/cooperative.wav",
+      "transcript": "evaluations/voice/cooperative.json",
+      "duration_ms": 71915.12
+    },
+    {
+      "fixture_id": "objection_unknown_human",
+      "scenario_ids": [
+        "B",
+        "D",
+        "E"
+      ],
+      "passed": true,
+      "audio": "data/audio/q1/objection_unknown_human.wav",
+      "transcript": "evaluations/voice/objection_unknown_human.json",
+      "duration_ms": 59344.69
+    },
+    {
+      "fixture_id": "conflict_callback",
+      "scenario_ids": [
+        "C",
+        "E"
+      ],
+      "passed": true,
+      "audio": "data/audio/q1/conflict_callback.wav",
+      "transcript": "evaluations/voice/conflict_callback.json",
+      "duration_ms": 87427.14
+    }
+  ],
+  "asr_provider": "Windows System.Speech en-US unrestricted dictation",
+  "tts_agent": "Microsoft David Desktop",
+  "tts_customer": "Microsoft Zira Desktop",
+  "audio_probes": [
+    {
+      "input_text": "Yes.",
+      "expected_behavior": "active",
+      "audio": "data/audio/q1/probe_1.wav",
+      "observed": {
+        "accepted": true,
+        "confidence": 0.7667928338050842,
+        "transcript": "Yes",
+        "reply": {
+          "call_id": "q1_probe_0_5fa0457f",
+          "turn_id": "probe",
+          "text": "What loan amount would you like to request, in INR?",
+          "status": "active",
+          "qualification": {
+            "fields": {
+              "requested_amount": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_type": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_age_months": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "annual_turnover": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "existing_loan": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "city": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "callback_preference": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              }
+            }
+          },
+          "next_field": "requested_amount",
+          "citations": [],
+          "tools_called": [],
+          "grounded": null,
+          "eligibility": null,
+          "lead_id": null,
+          "callback_id": null,
+          "escalation_id": null,
+          "recording_allowed": false,
+          "revision": 3
+        }
+      },
+      "expected_behavior_reached": true,
+      "request_duration_ms": 704.5
+    },
+    {
+      "input_text": "Five hundred thousand.",
+      "expected_behavior": "amount",
+      "audio": "data/audio/q1/probe_2.wav",
+      "observed": {
+        "accepted": false,
+        "reason": "unclear_audio",
+        "confidence": 0.4920680820941925,
+        "message": "I could not hear that clearly. Please repeat or type your reply; no details were updated."
+      },
+      "expected_behavior_reached": false,
+      "request_duration_ms": 661.73
+    },
+    {
+      "input_text": "Retail.",
+      "expected_behavior": "business_type",
+      "audio": "data/audio/q1/probe_3.wav",
+      "observed": {
+        "accepted": true,
+        "confidence": 0.7796815633773804,
+        "transcript": "Retail",
+        "reply": {
+          "call_id": "q1_probe_2_5fa0457f",
+          "turn_id": "probe",
+          "text": "You mentioned Retail for business type. Please confirm that value or provide a correction.",
+          "status": "active",
+          "qualification": {
+            "fields": {
+              "requested_amount": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_type": {
+                "value": "Retail",
+                "status": "tentative",
+                "source_turn_id": "probe",
+                "candidates": []
+              },
+              "business_age_months": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "annual_turnover": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "existing_loan": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "city": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "callback_preference": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              }
+            }
+          },
+          "next_field": "business_type",
+          "citations": [],
+          "tools_called": [
+            "update_qualification"
+          ],
+          "grounded": null,
+          "eligibility": null,
+          "lead_id": null,
+          "callback_id": null,
+          "escalation_id": null,
+          "recording_allowed": false,
+          "revision": 4
+        }
+      },
+      "expected_behavior_reached": true,
+      "request_duration_ms": 636.89
+    },
+    {
+      "input_text": "Forty eight months.",
+      "expected_behavior": "business_age",
+      "audio": "data/audio/q1/probe_4.wav",
+      "observed": {
+        "accepted": true,
+        "confidence": 0.6217009425163269,
+        "transcript": "48 months",
+        "reply": {
+          "call_id": "q1_probe_3_5fa0457f",
+          "turn_id": "probe",
+          "text": "You mentioned 48 for business age months. Please confirm that value or provide a correction.",
+          "status": "active",
+          "qualification": {
+            "fields": {
+              "requested_amount": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_type": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_age_months": {
+                "value": 48,
+                "status": "tentative",
+                "source_turn_id": "probe",
+                "candidates": []
+              },
+              "annual_turnover": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "existing_loan": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "city": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "callback_preference": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              }
+            }
+          },
+          "next_field": "business_age_months",
+          "citations": [],
+          "tools_called": [
+            "update_qualification"
+          ],
+          "grounded": null,
+          "eligibility": null,
+          "lead_id": null,
+          "callback_id": null,
+          "escalation_id": null,
+          "recording_allowed": false,
+          "revision": 4
+        }
+      },
+      "expected_behavior_reached": true,
+      "request_duration_ms": 723.52
+    },
+    {
+      "input_text": "What is the processing fee?",
+      "expected_behavior": "grounded_faq",
+      "audio": "data/audio/q1/probe_5.wav",
+      "observed": {
+        "accepted": true,
+        "confidence": 0.7563858032226562,
+        "transcript": "What is the processing fee",
+        "reply": {
+          "call_id": "q1_probe_4_5fa0457f",
+          "turn_id": "probe",
+          "text": "Synthetic demo information: The synthetic processing fee is 2 percent of the approved loan amount. Any applicable taxes must be confirmed in a verified written offer.",
+          "status": "active",
+          "qualification": {
+            "fields": {
+              "requested_amount": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_type": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_age_months": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "annual_turnover": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "existing_loan": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "city": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "callback_preference": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              }
+            }
+          },
+          "next_field": "requested_amount",
+          "citations": [
+            {
+              "record_id": "kb_demo_policy_1d4a44c67a60c2ea",
+              "source": "data/raw/demo_policy.pdf",
+              "source_type": "pdf",
+              "page": 1,
+              "section": "Processing fees",
+              "version": "1.0",
+              "synthetic": true
+            }
+          ],
+          "tools_called": [
+            "search_knowledge"
+          ],
+          "grounded": true,
+          "eligibility": null,
+          "lead_id": null,
+          "callback_id": null,
+          "escalation_id": null,
+          "recording_allowed": false,
+          "revision": 4
+        }
+      },
+      "expected_behavior_reached": true,
+      "request_duration_ms": 731.15
+    },
+    {
+      "input_text": "I want a human representative.",
+      "expected_behavior": "escalated",
+      "audio": "data/audio/q1/probe_6.wav",
+      "observed": {
+        "accepted": true,
+        "confidence": 0.8611183166503906,
+        "transcript": "I want a human representative",
+        "reply": {
+          "call_id": "q1_probe_5_5fa0457f",
+          "turn_id": "probe",
+          "text": "I recorded a mock human-assistance request. No representative has been contacted by this demo.",
+          "status": "escalated",
+          "qualification": {
+            "fields": {
+              "requested_amount": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_type": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_age_months": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "annual_turnover": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "existing_loan": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "city": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "callback_preference": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              }
+            }
+          },
+          "next_field": "requested_amount",
+          "citations": [],
+          "tools_called": [
+            "request_human_escalation"
+          ],
+          "grounded": null,
+          "eligibility": null,
+          "lead_id": null,
+          "callback_id": null,
+          "escalation_id": "esc_3dce347909dd5bf99181971280610b47",
+          "recording_allowed": false,
+          "revision": 4
+        }
+      },
+      "expected_behavior_reached": true,
+      "request_duration_ms": 678.04
+    }
+  ],
+  "manual_validation_pending": "Human microphone quality, live recording and native-speaker assessment have not been performed."
+}

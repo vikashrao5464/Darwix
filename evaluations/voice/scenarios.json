@@ -1,0 +1,7 @@
+[
+  {"scenario_id":"A","name":"Cooperative customer","expected":"Collect seven confirmed fields, cite preliminary rules and create one mock lead."},
+  {"scenario_id":"B","name":"Document-sharing objection","expected":"Retrieve the objection guidance with source citations."},
+  {"scenario_id":"C","name":"Incomplete and conflicting information","expected":"Do not guess missing information; preserve conflicting values until explicit confirmation."},
+  {"scenario_id":"D","name":"Out-of-scope question","expected":"Return the verified-information fallback without citations or invented facts."},
+  {"scenario_id":"E","name":"Human assistance and callback","expected":"Record mock callback/escalation actions and clearly disclose that no human has been contacted."}
+]

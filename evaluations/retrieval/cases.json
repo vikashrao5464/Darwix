@@ -1,0 +1,13 @@
+[
+  {"case_id":"product_amount","area":"product","query":"What are the loan amount limits?","expected_document_id":"demo_product","expected_section":"Loan amount limits","expected_category":"product","expected_terms":["100000","2000000"],"expect_grounded":true},
+  {"case_id":"policy_fees","area":"policy","query":"What is the processing fee?","expected_document_id":"demo_policy","expected_section":"Processing fees","expected_category":"policy","expected_terms":["2 percent"],"expect_grounded":true},
+  {"case_id":"qualification_age","area":"qualification","query":"What is the minimum business age?","expected_document_id":"demo_eligibility","expected_section":"Minimum business age","expected_category":"qualification","expected_terms":["24 months"],"expect_grounded":true},
+  {"case_id":"faq_documents","area":"faq","query":"What documents are required?","expected_document_id":"demo_faq","expected_section":"Required documents","expected_category":"faq","expected_terms":["bank statements","registration"],"expect_grounded":true},
+  {"case_id":"objection_documents","area":"objection","query":"I do not want to share documents.","expected_document_id":"demo_objections","expected_section":"Do not want to share documents","expected_category":"objection","expected_terms":["acknowledge","callback"],"expect_grounded":true},
+  {"case_id":"unknown_faq","area":"unsupported","query":"What is the cashback promotion for lunar tourism?","expected_category":"unsupported","expected_terms":[],"expect_grounded":false},
+  {"case_id":"unsupported_language","area":"filter","query":"What is the processing fee?","language":"fil","expected_category":"unsupported","expected_terms":[],"expect_grounded":false},
+  {"case_id":"unsupported_product","area":"filter","query":"What is the processing fee?","product":"life_insurance","expected_category":"unsupported","expected_terms":[],"expect_grounded":false},
+  {"case_id":"short_paraphrase","area":"qualification","query":"How old must my business be?","expected_document_id":"demo_eligibility","expected_section":"Minimum business age","expected_category":"qualification","expected_terms":["24 months"],"expect_grounded":true},
+  {"case_id":"semantic_paraphrase","area":"faq","query":"What paperwork should I bring to apply?","expected_document_id":"demo_faq","expected_section":"Required documents","expected_category":"faq","expected_terms":["bank statements","registration"],"expect_grounded":true},
+  {"case_id":"mixed_unsupported_topic","area":"unsupported","query":"What is the processing fee for lunar tourism?","expected_category":"unsupported","expected_terms":[],"expect_grounded":false}
+]
