@@ -14,6 +14,7 @@ logger = logging.getLogger("darwix.index")
 class KnowledgeIndex:
     def __init__(self, settings, embedding):
         self.dimensions = embedding.dimensions
+        self.remote = bool(settings.qdrant_url)
         self.alias = settings.qdrant_collection + "_" + hashlib.sha256(embedding.signature.encode()).hexdigest()[:12]
         if settings.qdrant_url:
             self.client = AsyncQdrantClient(url=settings.qdrant_url,
@@ -36,6 +37,17 @@ class KnowledgeIndex:
             await self.client.update_collection_aliases([
                 models.CreateAliasOperation(create_alias=models.CreateAlias(collection_name=name, alias_name=self.alias))
             ])
+        await self.ensure_filter_indexes(await self._active_collection())
+
+    async def ensure_filter_indexes(self, collection):
+        # Qdrant Cloud strict mode rejects unindexed metadata filters. Embedded
+        # Qdrant evaluates filters directly and does not implement payload indexes.
+        if not self.remote: return
+        info = await self.client.get_collection(collection)
+        for field in ('product', 'language'):
+            if field not in info.payload_schema:
+                await self.client.create_payload_index(collection_name=collection,
+                    field_name=field, field_schema=models.PayloadSchemaType.KEYWORD, wait=True)
 
     async def snapshot(self):
         points, offset = [], None
@@ -59,6 +71,7 @@ class KnowledgeIndex:
         switched = False
         try:
             await self.client.create_collection(staging, vectors_config=models.VectorParams(size=self.dimensions, distance=models.Distance.COSINE))
+            await self.ensure_filter_indexes(staging)
             if points:
                 await self.client.upsert(staging, points, wait=True)
             count = (await self.client.count(staging, exact=True)).count

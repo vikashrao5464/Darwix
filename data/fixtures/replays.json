@@ -1,0 +1,20 @@
+[
+  {
+    "fixture_id": "q1_insights",
+    "title": "Q1 stress call: opportunity, compliance, frustration, payment and noise",
+    "audio": "data/audio/q4/q1_insights.wav",
+    "annotations": "evaluations/realtime/q1_insights-source.json",
+    "duration_ms": 66000,
+    "language": "en",
+    "synthetic": true
+  },
+  {
+    "fixture_id": "q1_cooperative",
+    "title": "Original Q1 cooperative qualification recording",
+    "audio": "data/audio/q1/cooperative.wav",
+    "annotations": "evaluations/voice/cooperative.json",
+    "duration_ms": 71915,
+    "language": "en",
+    "synthetic": true
+  }
+]

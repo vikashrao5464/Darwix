@@ -8,6 +8,8 @@ from fastapi.responses import Response
 
 from app.schemas.voice import TurnRequest
 from app.voice.audio import prepare_audio
+from app.localization.language_state import LanguageState
+from app.localization.reminders import copy_for
 
 router = APIRouter(prefix="/api/voice/calls", tags=["speech"])
 logger = logging.getLogger("darwix.speech")
@@ -42,12 +44,16 @@ async def spoken_reply(call_id: str, turn_id: str, request: Request):
         reply = call.state.get("greeting") if turn_id == "greeting" else call.state.get("responses", {}).get(turn_id, {}).get("reply")
         if reply is None:
             raise HTTPException(404, "Agent reply not found.")
+        language_state = reply.get("language_state")
+        localized = LanguageState.model_validate(language_state) if language_state else None
+        provider = request.app.state.localized_tts if localized else request.app.state.tts
+        timeout = request.app.state.settings.localization_tts_timeout_seconds if localized else request.app.state.settings.provider_timeout_seconds
     try:
-        audio = await asyncio.wait_for(request.app.state.tts.synthesize(reply["text"], "en"), request.app.state.settings.provider_timeout_seconds)
+        audio = await asyncio.wait_for(provider.synthesize(reply["text"], localized.tts_language if localized else "en"), timeout)
         return Response(audio, media_type="audio/wav", headers={"Cache-Control":"no-store"})
     except Exception as exc:
         logger.warning("tts_unavailable", extra={"error_type":type(exc).__name__})
-        raise HTTPException(503, "Spoken output is unavailable. Read the displayed agent reply.") from None
+        raise HTTPException(503, copy_for(localized, "tts") if localized else "Spoken output is unavailable. Read the displayed agent reply.") from None
 
 
 @router.post("/{call_id}/audio-turn")
@@ -55,6 +61,7 @@ async def audio_turn(call_id: str, request: Request, turn_id: str = Query(patter
     with request.app.state.sessions() as session:
         call = request.app.state.voice_tools.call(session, call_id, active=True)
     settings = request.app.state.settings
+    localized = LanguageState.model_validate(call.state["language_state"]) if call.state.get("language_state") else None
     audio = await limited_body(request, 5_000_000)
     validate_wave(audio, settings.voice_audio_max_seconds)
     prepared = prepare_audio(audio)
@@ -62,20 +69,23 @@ async def audio_turn(call_id: str, request: Request, turn_id: str = Query(patter
     if prepared.issue:
         logger.info("asr_input_rejected", extra={**metrics,"reason":prepared.issue,"asr_provider":settings.asr_provider})
         return {"accepted":False,"reason":prepared.issue,"audio":metrics,
-                "message":"The selected microphone recorded almost no sound. Choose your laptop microphone below and check that the input meter moves while you speak."}
+                "message":copy_for(localized, "silent") if localized else "The selected microphone recorded almost no sound. Choose your laptop microphone below and check that the input meter moves while you speak."}
     try:
-        recognized = await asyncio.wait_for(request.app.state.asr.transcribe(prepared.audio), settings.asr_timeout_seconds)
+        if localized:
+            recognized = await asyncio.wait_for(request.app.state.localized_asr.transcribe(prepared.audio, language=localized.asr_language), settings.localization_asr_timeout_seconds)
+        else:
+            recognized = await asyncio.wait_for(request.app.state.asr.transcribe(prepared.audio), settings.asr_timeout_seconds)
     except Exception as exc:
         logger.warning("asr_unavailable", extra={"error_type":type(exc).__name__})
         return {"accepted":False, "reason":"asr_unavailable", "audio":metrics,
-                "message":"Speech recognition is unavailable. Please type your reply or retry; no details were updated."}
-    logger.info("asr_result", extra={**metrics,"confidence":recognized.confidence,"asr_provider":settings.asr_provider})
-    threshold = settings.whisper_min_score if settings.asr_provider == "whisper" else settings.voice_asr_min_confidence
+                "message":copy_for(localized, "unclear") if localized else "Speech recognition is unavailable. Please type your reply or retry; no details were updated."}
+    logger.info("asr_result", extra={**metrics,"confidence":recognized.confidence,"asr_provider":"whisper" if localized else settings.asr_provider})
+    threshold = settings.whisper_min_score if localized or settings.asr_provider == "whisper" else settings.voice_asr_min_confidence
     if recognized.confidence < threshold or not recognized.text.strip():
         preview = request.app.state.voice_tools.scrub(recognized.text).strip()
         return {"accepted":False, "reason":"unclear_audio", "confidence":recognized.confidence,"audio":metrics,
                 "review_required":bool(preview),"review_text":preview,
-                "message":"I picked up audio but could not confidently transcribe it. Review the text below before using it; no details were updated." if preview else
+                "message":copy_for(localized, "unclear") if localized else "I picked up audio but could not confidently transcribe it. Review the text below before using it; no details were updated." if preview else
                           "I picked up audio but could not transcribe it. Move closer to the microphone and try a short reply, or type it."}
     reply = await request.app.state.voice.process_turn(call_id, TurnRequest(turn_id=turn_id, text=recognized.text, require_confirmation=True))
     return {"accepted":True, "confidence":recognized.confidence,"audio":metrics,

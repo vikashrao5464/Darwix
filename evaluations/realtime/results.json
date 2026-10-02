@@ -1,0 +1,399 @@
+{
+  "runs": [
+    {
+      "observer": "CLI receipt acknowledgement, not rendered UI",
+      "call_id": "replay_5f8f174876804ae9b01866e1676efeff",
+      "fixture_id": "q1_insights",
+      "status": "completed",
+      "true_positives": 5,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "transcript_before_playback_end": true,
+      "nudge_before_playback_end": true,
+      "duration_ms": 66000,
+      "playback_finished_ms": 66000.83860009909,
+      "duplicate_suppressed": true,
+      "ambiguous_suppressed": true,
+      "counts": {
+        "chunks": 11,
+        "asr_failures": 0,
+        "unacknowledged": 0,
+        "nudges": 5,
+        "queue_high_water": 1
+      },
+      "comparison": [
+        {
+          "chunk_id": 0,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 1,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 2,
+          "expected": [
+            "missed_opportunity"
+          ],
+          "emitted": [
+            "missed_opportunity"
+          ],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 3,
+          "expected": [
+            "compliance_risk"
+          ],
+          "emitted": [
+            "compliance_risk"
+          ],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 4,
+          "expected": [
+            "rising_frustration"
+          ],
+          "emitted": [
+            "rising_frustration"
+          ],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 5,
+          "expected": [
+            "callback_need",
+            "payment_difficulty"
+          ],
+          "emitted": [
+            "callback_need",
+            "payment_difficulty"
+          ],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 6,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 7,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 8,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 9,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 10,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        }
+      ],
+      "suppression": [
+        {
+          "chunk_id": 6,
+          "type": "payment_difficulty",
+          "reason": "duplicate",
+          "confidence": 0.94
+        },
+        {
+          "chunk_id": 6,
+          "type": "callback_need",
+          "reason": "duplicate",
+          "confidence": 0.92
+        },
+        {
+          "chunk_id": 8,
+          "type": "missed_opportunity",
+          "reason": "low_confidence",
+          "confidence": 0.55
+        }
+      ],
+      "event_file": "evaluations/realtime/cli-insights.json",
+      "passed": true
+    },
+    {
+      "observer": "CLI receipt acknowledgement, not rendered UI",
+      "call_id": "replay_8cc53ba925fc4d548bedb6e852d43f6b",
+      "fixture_id": "q1_cooperative",
+      "status": "completed",
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "transcript_before_playback_end": true,
+      "nudge_before_playback_end": false,
+      "duration_ms": 71915,
+      "playback_finished_ms": 71916.1595000187,
+      "duplicate_suppressed": false,
+      "ambiguous_suppressed": false,
+      "counts": {
+        "chunks": 12,
+        "asr_failures": 0,
+        "unacknowledged": 0,
+        "nudges": 0,
+        "queue_high_water": 1
+      },
+      "comparison": [
+        {
+          "chunk_id": 0,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 1,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 2,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 3,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 4,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 5,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 6,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 7,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 8,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 9,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 10,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 11,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        }
+      ],
+      "suppression": [],
+      "event_file": "evaluations/realtime/cli-cooperative.json",
+      "passed": true
+    },
+    {
+      "observer": "Chrome rendered UI acknowledgement (two animation frames)",
+      "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+      "fixture_id": "q1_insights",
+      "status": "completed",
+      "true_positives": 5,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "transcript_before_playback_end": true,
+      "nudge_before_playback_end": true,
+      "duration_ms": 66000,
+      "playback_finished_ms": 66001.4106000308,
+      "duplicate_suppressed": true,
+      "ambiguous_suppressed": true,
+      "counts": {
+        "chunks": 11,
+        "asr_failures": 0,
+        "unacknowledged": 0,
+        "nudges": 5,
+        "queue_high_water": 1
+      },
+      "comparison": [
+        {
+          "chunk_id": 0,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 1,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 2,
+          "expected": [
+            "missed_opportunity"
+          ],
+          "emitted": [
+            "missed_opportunity"
+          ],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 3,
+          "expected": [
+            "compliance_risk"
+          ],
+          "emitted": [
+            "compliance_risk"
+          ],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 4,
+          "expected": [
+            "rising_frustration"
+          ],
+          "emitted": [
+            "rising_frustration"
+          ],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 5,
+          "expected": [
+            "callback_need",
+            "payment_difficulty"
+          ],
+          "emitted": [
+            "callback_need",
+            "payment_difficulty"
+          ],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 6,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 7,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 8,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 9,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        },
+        {
+          "chunk_id": 10,
+          "expected": [],
+          "emitted": [],
+          "false_positive": [],
+          "false_negative": []
+        }
+      ],
+      "suppression": [
+        {
+          "chunk_id": 6,
+          "type": "payment_difficulty",
+          "reason": "duplicate",
+          "confidence": 0.94
+        },
+        {
+          "chunk_id": 6,
+          "type": "callback_need",
+          "reason": "duplicate",
+          "confidence": 0.92
+        },
+        {
+          "chunk_id": 8,
+          "type": "missed_opportunity",
+          "reason": "low_confidence",
+          "confidence": 0.55
+        }
+      ],
+      "event_file": "evaluations/realtime/browser-smoke.json",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "scope": "Tiny synthesized English fixture set. Per-chunk signal FP/FN, not a human-call accuracy benchmark. Ground-truth text is not supplied to ASR/detector."
+}

@@ -1,0 +1,52 @@
+{
+  "browser": "Chrome headless",
+  "input": "Synthetic fake microphone; native speech playback accelerated 8x for UI checks",
+  "checks": [
+    "Formal Indonesian consent -> actual localized cited reminder",
+    "Synthetic Indonesian microphone -> multilingual Whisper -> cited tenor explanation",
+    "Indonesian unknown reply keeps formal fallback",
+    "Taglish selection -> real cited FAQ and localized speech output",
+    "Unknown Taglish input preserves fallback register"
+  ],
+  "page_errors": [],
+  "speech_responses": [
+    {
+      "path": "/api/voice/calls/call_f1e20660b9d34b4596b2b352f3e961f7/speech/greeting",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_f1e20660b9d34b4596b2b352f3e961f7/speech/turn_0615cda4-a4af-4468-ae85-011f899af6a4",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_f1e20660b9d34b4596b2b352f3e961f7/speech/audio_56b268fa-7063-4b0a-a1a6-fec05a69f966",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_f1e20660b9d34b4596b2b352f3e961f7/speech/turn_210e3c9c-8de1-4f4a-b9a5-040657e03af7",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_f1e20660b9d34b4596b2b352f3e961f7/speech/turn_5ce38c30-7bd8-4e7e-875b-7c52d8e88ffb",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_f04bb23256774aa89a0f40e3b62f1467/speech/greeting",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_f04bb23256774aa89a0f40e3b62f1467/speech/turn_0b6d28ff-e2e9-459d-8926-6da888ed924e",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_f04bb23256774aa89a0f40e3b62f1467/speech/turn_8e3d1ed2-8e23-4684-9492-fc83bf0cc85e",
+      "status": 200
+    },
+    {
+      "path": "/api/voice/calls/call_f04bb23256774aa89a0f40e3b62f1467/speech/turn_ec5ef71d-6f6c-407c-966b-8bb1389e0951",
+      "status": 200
+    }
+  ],
+  "asr_transcript": "Apa tenor itu?",
+  "asr_confidence": 0.6970108774009298
+}

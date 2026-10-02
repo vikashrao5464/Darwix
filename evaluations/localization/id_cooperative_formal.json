@@ -1,0 +1,412 @@
+{
+  "id": "id_cooperative_formal",
+  "call_id": "call_0c82e032900d4473b36c1822dbd0d931",
+  "scenario": "id_installment",
+  "input_mode": "scripted text; not human microphone calls",
+  "audio_kind": "synthesized from actual executed replies",
+  "observations": [
+    {
+      "input": "Ya",
+      "expected": {
+        "text": "Ya",
+        "expect": "grounded"
+      },
+      "reply": {
+        "call_id": "call_0c82e032900d4473b36c1822dbd0d931",
+        "turn_id": "turn_0",
+        "text": "Informasi simulasi: Dalam contoh simulasi, angsuran pembiayaan konsumen sebesar tujuh ratus lima puluh ribu rupiah jatuh tempo pada tanggal lima belas Oktober dua ribu dua puluh enam. Ini bukan rekening atau tagihan nyata. Apakah ada pertanyaan, atau Anda ingin meminta panggilan kembali?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [
+          {
+            "record_id": "kb_id_reminder_formal_9b6929e49abb3c1d",
+            "source": "data/raw/id_reminder_formal.json",
+            "source_type": "json",
+            "page": null,
+            "section": "reminder",
+            "version": "1.0",
+            "synthetic": true
+          }
+        ],
+        "tools_called": [
+          "search_knowledge"
+        ],
+        "grounded": true,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 3,
+        "scenario": "id_installment",
+        "language_state": {
+          "market": "ID",
+          "primary_language": "id",
+          "register": "formal",
+          "last_detected_language": "id-formal",
+          "preferred_response_language": "id-formal"
+        },
+        "reminder_status": "discussing"
+      },
+      "passed": true,
+      "request_ms": 30
+    },
+    {
+      "input": "Mohon jelaskan tenor",
+      "expected": {
+        "text": "Mohon jelaskan tenor",
+        "expect": "grounded",
+        "language": "id-formal"
+      },
+      "reply": {
+        "call_id": "call_0c82e032900d4473b36c1822dbd0d931",
+        "turn_id": "turn_1",
+        "text": "Informasi simulasi: Tenor adalah jangka waktu pembiayaan dalam perjanjian. Simulasi ini tidak dapat mengubah tenor atau menjanjikan perpanjangan.",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [
+          {
+            "record_id": "kb_id_reminder_formal_04d9fbfac7d082e3",
+            "source": "data/raw/id_reminder_formal.json",
+            "source_type": "json",
+            "page": null,
+            "section": "tenor",
+            "version": "1.0",
+            "synthetic": true
+          }
+        ],
+        "tools_called": [
+          "search_knowledge"
+        ],
+        "grounded": true,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 4,
+        "scenario": "id_installment",
+        "language_state": {
+          "market": "ID",
+          "primary_language": "id",
+          "register": "formal",
+          "last_detected_language": "id-formal",
+          "preferred_response_language": "id-formal"
+        },
+        "reminder_status": "discussing"
+      },
+      "passed": true,
+      "request_ms": 30
+    },
+    {
+      "input": "Saya sudah membayar",
+      "expected": {
+        "text": "Saya sudah membayar",
+        "expect": "active"
+      },
+      "reply": {
+        "call_id": "call_0c82e032900d4473b36c1822dbd0d931",
+        "turn_id": "turn_2",
+        "text": "Anda menyatakan sudah membayar. Mohon konfirmasi; simulasi ini tidak dapat memverifikasi pembayaran.",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 5,
+        "scenario": "id_installment",
+        "language_state": {
+          "market": "ID",
+          "primary_language": "id",
+          "register": "formal",
+          "last_detected_language": "id-formal",
+          "preferred_response_language": "id-formal"
+        },
+        "reminder_status": "discussing"
+      },
+      "passed": true,
+      "request_ms": 8
+    },
+    {
+      "input": "Ya",
+      "expected": {
+        "text": "Ya",
+        "expect": "completed"
+      },
+      "reply": {
+        "call_id": "call_0c82e032900d4473b36c1822dbd0d931",
+        "turn_id": "turn_3",
+        "text": "Pernyataan Anda bahwa pembayaran sudah dilakukan telah dicatat. Pembayaran belum diverifikasi.",
+        "status": "completed",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 6,
+        "scenario": "id_installment",
+        "language_state": {
+          "market": "ID",
+          "primary_language": "id",
+          "register": "formal",
+          "last_detected_language": "id-formal",
+          "preferred_response_language": "id-formal"
+        },
+        "reminder_status": "customer_reports_paid"
+      },
+      "passed": true,
+      "request_ms": 9
+    }
+  ],
+  "passed": true,
+  "audio": "data/audio/q3/id_cooperative_formal.wav",
+  "timeline": [
+    {
+      "speaker": "agent",
+      "text": "Selamat siang. Ini pengingat angsuran pembiayaan konsumen dalam simulasi. Apakah Anda bersedia melanjutkan?",
+      "start_ms": 0,
+      "end_ms": 9520
+    },
+    {
+      "speaker": "customer",
+      "text": "Ya",
+      "start_ms": 10020,
+      "end_ms": 10724
+    },
+    {
+      "speaker": "agent",
+      "text": "Informasi simulasi: Dalam contoh simulasi, angsuran pembiayaan konsumen sebesar tujuh ratus lima puluh ribu rupiah jatuh tempo pada tanggal lima belas Oktober dua ribu dua puluh enam. Ini bukan rekening atau tagihan nyata. Apakah ada pertanyaan, atau Anda ingin meminta panggilan kembali?",
+      "start_ms": 11224,
+      "end_ms": 36472
+    },
+    {
+      "speaker": "customer",
+      "text": "Mohon jelaskan tenor",
+      "start_ms": 36972,
+      "end_ms": 39052
+    },
+    {
+      "speaker": "agent",
+      "text": "Informasi simulasi: Tenor adalah jangka waktu pembiayaan dalam perjanjian. Simulasi ini tidak dapat mengubah tenor atau menjanjikan perpanjangan.",
+      "start_ms": 39552,
+      "end_ms": 50800
+    },
+    {
+      "speaker": "customer",
+      "text": "Saya sudah membayar",
+      "start_ms": 51300,
+      "end_ms": 53396
+    },
+    {
+      "speaker": "agent",
+      "text": "Anda menyatakan sudah membayar. Mohon konfirmasi; simulasi ini tidak dapat memverifikasi pembayaran.",
+      "start_ms": 53896,
+      "end_ms": 62136
+    },
+    {
+      "speaker": "customer",
+      "text": "Ya",
+      "start_ms": 62636,
+      "end_ms": 63340
+    },
+    {
+      "speaker": "agent",
+      "text": "Pernyataan Anda bahwa pembayaran sudah dilakukan telah dicatat. Pembayaran belum diverifikasi.",
+      "start_ms": 63840,
+      "end_ms": 70832
+    }
+  ]
+}

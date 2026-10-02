@@ -7,7 +7,9 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
-    "test:call": "node tests/call-smoke.mjs"
+    "test:call": "node tests/call-smoke.mjs",
+    "test:localization": "node tests/localization-smoke.mjs",
+    "test:live": "node tests/live-smoke.mjs"
   },
   "dependencies": {
     "react": "^19.1.1",

@@ -10,10 +10,16 @@ os.environ["OPENBLAS_NUM_THREADS"] = "1"
 os.environ["OMP_NUM_THREADS"] = "2"
 
 
-def transcribe(model, audio):
-    segments, _ = model.transcribe(audio, language="en", beam_size=5, temperature=0,
+def transcribe(model, audio, language="en"):
+    hints = None
+    if language in {"tl", None}:
+        hints = "Usapan sa Filipino at Taglish: premium, policy, beneficiary, rider, lapse, coverage, bank referral, hulog, bayad, callback."
+    elif language == "id":
+        hints = "Percakapan Bahasa Indonesia: cicilan, angsuran, tenor, denda, DP, uang muka, jatuh tempo, pembiayaan, payment, callback."
+    segments, _ = model.transcribe(audio, language=language, beam_size=5, temperature=0,
         condition_on_previous_text=False, vad_filter=True,
-        vad_parameters={"min_silence_duration_ms":300}, no_speech_threshold=.6)
+        vad_parameters={"min_silence_duration_ms":300}, no_speech_threshold=.6,
+        initial_prompt=hints)
     text, scores = [], []
     for segment in segments:
         if not segment.text.strip():
@@ -33,11 +39,12 @@ def main():
     parser.add_argument("--input", required=True)
     parser.add_argument("--output", required=True)
     parser.add_argument("--threads", type=int, default=2)
+    parser.add_argument("--language", choices=["en", "tl", "id", "auto"], default="en")
     args = parser.parse_args()
     from faster_whisper import WhisperModel
     model = WhisperModel(args.model, device="cpu", compute_type="int8", cpu_threads=args.threads,
         num_workers=1, local_files_only=True)
-    result = transcribe(model, args.input)
+    result = transcribe(model, args.input, None if args.language == "auto" else args.language)
     Path(args.output).write_text(json.dumps(result), encoding="utf-8")
 
 

@@ -1,45 +1,82 @@
 # Darwix AI Engineer Assessment
 
-Implemented scope: **Phases 0, 1 and 2** of [BUILD_STEPS.md](BUILD_STEPS.md). This repository provides a running FastAPI/React prototype and a traceable Q2 knowledge base connected to the Q1 business-loan voice agent.
+This repository implements the **Phases 0–7 prototype** in [BUILD_STEPS.md](BUILD_STEPS.md): a knowledge-grounded voice agent, traceable knowledge base, Philippine/Indonesian reminders and real-time call insights. It runs as one FastAPI backend and a small React application.
 
-**All business documents and rules are synthetic demonstration content. They are not Darwix policies or an actual lender's offer.** No official business dataset was supplied. The default demo runs without hosted-provider credentials.
+**Business content, account amounts and public call dialogues are synthetic demonstration material, not Darwix policies.** No official business dataset was supplied. Human/native-speaker and compliance validation remain manual requirements. Defaults use local speech, deterministic evidence selection and rules; hosted AI credentials are optional.
 
-The demo extracts PDF, HTML, Markdown, text, JSON and CSV; cleans boilerplate; redacts basic PII; deduplicates; chunks with citations; indexes vectors in Qdrant; and returns grounded excerpts or a human-assistance fallback. SQLite stores calls, qualification state, redacted transcripts and mock leads/callbacks/escalations alongside the Phase 0 tables.
+## Demo links
 
-Local entry points after startup:
+- [Call and knowledge demo](http://127.0.0.1:5173/call): Q1 qualification or Q3 localized reminders.
+- [Live dashboard](http://127.0.0.1:5173/live): select the stress recording and start replay.
+- [Recorded screen demo](evaluations/realtime/live-demo.webm): supported FAQ, unsupported fallback and actual streaming nudges/suppression.
+- [API docs](http://127.0.0.1:8000/docs), [health](http://127.0.0.1:8000/health).
+- [Final checklist](docs/submission-checklist.md): implemented evidence and remaining manual validation.
 
-- [Voice call and knowledge demo](http://127.0.0.1:5173/call)
-- [API documentation](http://127.0.0.1:8000/docs)
-- [Health](http://127.0.0.1:8000/health)
-- [Qdrant dashboard](http://127.0.0.1:6333/dashboard)
+Local links require setup below. The video is a silent automated Chrome screen recording; listen to the linked WAV calls for speech. It is not a native-speaker listening assessment.
 
-`/live` is a clearly marked placeholder. Q3 localization and Q4 streaming/nudges/component-latency metrics belong to later phases and are not implemented.
+## Architecture
 
-The default embedding adapter uses deterministic feature hashing with weighted headings, **not a trained semantic embedding model**. The default answer adapter returns verbatim evidence, **not generative LLM output**. Optional OpenAI adapters support semantic embeddings and LLM evidence selection; they are covered by mocked tests but have not been verified against a live account. Source content must still answer the question regardless of provider choice.
+[Mermaid and design decisions](docs/architecture.md) describe shared voice/KB tools, SQLite state, Qdrant snapshots and streaming analysis. Microphone audio goes through provider adapters and deterministic call state. Business answers retrieve first and cite validated evidence. Q4 independently reads timed chunks into warm Whisper, bounded rolling context, detection, suppression and WebSocket delivery.
 
-See [architecture](docs/architecture.md), [knowledge-base behavior](docs/knowledge-base.md), [actual retrieval evaluation](docs/q2-retrieval-evaluation.md), [manual chunk inspection](docs/chunk-review.md), and [verification evidence](docs/phase-0-1-verification.md).
+Feature-hash vectors are a lexical baseline; the default answer adapter selects verbatim evidence. Optional semantic embeddings, interpretation and Q4 classification use the existing OpenAI adapter and mocked contract tests. Live hosted AI behavior has not been measured.
 
-## Q1 voice behavior and evidence
+## Q1: business-loan qualification
 
-Open `/call`, start a demo call, consent, then use **Speak a reply** / **Send voice reply** or type a response. The backend uses local Whisper `small.en` recognition and Microsoft David Desktop spoken output. Choose your microphone and watch the input meter while listening. Laptop noise reduction is enabled; automatic microphone gain is disabled to avoid clipping. Quiet audio receives bounded gain and is converted to mono 16-kHz PCM before recognition. It collects one field at a time, requests confirmation for newly recognized spoken details, confirms tentative/conflicting values, queries the existing KB for FAQs/objections and produces source-backed **preliminary** eligibility. Six HTTP tools are available under `/api/voice/tools/`; Swagger documents their strict schemas.
+Open /call, select business loans, start, consent, and speak or type. Local Whisper small.en recognizes speech; Windows David speaks replies. Select the microphone and watch the meter. Browser noise suppression and bounded normalization help quiet input. Uncertain text is reviewed before use; newly spoken values require confirmation. Silence returns a microphone-specific message.
 
-Recordings require both the recording checkbox and qualification consent. The browser mixes microphone and spoken agent audio after consent, caps capture at five minutes and saves on completion/end/escalation. Raw recordings are private, ignored files under `data/audio/private`; stored transcripts redact basic PII. Use synthetic details. Closing/reloading the page discards unsaved audio; recovery/reconnection is not implemented.
+Shared tools collect deterministic fields, preserve tentative/conflicting values, retrieve FAQs/objections and evaluate source-backed **preliminary** eligibility. Leads, callbacks and escalations are mock records. A human coordinates actual contact; no credit approval is performed.
 
-[Q1 observed results](docs/q1-results.md) contain **three synthesized scripted call recordings**, transcripts and actual checks covering scenarios A-E. The original Windows ASR baseline reached the intended behavior on **5/6** separate WAV probes; the amount phrase was withheld below its 0.55 confidence threshold. The current Whisper adapter passes the four checks in the [microphone regression report](evaluations/voice/microphone-fix.json), including that amount. These fixtures do not replace human microphone testing. [Phase 2 changed files](docs/phase-2-files.md) and [verification](docs/phase-2-verification.md) document the implemented scope.
+[Three synthesized scripted calls and executed checks](docs/q1-results.md) cover cooperation, objection, conflicting/incomplete details, unsupported questions and human assistance. [The microphone fix](docs/microphone-fix.md) records the English comparison and user-confirmed spoken amount. [Chrome regression](evaluations/voice/browser-smoke.json) uses actual ASR/TTS and synthetic microphone input.
 
-Uncertain transcriptions appear in a review box; no qualification value changes until you explicitly use the reviewed text. Silent input produces a microphone-specific message instead of the generic recognition error. The [microphone fix report](docs/microphone-fix.md) includes actual tests, model comparison and the user-confirmed spoken-amount check.
+Browser recordings require separate recording and conversation consent. Private audio is ignored under data/audio/private, capped at five minutes and saved on completion/end/escalation. Reloading discards unsaved audio. Stored transcripts redact basic PII.
 
-The local interpreter handles explicit single-field English replies and number words. Optional hosted interpretation classifies intent/exact evidence; deterministic validation and state transitions still control business actions. Missing evidence, stale rules and provider timeouts produce fallbacks. Leads, callbacks and human requests are **mock local records**; a coordinator must take any real action.
+## Q2: production-minded knowledge base
 
-## Results
+Fourteen sources yield 68 traceable chunks: 23 Q1 and 45 Q3 chunks. PDF, HTML, Markdown, text, JSON and CSV pass through extraction, deterministic cleaning, PII redaction, dedupe, normalization and heading/page-aware chunking. One exact duplicate is skipped; a near duplicate remains flagged for review.
 
-The synthetic manifest produces 23 chunks from eight sources. One exact duplicate is skipped and one near duplicate is flagged and retained. Eleven retrieval cases cover product, policy, qualification, FAQ, objection, unavailable content, metadata filters and paraphrases. Actual output: **10 correct, 1 incorrect**. The failed paperwork paraphrase safely falls back; the local vectors do not understand that synonym. The [JSON report](evaluations/retrieval/results.json) includes every returned record, source, score, citation and verdict.
+Chunks retain source/type/page/section/version/checksum/record ID. Retrieval applies product/language filters and top-k ranking. Remote Qdrant receives keyword indexes for strict-mode filtering. Provider signatures isolate vector spaces. Rebuild validates staging before an atomic alias switch; failed extraction, embeddings, metadata indexing or writes preserve the active index.
 
-Tests cover extraction failure, PII and ordinary business numbers, deduplication, chunk provenance, SQLite insertion/readback, metadata filters, unsupported questions, timeouts, invalid LLM quotes, failed index writes, rebuild preservation and version replacement. Test-only latency rows use synthetic numbers to check persistence; they are not call latency measurements.
+[KB specification](docs/knowledge-base.md), [chunk review](docs/chunk-review.md) and [eleven actual retrieval cases](docs/q2-retrieval-evaluation.md) document **10 correct, one safe paraphrase miss**. The lexical baseline misses “paperwork” as a synonym. Unsupported/insufficient evidence never becomes an invented policy answer.
+
+## Q3: localized reminders
+
+Philippines: life-insurance premium/renewal reminders in English, Filipino/Tagalog and Taglish. Indonesia: installments in formal, colloquial and finance-mixed Bahasa. Choose a starting register in /call; short acknowledgements preserve it. For an ambiguous spoken switch, first send a typed reply with the response-language selector. Interface labels remain English; agent replies/fallbacks follow register.
+
+Local multilingual Whisper medium handles recognition, Meta MMS tgl/ind handles native speech, and Windows David handles English. Greetings, objections, money/date wording and confirmations are explicit draft localization; business facts come from filtered KB evidence. Payment statements and spoken callback times require confirmation. No payment is verified, fee waived or policy renewed.
+
+[Q3 observations](docs/q3-localization-report.md) include two synthesized scripted calls per market, three phrasing examples per market, six actual ASR probes and one publisher-labeled Batak human sample. **Four of six synthetic probes reached intended behavior; two short Filipino/Taglish probes returned fallbacks.** One clean news sample does not establish accent robustness or finance-call accuracy.
+
+MMS licenses assume noncommercial assessment use. Corpus audio is downloaded privately rather than redistributed. Native speakers must review phrasing, pronunciation/prosody and consented human calls.
+
+## Q4: real-time insights and nudges
+
+Open /live and start replay. The original Q1 cooperative recording is a negative control; the 66-second Q1 stress recording combines its actual opening with explicitly injected synthetic opportunity, risky-agent, frustration, payment/callback, noise and duplicate windows.
+
+The server reads six-second chunks at real-time speed, continuously recognizes final chunk text and emits events while replay is active. It never transcribes the entire recording upfront. Whisper stays warm; context, backlog and subscribers are bounded. One active replay is admitted. ASR failure/overload stops safely.
+
+Signals provide confidence-scored, evidence-backed guidance with configurable threshold, per-type cooldown, normalized evidence/action fingerprints, priority and expiry. Weak evidence is withheld and repeated issues do not spam nudges. Speaker labels use registered synthetic role/timing annotations; mixed-role/unknown chunks stay unknown. Diarization and token-level partial transcription remain unimplemented.
+
+[Actual quality and generated latency](docs/q4-latency-report.md) include CLI/rendered Chrome runs, per-window expected/emitted signals, FP/FN, suppression and persisted acknowledged samples. Capture delay (up to six seconds) and model warmup are separate from pipeline latency. Delivery includes the acknowledgement return trip. The llm_latency_ms field measures deterministic nudge construction by default; optional semantic classification belongs to signal time.
+
+## Results and evidence
+
+| Area | Evidence |
+|---|---|
+| Q1 voice agent | [Three calls, transcripts and checks](docs/q1-results.md) |
+| Q1 grounding | [Executed tool logs/citations](evaluations/voice/results.json), [Chrome check](evaluations/voice/browser-smoke.json) |
+| Q2 retrieval | [Eleven evaluated queries and safe miss](docs/q2-retrieval-evaluation.md) |
+| Q3 Philippines | [Two calls and localization examples](docs/q3-localization-report.md) |
+| Q3 Indonesia | [Two calls and accent observations](docs/q3-localization-report.md) |
+| Q4 real-time | [Chrome video](evaluations/realtime/live-demo.webm), [events](evaluations/realtime/browser-smoke.json) |
+| Q4 latency | [Generated P50/P95](docs/q4-latency-report.md), [samples](evaluations/realtime/latency.json) |
+| Q4 quality | [FP/FN and suppression](evaluations/realtime/results.json) |
+| Automated checks | [Final JUnit](evaluations/final-tests.xml), [handoff](docs/remaining-phases-verification.md) |
+
+Reports retain actual errors. Synthetic fixtures and mocked contracts do not certify human accuracy, production scale or compliance.
 
 ## Setup (PowerShell, repository root)
 
-Prerequisites: Python 3.12+; Node 20.19+ or 22.12+; Docker Desktop running for the default Qdrant configuration; Windows PowerShell 5.1 and David/Zira desktop voices for spoken output; the English desktop recognizer is needed only if selecting the legacy Windows ASR adapter. Download the default local Whisper model once with `scripts/setup_asr.py`. Cross-platform text/KB operation remains available; Windows speech errors fall back to typed replies. Verified here on Python 3.14.3 and Node 22.20.0. The tested dependencies are pinned in `backend/requirements-lock.txt` and `frontend/package-lock.json`.
+Tested on Python 3.14.3 and Node 22.20.0. Use Python 3.12+, Node 20.19+ or 22.12+, Docker Desktop for default Qdrant, and Windows PowerShell with David/Zira voices for English TTS/fixture generation. Recognition downloads pinned models once, then runs offline. Other operating systems have not been exercised.
 
 ```powershell
 python -m venv .venv
@@ -48,107 +85,85 @@ if (!(Test-Path .env)) { Copy-Item .env.example .env }
 docker compose up -d qdrant
 npm --prefix frontend ci
 .\.venv\Scripts\python.exe scripts/setup_asr.py
+.\.venv\Scripts\python.exe scripts/setup_localization.py
+.\.venv\Scripts\python.exe scripts/setup_accent_sample.py
 .\.venv\Scripts\python.exe scripts/ingest.py --rebuild
 powershell.exe -NoProfile -NonInteractive -File scripts/check_speech.ps1
 ```
 
-Run the backend in one terminal:
+The checked-in recordings/catalogue are ready to replay. Regenerate the Q4 fixture with scripts/create_realtime_fixtures.py if needed, and rerun it after regenerating Q1 audio to refresh replay metadata. The regional sample stays ignored and requires its setup script.
+
+Backend terminal:
 
 ```powershell
 .\.venv\Scripts\python.exe -m uvicorn app.main:app --app-dir backend --host 127.0.0.1 --port 8000 --no-access-log
 ```
 
-Run the frontend in another:
+Frontend terminal:
 
 ```powershell
 npm --prefix frontend run dev
 ```
 
-Check the API and ask a supported or unsupported question:
+Use explicit loopback URLs. For other ports, change VITE_API_BASE_URL/CORS_ORIGINS and restart Vite. QDRANT_URL= selects embedded Qdrant without Docker; stop the backend before CLI ingestion/evaluation because only one process may open that store. Tests use isolated in-memory Qdrant. Do not overwrite an existing .env when adding defaults.
+
+Verification (services running for browser/replay checks):
 
 ```powershell
-curl.exe http://127.0.0.1:8000/health
-Invoke-RestMethod -Uri http://127.0.0.1:8000/api/knowledge/answer -Method Post -ContentType 'application/json' -Body '{"query":"What is the processing fee?","product":"business_loan"}'
-Invoke-RestMethod -Uri http://127.0.0.1:8000/api/knowledge/answer -Method Post -ContentType 'application/json' -Body '{"query":"What cashback applies to lunar tourism?","product":"business_loan"}'
-```
-
-Use the explicit loopback addresses above: this machine has another listener on `localhost:8000` via IPv6. If either port is occupied on another machine, select a free backend/frontend port and update `VITE_API_BASE_URL`/`CORS_ORIGINS` in `.env`. Restart Vite after environment changes.
-
-Without Docker, set `QDRANT_URL=` in `.env` to use Qdrant's embedded persistent mode. **Stop the backend before running ingestion/evaluation CLI commands in this mode**, because only one process can open the local store. While the backend is running, ingestion through the HTTP API uses its existing client. Tests use isolated in-memory Qdrant and need neither Docker nor keys.
-
-On macOS/Linux replace `.\.venv\Scripts\python.exe` with `.venv/bin/python` and copy the environment file with `cp .env.example .env`. The pinned Windows environment was tested here; other OS/Python combinations have not been exercised.
-
-## Verification commands
-
-```powershell
-.\.venv\Scripts\python.exe -m pytest -q --junitxml=evaluations/phase-2-tests.xml
+.\.venv\Scripts\python.exe -m pytest -q --junitxml=evaluations/final-tests.xml
 npm --prefix frontend run build
 .\.venv\Scripts\python.exe scripts/evaluate_retrieval.py
-.\.venv\Scripts\python.exe scripts/evaluate_voice.py
 npm --prefix frontend run test:call
-.\.venv\Scripts\python.exe scripts/evaluate_microphone.py
+npm --prefix frontend run test:localization
+.\frontend\node_modules\.bin\playwright.cmd install ffmpeg
+.\.venv\Scripts\python.exe scripts/replay_audio.py --file data/audio/q4/q1_insights.wav --output evaluations/realtime/cli-insights.json
+.\.venv\Scripts\python.exe scripts/replay_audio.py --file data/audio/q1/cooperative.wav --output evaluations/realtime/cli-cooperative.json
+npm --prefix frontend run test:live
+.\.venv\Scripts\python.exe scripts/evaluate_realtime.py
+.\.venv\Scripts\python.exe scripts/summarize_evidence.py
 ```
 
-The evaluator writes `evaluations/retrieval/results.json` and `docs/q2-retrieval-evaluation.md`. **It exits 1 when any case is incomplete/incorrect**, including the documented local paraphrase miss; this is an honest evaluation result, not a script crash. A clean index must be ingested first.
+Run replays sequentially: one active replay is allowed. Retrieval evaluation intentionally exits 1 for the documented paraphrase miss; inspect its report. scripts/summarize_latency.py --call-id <id> regenerates selected persisted percentiles. Q4 evaluation selects the observed IDs and distinguishes CLI receipt from rendered Chrome acknowledgement.
 
-The voice evaluator requires a running backend and ingested KB. It writes three public **synthetic** WAV fixtures plus detailed JSON/transcripts and `docs/q1-results.md`. `--without-audio` runs controller-only checks on machines without Windows speech and marks audio evidence absent. The Chrome test requires the running frontend/backend, generated `probe_browser_faq.wav` and Chrome; set `CHROME_PATH` if installed elsewhere. It uses synthetic fake-microphone audio and saves a verification JSON.
-
-PDF fixtures are already included. To regenerate them:
-
-```powershell
-.\.venv\Scripts\python.exe scripts/create_fixtures.py
-```
-
-`--rebuild` replaces only the configured provider's knowledge collection. It prepares and validates a new collection before switching the active Qdrant alias. Failed extraction in a full rebuild aborts the switch; failed embeddings or staging writes preserve the prior active index. The command never deletes SQLite rows or another provider's namespace. Run a single ingestion writer at a time.
+Chrome uses its standard Windows path; set CHROME_PATH for another location. Playwright FFmpeg is needed only to regenerate screen video. Full Q1/Q3 reports regenerate with scripts/evaluate_voice.py and scripts/evaluate_localization.py; --without-audio marks absent speech. Browser checks use synthetic microphone input; playback acceleration is disclosed.
 
 ## Environment variables
 
-All configuration is documented in [.env.example](.env.example). Secrets are optional for the local demo:
+[.env.example](.env.example) documents every default; existing environments use defaults for omitted new values. Credentials are optional in the keyless demo.
 
-| Variable | Default / purpose |
+| Settings | Purpose |
 |---|---|
-| `APP_ENV`, `LOG_LEVEL` | Environment label and JSON application log level |
-| `CORS_ORIGINS` | JSON list of permitted frontend origins |
-| `DATABASE_URL` | SQLite relational state in `data/state/darwix.db` |
-| `QDRANT_URL`, `QDRANT_PATH`, `QDRANT_COLLECTION` | Remote service, embedded location, namespace prefix |
-| `QDRANT_API_KEY` | Optional secret for secured remote Qdrant |
-| `EMBEDDING_PROVIDER` | `hash` or `openai` |
-| `EMBEDDING_MODEL`, `EMBEDDING_DIMENSIONS` | Hosted model name and vector dimension; hash default is 512 |
-| `LLM_PROVIDER`, `LLM_MODEL` | `extractive` or `openai`, and hosted model name |
-| `OPENAI_API_KEY`, `OPENAI_BASE_URL` | Hosted-provider secret and API endpoint |
-| `PROVIDER_TIMEOUT_SECONDS` | Timeout for provider and retrieval operations; no automatic retries |
-| `RETRIEVAL_MIN_SCORE` | Cosine evidence threshold, 0.3 for the fixture baseline |
-| `NEAR_DUPLICATE_THRESHOLD` | Token Jaccard threshold, 0.88 |
-| `CHUNK_WORDS`, `CHUNK_OVERLAP_WORDS` | 400-word bound, 60-word overlap within long sections |
-| `TERMINOLOGY_PATH` | JSON terminology normalization map |
-| `GOVERNMENT_ID_PATTERNS` | JSON list of regex redaction patterns |
-| `VITE_API_BASE_URL` | Browser-accessible backend URL |
-| `QUALIFICATION_RULES_PATH` | Reviewed synthetic rules with source ID/version/checksum/quote |
-| `ASR_PROVIDER`, `ASR_LANGUAGE` | `whisper` local English by default; `windows` enables legacy `en-US` dictation |
-| `TTS_PROVIDER`, `TTS_VOICE` | `windows`, Microsoft David Desktop |
-| `VOICE_ASR_MIN_CONFIDENCE` | 0.55 for legacy Windows confidence; below threshold requires review/repetition |
-| `WHISPER_MODEL_NAME`, `WHISPER_MODEL_DIR` | `small.en`, ignored local model directory; `base.en` is a smaller alternative |
-| `WHISPER_CPU_THREADS`, `ASR_TIMEOUT_SECONDS`, `WHISPER_MIN_SCORE` | 2 threads, 30-second timeout, 0.37 decoder evidence threshold |
-| `VOICE_MAX_TURNS`, `VOICE_AUDIO_MAX_SECONDS` | 60 turns per call, 20 seconds per uploaded utterance (UI stops at 18) |
-| `RECORDINGS_DIR` | Private, ignored consented audio directory |
+| APP_ENV, LOG_LEVEL, CORS_ORIGINS, VITE_API_BASE_URL | Environment, redacted logs and browser URLs |
+| DATABASE_URL | SQLite state |
+| QDRANT_URL, QDRANT_PATH, QDRANT_COLLECTION, QDRANT_API_KEY | Remote/embedded vectors and optional secret |
+| EMBEDDING_PROVIDER, EMBEDDING_MODEL, EMBEDDING_DIMENSIONS | Hash default or hosted embeddings |
+| LLM_PROVIDER, LLM_MODEL, OPENAI_API_KEY, OPENAI_BASE_URL | Evidence/interpretation and optional hosted configuration |
+| PROVIDER_TIMEOUT_SECONDS, RETRIEVAL_MIN_SCORE | Time budget and evidence threshold |
+| CHUNK_WORDS, CHUNK_OVERLAP_WORDS, NEAR_DUPLICATE_THRESHOLD | Chunking/dedupe |
+| TERMINOLOGY_PATH, GOVERNMENT_ID_PATTERNS, QUALIFICATION_RULES_PATH | Normalization, redaction and reviewed rules |
+| ASR_PROVIDER, ASR_LANGUAGE, WHISPER_MODEL_NAME, WHISPER_MODEL_DIR | English small.en default or legacy Windows |
+| WHISPER_CPU_THREADS, ASR_TIMEOUT_SECONDS, WHISPER_MIN_SCORE, VOICE_ASR_MIN_CONFIDENCE | CPU bound and distinct decoder/legacy thresholds |
+| TTS_PROVIDER, TTS_VOICE | Windows English speech |
+| VOICE_MAX_TURNS, VOICE_AUDIO_MAX_SECONDS, RECORDINGS_DIR | Interactive limits/private recordings |
+| LOCALIZATION_WHISPER_MODEL_NAME, LOCALIZATION_WHISPER_MODEL_DIR, LOCALIZATION_ASR_TIMEOUT_SECONDS | Multilingual medium (small optional) and timeout |
+| LOCALIZATION_TTS_PROVIDER, LOCALIZATION_TTS_MODEL_DIR, LOCALIZATION_TTS_TIMEOUT_SECONDS | Local MMS and synthesis bound |
+| REALTIME_CHUNK_SECONDS, REALTIME_WINDOW_SECONDS, REALTIME_QUEUE_SIZE, REALTIME_MAX_SUBSCRIBERS | Six-second capture, 45-second context and bounds |
+| REALTIME_MIN_CONFIDENCE, REALTIME_COOLDOWNS, REALTIME_DUPLICATE_SECONDS, REALTIME_NUDGE_EXPIRY_SECONDS | Threshold, cooldown, fingerprints and expiry |
+| REALTIME_ACK_TIMEOUT_SECONDS, REALTIME_LLM_ENABLED | Measured delivery eligibility and opt-in classifier |
 
-To exercise hosted providers, manually supply a valid account key and choose `openai` for one or both adapters. Rebuild after changing embeddings, dimensions or terminology, rerun the evaluation, and recalibrate the confidence threshold for that model. Provider signatures isolate embedding spaces to prevent mixing incompatible vectors. The example model names are configuration examples, not a performance claim. The adapter follows the [official embeddings API](https://developers.openai.com/api/reference/resources/embeddings/methods/create) and [Structured Outputs contract](https://developers.openai.com/api/docs/guides/structured-outputs).
+For hosted AI, supply your account key, choose openai, rebuild after embedding changes and recalibrate thresholds. Q4 classification also needs REALTIME_LLM_ENABLED=true. Default evaluation makes no hosted AI calls. Restart the backend after model/config changes.
 
-## Manual intervention and current limits
+## Known limitations and manual intervention
 
-- Start Docker Desktop and the application processes; open the browser demo. Allow microphone access, use a headset, and validate a human spoken call and recording. No keys are required for the default mode.
-- A key was found in `.env.example` during this work. The template is now blank and the value was moved into ignored `.env`. **Rotate the exposed key before using hosted providers.**
-- Before using real business material, obtain approved sources, mark `synthetic: false` only when justified, update the manifest, review extraction/redaction/chunks, and rebuild. Do not put customer documents in this demo repository.
-- A live hosted-provider run requires your account key, access to the configured models and possible usage charges. No hosted calls were made during this implementation.
-- Human escalation/callbacks write local mock requests and never contact a person. Exact dates, availability and real appointment coordination require a human.
-- Local Whisper `small.en` replaces the weak Windows dictation baseline for recognition; Windows SAPI remains the TTS adapter. The user verified a spoken amount on Chrome with a laptop mic. This single check is not an accent/accuracy benchmark. Use a headset in noisy surroundings, review uncertain transcripts, and confirm recognized fields. No localization or streaming voice is claimed.
-- Model setup needs internet access to download the public pinned model revision once; recognition subsequently uses local files only and sends no audio to a hosted service. Install the pinned dependency lock: the tested PyAV version is compatible with faster-whisper 1.2.1.
-- The Windows 0.55 confidence and Whisper 0.37 decoder evidence thresholds use different scales. Neither is a calibrated accuracy percentage.
-- Qualification rules are reviewed configuration, not automatic policy extraction. Changes to policy sources/version/checksum/record IDs require manual rule review; stale evidence blocks eligibility.
-- PDF extraction requires a text layer; scanned PDFs need OCR. PDF heading recognition uses explicit heading markers in the fixture; ordinary PDF typography is kept page-by-page. Ambiguous dates use the documented day-first convention.
-- Regex PII detection is a baseline, not a complete privacy control. Amounts are preserved when clearly identified as currency/turnover. Phone-like unlabeled numbers are conservatively redacted. Source metadata must also be reviewed before real ingestion.
-- Near duplicates are retained to avoid erasing conflicting amounts or rules. This phase reports similarity; it does not reconcile contradictions. The manual source review is required before using real policy data.
-- The public prototype API has no authentication. Keep it on loopback. Production needs access control, approved retention, encryption, audited source/version management, provider quality testing and proper schema migrations.
-- Snapshot index replacement is suitable for a small corpus and a single ingestion writer. Multiple API workers/CLI writers need distributed coordination; large corpora need batch indexing and production rollout procedures.
+- Native-speaker listening, consented recordings in both markets and approved-source/compliance review remain required. Q3 Filipino/Taglish accuracy is limited on the small probe set; review uncertain text and confirm risky details.
+- Callback/escalation records are mock requests. A human arranges actual contact; account verification, payment, renewal, fee waivers and final approval are outside this prototype.
+- MMS is CC BY-NC 4.0; corpus audio has separate noncommercial/redistribution conditions. Commercial licenses/providers and regional legal review need owner intervention.
+- A previously exposed provider key needs owner-side rotation if still valid. .env is ignored; .env.example has blank secrets.
+- Regex PII handling is a baseline; scanned PDFs need OCR. Chunk/source metadata and rules require review. Near duplicates are flagged rather than reconciled.
+- Q4 uses synthetic English recordings, final fixed chunks and offline role annotations. There is no real-call diarization, token streaming, crash resume or calibrated signal probability. One active replay is a CPU limit; capture/warmup are excluded from pipeline percentiles.
+- The API has no authentication. Keep it on loopback; production needs access control, retention, encryption, provider/license review, proper migrations, ingestion coordination and load tests.
+- No public deployment or external submission has been performed. Upload the required evaluator links through the owner's chosen channel after review.
 
-The broader assessment remains incomplete until Phases 3 through 7 provide the localization, real-time and submission evidence described in the supplied instructions.
+## Production improvements
+
+[Production plan](docs/production-improvements.md) covers ten-times-traffic design, sessions/connections, bounded workloads, quotas, fan-out, observability, noisy audio, reliability, audit, consent and privacy. These are proposed changes, not implemented infrastructure.

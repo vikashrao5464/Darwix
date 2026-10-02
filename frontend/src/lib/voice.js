@@ -18,7 +18,7 @@ export function encodeWave(chunks, rate) {
 
 export async function audioRequest(path, blob) {
   const response = await fetch(`${base}${path}`, {
-    method: 'POST', headers: { 'Content-Type': 'audio/wav' }, body: blob, signal: AbortSignal.timeout(30000),
+    method: 'POST', headers: { 'Content-Type': 'audio/wav' }, body: blob, signal: AbortSignal.timeout(75000),
   });
   if (!response.ok) throw new Error(`Audio request failed (${response.status}). Please type your reply or retry.`);
   return response.json();
@@ -42,7 +42,7 @@ export class BrowserAudio {
   }
 
   async speak(callId, turnId) {
-    const response = await fetch(`${base}/api/voice/calls/${callId}/speech/${turnId}`, { signal: AbortSignal.timeout(15000) });
+    const response = await fetch(`${base}/api/voice/calls/${callId}/speech/${turnId}`, { signal: AbortSignal.timeout(75000) });
     if (!response.ok) throw new Error('Spoken output unavailable. Read the agent reply below.');
     const data = await response.arrayBuffer();
     if (!this.ctx || this.ctx.state === 'closed') return;

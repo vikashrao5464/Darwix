@@ -16,7 +16,7 @@ class WhisperASRProvider:
         self.settings = settings
         self.slots = asyncio.Semaphore(1)
 
-    async def transcribe(self, audio):
+    async def transcribe(self, audio, language="en"):
         model = self.settings.whisper_model_dir
         if not model.is_absolute():
             model = ROOT / model
@@ -30,6 +30,7 @@ class WhisperASRProvider:
                     sys.executable, "-m", "app.providers.whisper_worker",
                     "--model", str(model), "--input", str(source), "--output", str(output),
                     "--threads", str(self.settings.whisper_cpu_threads),
+                    "--language", language or "auto",
                     cwd=str(ROOT / "backend"),
                     stdout=asyncio.subprocess.DEVNULL, stderr=asyncio.subprocess.DEVNULL,
                     creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0,

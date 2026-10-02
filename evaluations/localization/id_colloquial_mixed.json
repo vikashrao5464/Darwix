@@ -1,0 +1,695 @@
+{
+  "id": "id_colloquial_mixed",
+  "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+  "scenario": "id_installment",
+  "input_mode": "scripted text; not human microphone calls",
+  "audio_kind": "synthesized from actual executed replies",
+  "observations": [
+    {
+      "input": "Ya",
+      "expected": {
+        "text": "Ya",
+        "expect": "grounded"
+      },
+      "reply": {
+        "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+        "turn_id": "turn_0",
+        "text": "Ini contoh demo, ya: Di contoh demo ini, cicilannya tujuh ratus lima puluh ribu rupiah, bayar paling lambat tanggal lima belas Oktober dua ribu dua puluh enam, ya. Ini bukan tagihan beneran. Ada yang mau ditanyain, atau mau ditelepon lagi?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [
+          {
+            "record_id": "kb_id_reminder_colloquial_b15bf364ad42d989",
+            "source": "data/raw/id_reminder_colloquial.json",
+            "source_type": "json",
+            "page": null,
+            "section": "reminder",
+            "version": "1.0",
+            "synthetic": true
+          }
+        ],
+        "tools_called": [
+          "search_knowledge"
+        ],
+        "grounded": true,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 3,
+        "scenario": "id_installment",
+        "language_state": {
+          "market": "ID",
+          "primary_language": "id",
+          "register": "colloquial",
+          "last_detected_language": "id-colloquial",
+          "preferred_response_language": "id-colloquial"
+        },
+        "reminder_status": "discussing"
+      },
+      "passed": true,
+      "request_ms": 29
+    },
+    {
+      "input": "Apa DP itu, aku nggak ngerti?",
+      "expected": {
+        "text": "Apa DP itu, aku nggak ngerti?",
+        "expect": "grounded",
+        "language": "id-colloquial"
+      },
+      "reply": {
+        "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+        "turn_id": "turn_1",
+        "text": "Ini contoh demo, ya: DP itu uang muka sesuai perjanjian pembiayaan. Jumlahnya perlu dicek di dokumen; demo ini belum punya info itu.",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [
+          {
+            "record_id": "kb_id_reminder_colloquial_fe52ee3b8d47b27d",
+            "source": "data/raw/id_reminder_colloquial.json",
+            "source_type": "json",
+            "page": null,
+            "section": "DP",
+            "version": "1.0",
+            "synthetic": true
+          }
+        ],
+        "tools_called": [
+          "search_knowledge"
+        ],
+        "grounded": true,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 4,
+        "scenario": "id_installment",
+        "language_state": {
+          "market": "ID",
+          "primary_language": "id",
+          "register": "colloquial",
+          "last_detected_language": "id-colloquial",
+          "preferred_response_language": "id-colloquial"
+        },
+        "reminder_status": "discussing"
+      },
+      "passed": true,
+      "request_ms": 29
+    },
+    {
+      "input": "Cash flow sulit, perlu callback",
+      "expected": {
+        "text": "Cash flow sulit, perlu callback",
+        "expect": "difficulty",
+        "language": "id-en-mixed"
+      },
+      "reply": {
+        "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+        "turn_id": "turn_2",
+        "text": "Saya paham cash flow sedang sulit. Saya tidak bisa menjanjikan fee waiver atau perpanjangan due date. Perlu callback?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 5,
+        "scenario": "id_installment",
+        "language_state": {
+          "market": "ID",
+          "primary_language": "id",
+          "register": "mixed",
+          "last_detected_language": "id-en-mixed",
+          "preferred_response_language": "id-en-mixed"
+        },
+        "reminder_status": "discussing"
+      },
+      "passed": true,
+      "request_ms": 9
+    },
+    {
+      "input": "Minta callback",
+      "expected": {
+        "text": "Minta callback",
+        "expect": "callback_prompt"
+      },
+      "reply": {
+        "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+        "turn_id": "turn_3",
+        "text": "Hari dan jam berapa yang cocok untuk callback?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 6,
+        "scenario": "id_installment",
+        "language_state": {
+          "market": "ID",
+          "primary_language": "id",
+          "register": "mixed",
+          "last_detected_language": "id-en-mixed",
+          "preferred_response_language": "id-en-mixed"
+        },
+        "reminder_status": "discussing"
+      },
+      "passed": true,
+      "request_ms": 8
+    },
+    {
+      "input": "Besok jam tiga",
+      "expected": {
+        "text": "Besok jam tiga",
+        "expect": "callback"
+      },
+      "reply": {
+        "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+        "turn_id": "turn_4",
+        "text": "Preferensi callback dicatat dalam demo. Jadwal tetap perlu konfirmasi petugas.",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [
+          "schedule_callback"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": "cb_b21bd0ff515b523e8056b63f3f152ad0",
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 7,
+        "scenario": "id_installment",
+        "language_state": {
+          "market": "ID",
+          "primary_language": "id",
+          "register": "mixed",
+          "last_detected_language": "id-en-mixed",
+          "preferred_response_language": "id-en-mixed"
+        },
+        "reminder_status": "callback_requested"
+      },
+      "passed": true,
+      "request_ms": 12
+    },
+    {
+      "input": "xyz zzz",
+      "expected": {
+        "text": "xyz zzz",
+        "expect": "fallback",
+        "language": "id-en-mixed"
+      },
+      "reply": {
+        "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+        "turn_id": "turn_5",
+        "text": "Info itu belum verified. Mau berbicara dengan petugas?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [],
+        "grounded": false,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 8,
+        "scenario": "id_installment",
+        "language_state": {
+          "market": "ID",
+          "primary_language": "id",
+          "register": "mixed",
+          "last_detected_language": "id-en-mixed",
+          "preferred_response_language": "id-en-mixed"
+        },
+        "reminder_status": "callback_requested"
+      },
+      "passed": true,
+      "request_ms": 8
+    },
+    {
+      "input": "Aku mau petugas",
+      "expected": {
+        "text": "Aku mau petugas",
+        "expect": "escalated",
+        "language": "id-colloquial"
+      },
+      "reply": {
+        "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+        "turn_id": "turn_6",
+        "text": "Permintaan ngobrol sama petugas sudah dicatat di demo. Belum ada yang dihubungi.",
+        "status": "escalated",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [
+          "request_human_escalation"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": "esc_b21bd0ff515b523e8056b63f3f152ad0",
+        "recording_allowed": false,
+        "revision": 10,
+        "scenario": "id_installment",
+        "language_state": {
+          "market": "ID",
+          "primary_language": "id",
+          "register": "colloquial",
+          "last_detected_language": "id-colloquial",
+          "preferred_response_language": "id-colloquial"
+        },
+        "reminder_status": "escalation_requested"
+      },
+      "passed": true,
+      "request_ms": 10
+    }
+  ],
+  "passed": true,
+  "audio": "data/audio/q3/id_colloquial_mixed.wav",
+  "timeline": [
+    {
+      "speaker": "agent",
+      "text": "Halo, ini demo pengingat cicilan, ya. Boleh kita lanjut?",
+      "start_ms": 0,
+      "end_ms": 4080
+    },
+    {
+      "speaker": "customer",
+      "text": "Ya",
+      "start_ms": 4580,
+      "end_ms": 5284
+    },
+    {
+      "speaker": "agent",
+      "text": "Ini contoh demo, ya: Di contoh demo ini, cicilannya tujuh ratus lima puluh ribu rupiah, bayar paling lambat tanggal lima belas Oktober dua ribu dua puluh enam, ya. Ini bukan tagihan beneran. Ada yang mau ditanyain, atau mau ditelepon lagi?",
+      "start_ms": 5784,
+      "end_ms": 24568
+    },
+    {
+      "speaker": "customer",
+      "text": "Apa DP itu, aku nggak ngerti?",
+      "start_ms": 25068,
+      "end_ms": 27868
+    },
+    {
+      "speaker": "agent",
+      "text": "Ini contoh demo, ya: DP itu uang muka sesuai perjanjian pembiayaan. Jumlahnya perlu dicek di dokumen; demo ini belum punya info itu.",
+      "start_ms": 28368,
+      "end_ms": 37888
+    },
+    {
+      "speaker": "customer",
+      "text": "Cash flow sulit, perlu callback",
+      "start_ms": 38388,
+      "end_ms": 40964
+    },
+    {
+      "speaker": "agent",
+      "text": "Saya paham cash flow sedang sulit. Saya tidak bisa menjanjikan fee waiver atau perpanjangan due date. Perlu callback?",
+      "start_ms": 41464,
+      "end_ms": 51784
+    },
+    {
+      "speaker": "customer",
+      "text": "Minta callback",
+      "start_ms": 52284,
+      "end_ms": 53996
+    },
+    {
+      "speaker": "agent",
+      "text": "Hari dan jam berapa yang cocok untuk callback?",
+      "start_ms": 54496,
+      "end_ms": 58384
+    },
+    {
+      "speaker": "customer",
+      "text": "Besok jam tiga",
+      "start_ms": 58884,
+      "end_ms": 60500
+    },
+    {
+      "speaker": "agent",
+      "text": "Preferensi callback dicatat dalam demo. Jadwal tetap perlu konfirmasi petugas.",
+      "start_ms": 61000,
+      "end_ms": 67784
+    },
+    {
+      "speaker": "customer",
+      "text": "xyz zzz",
+      "start_ms": 68284,
+      "end_ms": 69116
+    },
+    {
+      "speaker": "agent",
+      "text": "Info itu belum verified. Mau berbicara dengan petugas?",
+      "start_ms": 69616,
+      "end_ms": 74112
+    },
+    {
+      "speaker": "customer",
+      "text": "Aku mau petugas",
+      "start_ms": 74612,
+      "end_ms": 76308
+    },
+    {
+      "speaker": "agent",
+      "text": "Permintaan ngobrol sama petugas sudah dicatat di demo. Belum ada yang dihubungi.",
+      "start_ms": 76808,
+      "end_ms": 82648
+    }
+  ]
+}

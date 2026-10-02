@@ -1,0 +1,3534 @@
+{
+  "calls": [
+    {
+      "id": "ph_cooperative",
+      "call_id": "call_c839ff0c57a54778aab390eabe46fbd2",
+      "scenario": "ph_renewal",
+      "input_mode": "scripted text; not human microphone calls",
+      "audio_kind": "synthesized from actual executed replies",
+      "observations": [
+        {
+          "input": "Yes",
+          "expected": {
+            "text": "Yes",
+            "expect": "grounded"
+          },
+          "reply": {
+            "call_id": "call_c839ff0c57a54778aab390eabe46fbd2",
+            "turn_id": "turn_0",
+            "text": "Synthetic demo information: In this synthetic example, the life-insurance premium is one thousand five hundred Philippine pesos, due on October fifteenth, two thousand twenty-six. This is not a real account or payment request. Would you like to discuss the reminder or request a callback?",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [
+              {
+                "record_id": "kb_ph_reminder_en_07f327dd44587b90",
+                "source": "data/raw/ph_reminder_en.json",
+                "source_type": "json",
+                "page": null,
+                "section": "reminder",
+                "version": "1.0",
+                "synthetic": true
+              }
+            ],
+            "tools_called": [
+              "search_knowledge"
+            ],
+            "grounded": true,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 3,
+            "scenario": "ph_renewal",
+            "language_state": {
+              "market": "PH",
+              "primary_language": "en",
+              "register": "english",
+              "last_detected_language": "en",
+              "preferred_response_language": "en"
+            },
+            "reminder_status": "discussing"
+          },
+          "passed": true,
+          "request_ms": 33
+        },
+        {
+          "input": "What is a premium?",
+          "expected": {
+            "text": "What is a premium?",
+            "expect": "grounded"
+          },
+          "reply": {
+            "call_id": "call_c839ff0c57a54778aab390eabe46fbd2",
+            "turn_id": "turn_1",
+            "text": "Synthetic demo information: A premium is the amount paid for the policy. This demo cannot verify a payment, renew a policy, or promise that coverage continues.",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [
+              {
+                "record_id": "kb_ph_reminder_en_15155c0656cf1312",
+                "source": "data/raw/ph_reminder_en.json",
+                "source_type": "json",
+                "page": null,
+                "section": "premium",
+                "version": "1.0",
+                "synthetic": true
+              }
+            ],
+            "tools_called": [
+              "search_knowledge"
+            ],
+            "grounded": true,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 4,
+            "scenario": "ph_renewal",
+            "language_state": {
+              "market": "PH",
+              "primary_language": "en",
+              "register": "english",
+              "last_detected_language": "en",
+              "preferred_response_language": "en"
+            },
+            "reminder_status": "discussing"
+          },
+          "passed": true,
+          "request_ms": 19
+        },
+        {
+          "input": "Ano po ang beneficiary?",
+          "expected": {
+            "text": "Ano po ang beneficiary?",
+            "expect": "grounded",
+            "language": "fil-en"
+          },
+          "reply": {
+            "call_id": "call_c839ff0c57a54778aab390eabe46fbd2",
+            "turn_id": "turn_2",
+            "text": "Demo lang po ito: Ang beneficiary po ang taong pinili ninyong tumanggap ng benefits ayon sa policy. Representative ang kailangan para mag-update; hindi ito kayang baguhin ng demo.",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [
+              {
+                "record_id": "kb_ph_reminder_taglish_5d36237e7c0c6ad8",
+                "source": "data/raw/ph_reminder_taglish.json",
+                "source_type": "json",
+                "page": null,
+                "section": "beneficiary",
+                "version": "1.0",
+                "synthetic": true
+              }
+            ],
+            "tools_called": [
+              "search_knowledge"
+            ],
+            "grounded": true,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 5,
+            "scenario": "ph_renewal",
+            "language_state": {
+              "market": "PH",
+              "primary_language": "fil",
+              "register": "taglish",
+              "last_detected_language": "fil-en",
+              "preferred_response_language": "fil-en"
+            },
+            "reminder_status": "discussing"
+          },
+          "passed": true,
+          "request_ms": 27
+        },
+        {
+          "input": "Bayad na po",
+          "expected": {
+            "text": "Bayad na po",
+            "expect": "active",
+            "language": "fil"
+          },
+          "reply": {
+            "call_id": "call_c839ff0c57a54778aab390eabe46fbd2",
+            "turn_id": "turn_3",
+            "text": "Sinabi ninyong nakapagbayad na. Pakikumpirma po; hindi kayang beripikahin ng halimbawang ito ang bayad.",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [],
+            "grounded": null,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 6,
+            "scenario": "ph_renewal",
+            "language_state": {
+              "market": "PH",
+              "primary_language": "fil",
+              "register": "filipino",
+              "last_detected_language": "fil",
+              "preferred_response_language": "fil"
+            },
+            "reminder_status": "discussing"
+          },
+          "passed": true,
+          "request_ms": 9
+        },
+        {
+          "input": "Opo",
+          "expected": {
+            "text": "Opo",
+            "expect": "completed",
+            "language": "fil"
+          },
+          "reply": {
+            "call_id": "call_c839ff0c57a54778aab390eabe46fbd2",
+            "turn_id": "turn_4",
+            "text": "Naitala ang sinabi ninyong nakapagbayad na. Hindi pa beripikado ang bayad at walang segurong na-renew dito.",
+            "status": "completed",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [],
+            "grounded": null,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 7,
+            "scenario": "ph_renewal",
+            "language_state": {
+              "market": "PH",
+              "primary_language": "fil",
+              "register": "filipino",
+              "last_detected_language": "fil",
+              "preferred_response_language": "fil"
+            },
+            "reminder_status": "customer_reports_paid"
+          },
+          "passed": true,
+          "request_ms": 9
+        }
+      ],
+      "passed": true,
+      "audio": "data/audio/q3/ph_cooperative.wav",
+      "timeline": [
+        {
+          "speaker": "agent",
+          "text": "Hello. This is a synthetic life-insurance renewal reminder. May we continue? Please say yes or no.",
+          "start_ms": 0,
+          "end_ms": 8808
+        },
+        {
+          "speaker": "customer",
+          "text": "Yes",
+          "start_ms": 9308,
+          "end_ms": 10583
+        },
+        {
+          "speaker": "agent",
+          "text": "Synthetic demo information: In this synthetic example, the life-insurance premium is one thousand five hundred Philippine pesos, due on October fifteenth, two thousand twenty-six. This is not a real account or payment request. Would you like to discuss the reminder or request a callback?",
+          "start_ms": 11083,
+          "end_ms": 31149
+        },
+        {
+          "speaker": "customer",
+          "text": "What is a premium?",
+          "start_ms": 31649,
+          "end_ms": 33483
+        },
+        {
+          "speaker": "agent",
+          "text": "Synthetic demo information: A premium is the amount paid for the policy. This demo cannot verify a payment, renew a policy, or promise that coverage continues.",
+          "start_ms": 33983,
+          "end_ms": 45836
+        },
+        {
+          "speaker": "customer",
+          "text": "Ano po ang beneficiary?",
+          "start_ms": 46336,
+          "end_ms": 48352
+        },
+        {
+          "speaker": "agent",
+          "text": "Demo lang po ito: Ang beneficiary po ang taong pinili ninyong tumanggap ng benefits ayon sa policy. Representative ang kailangan para mag-update; hindi ito kayang baguhin ng demo.",
+          "start_ms": 48852,
+          "end_ms": 61620
+        },
+        {
+          "speaker": "customer",
+          "text": "Bayad na po",
+          "start_ms": 62120,
+          "end_ms": 63288
+        },
+        {
+          "speaker": "agent",
+          "text": "Sinabi ninyong nakapagbayad na. Pakikumpirma po; hindi kayang beripikahin ng halimbawang ito ang bayad.",
+          "start_ms": 63788,
+          "end_ms": 70988
+        },
+        {
+          "speaker": "customer",
+          "text": "Opo",
+          "start_ms": 71488,
+          "end_ms": 72256
+        },
+        {
+          "speaker": "agent",
+          "text": "Naitala ang sinabi ninyong nakapagbayad na. Hindi pa beripikado ang bayad at walang segurong na-renew dito.",
+          "start_ms": 72756,
+          "end_ms": 80036
+        }
+      ]
+    },
+    {
+      "id": "ph_objection_callback",
+      "call_id": "call_a17f6db6d2ea4c85bbdc942f061a7cf6",
+      "scenario": "ph_renewal",
+      "input_mode": "scripted text; not human microphone calls",
+      "audio_kind": "synthesized from actual executed replies",
+      "observations": [
+        {
+          "input": "Opo",
+          "expected": {
+            "text": "Opo",
+            "expect": "grounded"
+          },
+          "reply": {
+            "call_id": "call_a17f6db6d2ea4c85bbdc942f061a7cf6",
+            "turn_id": "turn_0",
+            "text": "Kathang-isip na halimbawa: Sa kathang-isip na halimbawa, ang hulog sa seguro sa buhay ay isang libo at limang daang piso. Takda ito sa ika-labinlima ng Oktubre, dalawang libo dalawampu't anim. Hindi ito tunay na account o singilan. May tanong po ba kayo, o gusto ninyong magpatawag muli?",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [
+              {
+                "record_id": "kb_ph_reminder_fil_d976b23db7c4d816",
+                "source": "data/raw/ph_reminder_fil.json",
+                "source_type": "json",
+                "page": null,
+                "section": "reminder",
+                "version": "1.0",
+                "synthetic": true
+              }
+            ],
+            "tools_called": [
+              "search_knowledge"
+            ],
+            "grounded": true,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 3,
+            "scenario": "ph_renewal",
+            "language_state": {
+              "market": "PH",
+              "primary_language": "fil",
+              "register": "filipino",
+              "last_detected_language": "fil",
+              "preferred_response_language": "fil"
+            },
+            "reminder_status": "discussing"
+          },
+          "passed": true,
+          "request_ms": 19
+        },
+        {
+          "input": "xyz zzz",
+          "expected": {
+            "text": "xyz zzz",
+            "expect": "fallback",
+            "language": "fil"
+          },
+          "reply": {
+            "call_id": "call_a17f6db6d2ea4c85bbdc942f061a7cf6",
+            "turn_id": "turn_1",
+            "text": "Wala po akong beripikadong impormasyon tungkol diyan. Gusto po ba ninyong makausap ang isang kinatawan?",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [],
+            "grounded": false,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 4,
+            "scenario": "ph_renewal",
+            "language_state": {
+              "market": "PH",
+              "primary_language": "fil",
+              "register": "filipino",
+              "last_detected_language": "fil",
+              "preferred_response_language": "fil"
+            },
+            "reminder_status": "discussing"
+          },
+          "passed": true,
+          "request_ms": 19
+        },
+        {
+          "input": "Wala po akong pera ngayon",
+          "expected": {
+            "text": "Wala po akong pera ngayon",
+            "expect": "difficulty"
+          },
+          "reply": {
+            "call_id": "call_a17f6db6d2ea4c85bbdc942f061a7cf6",
+            "turn_id": "turn_2",
+            "text": "Naiintindihan ko po na mahirap magbayad ngayon. Hindi ako makapangangako ng palugit o pagbabago sa saklaw ng seguro. Gusto po ba ninyong magpatawag muli?",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [],
+            "grounded": null,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 5,
+            "scenario": "ph_renewal",
+            "language_state": {
+              "market": "PH",
+              "primary_language": "fil",
+              "register": "filipino",
+              "last_detected_language": "fil",
+              "preferred_response_language": "fil"
+            },
+            "reminder_status": "discussing"
+          },
+          "passed": true,
+          "request_ms": 9
+        },
+        {
+          "input": "Pwede po bang callback?",
+          "expected": {
+            "text": "Pwede po bang callback?",
+            "expect": "callback_prompt",
+            "language": "fil-en"
+          },
+          "reply": {
+            "call_id": "call_a17f6db6d2ea4c85bbdc942f061a7cf6",
+            "turn_id": "turn_3",
+            "text": "Anong araw at oras po kayo available for a callback?",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [],
+            "grounded": null,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 6,
+            "scenario": "ph_renewal",
+            "language_state": {
+              "market": "PH",
+              "primary_language": "fil",
+              "register": "taglish",
+              "last_detected_language": "fil-en",
+              "preferred_response_language": "fil-en"
+            },
+            "reminder_status": "discussing"
+          },
+          "passed": true,
+          "request_ms": 8
+        },
+        {
+          "input": "Bukas alas tres",
+          "expected": {
+            "text": "Bukas alas tres",
+            "expect": "callback",
+            "language": "fil"
+          },
+          "reply": {
+            "call_id": "call_a17f6db6d2ea4c85bbdc942f061a7cf6",
+            "turn_id": "turn_4",
+            "text": "Naitala ang gusto ninyong oras sa halimbawang kahilingan. Kailangan pa itong kumpirmahin ng tagapag-ugnay.",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [
+              "schedule_callback"
+            ],
+            "grounded": null,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": "cb_a6717d95c670550a9f4dec9eb72d84d0",
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 8,
+            "scenario": "ph_renewal",
+            "language_state": {
+              "market": "PH",
+              "primary_language": "fil",
+              "register": "filipino",
+              "last_detected_language": "fil",
+              "preferred_response_language": "fil"
+            },
+            "reminder_status": "callback_requested"
+          },
+          "passed": true,
+          "request_ms": 12
+        },
+        {
+          "input": "Gusto ko po ng kinatawan",
+          "expected": {
+            "text": "Gusto ko po ng kinatawan",
+            "expect": "escalated"
+          },
+          "reply": {
+            "call_id": "call_a17f6db6d2ea4c85bbdc942f061a7cf6",
+            "turn_id": "turn_5",
+            "text": "Naitala ko po ang halimbawang kahilingang makausap ang kinatawan. Wala pang taong nakontak.",
+            "status": "escalated",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [
+              "request_human_escalation"
+            ],
+            "grounded": null,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": "esc_a6717d95c670550a9f4dec9eb72d84d0",
+            "recording_allowed": false,
+            "revision": 9,
+            "scenario": "ph_renewal",
+            "language_state": {
+              "market": "PH",
+              "primary_language": "fil",
+              "register": "filipino",
+              "last_detected_language": "fil",
+              "preferred_response_language": "fil"
+            },
+            "reminder_status": "escalation_requested"
+          },
+          "passed": true,
+          "request_ms": 12
+        }
+      ],
+      "passed": true,
+      "audio": "data/audio/q3/ph_objection_callback.wav",
+      "timeline": [
+        {
+          "speaker": "agent",
+          "text": "Magandang araw po. Paalala ito para sa pag-renew ng seguro sa buhay sa isang kathang-isip na halimbawa. Maaari po ba tayong magpatuloy?",
+          "start_ms": 0,
+          "end_ms": 8800
+        },
+        {
+          "speaker": "customer",
+          "text": "Opo",
+          "start_ms": 9300,
+          "end_ms": 10068
+        },
+        {
+          "speaker": "agent",
+          "text": "Kathang-isip na halimbawa: Sa kathang-isip na halimbawa, ang hulog sa seguro sa buhay ay isang libo at limang daang piso. Takda ito sa ika-labinlima ng Oktubre, dalawang libo dalawampu't anim. Hindi ito tunay na account o singilan. May tanong po ba kayo, o gusto ninyong magpatawag muli?",
+          "start_ms": 10568,
+          "end_ms": 33288
+        },
+        {
+          "speaker": "customer",
+          "text": "xyz zzz",
+          "start_ms": 33788,
+          "end_ms": 34716
+        },
+        {
+          "speaker": "agent",
+          "text": "Wala po akong beripikadong impormasyon tungkol diyan. Gusto po ba ninyong makausap ang isang kinatawan?",
+          "start_ms": 35216,
+          "end_ms": 43136
+        },
+        {
+          "speaker": "customer",
+          "text": "Wala po akong pera ngayon",
+          "start_ms": 43636,
+          "end_ms": 45764
+        },
+        {
+          "speaker": "agent",
+          "text": "Naiintindihan ko po na mahirap magbayad ngayon. Hindi ako makapangangako ng palugit o pagbabago sa saklaw ng seguro. Gusto po ba ninyong magpatawag muli?",
+          "start_ms": 46264,
+          "end_ms": 56920
+        },
+        {
+          "speaker": "customer",
+          "text": "Pwede po bang callback?",
+          "start_ms": 57420,
+          "end_ms": 59372
+        },
+        {
+          "speaker": "agent",
+          "text": "Anong araw at oras po kayo available for a callback?",
+          "start_ms": 59872,
+          "end_ms": 64688
+        },
+        {
+          "speaker": "customer",
+          "text": "Bukas alas tres",
+          "start_ms": 65188,
+          "end_ms": 66980
+        },
+        {
+          "speaker": "agent",
+          "text": "Naitala ang gusto ninyong oras sa halimbawang kahilingan. Kailangan pa itong kumpirmahin ng tagapag-ugnay.",
+          "start_ms": 67480,
+          "end_ms": 74616
+        },
+        {
+          "speaker": "customer",
+          "text": "Gusto ko po ng kinatawan",
+          "start_ms": 75116,
+          "end_ms": 77356
+        },
+        {
+          "speaker": "agent",
+          "text": "Naitala ko po ang halimbawang kahilingang makausap ang kinatawan. Wala pang taong nakontak.",
+          "start_ms": 77856,
+          "end_ms": 84464
+        }
+      ]
+    },
+    {
+      "id": "id_cooperative_formal",
+      "call_id": "call_0c82e032900d4473b36c1822dbd0d931",
+      "scenario": "id_installment",
+      "input_mode": "scripted text; not human microphone calls",
+      "audio_kind": "synthesized from actual executed replies",
+      "observations": [
+        {
+          "input": "Ya",
+          "expected": {
+            "text": "Ya",
+            "expect": "grounded"
+          },
+          "reply": {
+            "call_id": "call_0c82e032900d4473b36c1822dbd0d931",
+            "turn_id": "turn_0",
+            "text": "Informasi simulasi: Dalam contoh simulasi, angsuran pembiayaan konsumen sebesar tujuh ratus lima puluh ribu rupiah jatuh tempo pada tanggal lima belas Oktober dua ribu dua puluh enam. Ini bukan rekening atau tagihan nyata. Apakah ada pertanyaan, atau Anda ingin meminta panggilan kembali?",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [
+              {
+                "record_id": "kb_id_reminder_formal_9b6929e49abb3c1d",
+                "source": "data/raw/id_reminder_formal.json",
+                "source_type": "json",
+                "page": null,
+                "section": "reminder",
+                "version": "1.0",
+                "synthetic": true
+              }
+            ],
+            "tools_called": [
+              "search_knowledge"
+            ],
+            "grounded": true,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 3,
+            "scenario": "id_installment",
+            "language_state": {
+              "market": "ID",
+              "primary_language": "id",
+              "register": "formal",
+              "last_detected_language": "id-formal",
+              "preferred_response_language": "id-formal"
+            },
+            "reminder_status": "discussing"
+          },
+          "passed": true,
+          "request_ms": 30
+        },
+        {
+          "input": "Mohon jelaskan tenor",
+          "expected": {
+            "text": "Mohon jelaskan tenor",
+            "expect": "grounded",
+            "language": "id-formal"
+          },
+          "reply": {
+            "call_id": "call_0c82e032900d4473b36c1822dbd0d931",
+            "turn_id": "turn_1",
+            "text": "Informasi simulasi: Tenor adalah jangka waktu pembiayaan dalam perjanjian. Simulasi ini tidak dapat mengubah tenor atau menjanjikan perpanjangan.",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [
+              {
+                "record_id": "kb_id_reminder_formal_04d9fbfac7d082e3",
+                "source": "data/raw/id_reminder_formal.json",
+                "source_type": "json",
+                "page": null,
+                "section": "tenor",
+                "version": "1.0",
+                "synthetic": true
+              }
+            ],
+            "tools_called": [
+              "search_knowledge"
+            ],
+            "grounded": true,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 4,
+            "scenario": "id_installment",
+            "language_state": {
+              "market": "ID",
+              "primary_language": "id",
+              "register": "formal",
+              "last_detected_language": "id-formal",
+              "preferred_response_language": "id-formal"
+            },
+            "reminder_status": "discussing"
+          },
+          "passed": true,
+          "request_ms": 30
+        },
+        {
+          "input": "Saya sudah membayar",
+          "expected": {
+            "text": "Saya sudah membayar",
+            "expect": "active"
+          },
+          "reply": {
+            "call_id": "call_0c82e032900d4473b36c1822dbd0d931",
+            "turn_id": "turn_2",
+            "text": "Anda menyatakan sudah membayar. Mohon konfirmasi; simulasi ini tidak dapat memverifikasi pembayaran.",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [],
+            "grounded": null,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 5,
+            "scenario": "id_installment",
+            "language_state": {
+              "market": "ID",
+              "primary_language": "id",
+              "register": "formal",
+              "last_detected_language": "id-formal",
+              "preferred_response_language": "id-formal"
+            },
+            "reminder_status": "discussing"
+          },
+          "passed": true,
+          "request_ms": 8
+        },
+        {
+          "input": "Ya",
+          "expected": {
+            "text": "Ya",
+            "expect": "completed"
+          },
+          "reply": {
+            "call_id": "call_0c82e032900d4473b36c1822dbd0d931",
+            "turn_id": "turn_3",
+            "text": "Pernyataan Anda bahwa pembayaran sudah dilakukan telah dicatat. Pembayaran belum diverifikasi.",
+            "status": "completed",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [],
+            "grounded": null,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 6,
+            "scenario": "id_installment",
+            "language_state": {
+              "market": "ID",
+              "primary_language": "id",
+              "register": "formal",
+              "last_detected_language": "id-formal",
+              "preferred_response_language": "id-formal"
+            },
+            "reminder_status": "customer_reports_paid"
+          },
+          "passed": true,
+          "request_ms": 9
+        }
+      ],
+      "passed": true,
+      "audio": "data/audio/q3/id_cooperative_formal.wav",
+      "timeline": [
+        {
+          "speaker": "agent",
+          "text": "Selamat siang. Ini pengingat angsuran pembiayaan konsumen dalam simulasi. Apakah Anda bersedia melanjutkan?",
+          "start_ms": 0,
+          "end_ms": 9520
+        },
+        {
+          "speaker": "customer",
+          "text": "Ya",
+          "start_ms": 10020,
+          "end_ms": 10724
+        },
+        {
+          "speaker": "agent",
+          "text": "Informasi simulasi: Dalam contoh simulasi, angsuran pembiayaan konsumen sebesar tujuh ratus lima puluh ribu rupiah jatuh tempo pada tanggal lima belas Oktober dua ribu dua puluh enam. Ini bukan rekening atau tagihan nyata. Apakah ada pertanyaan, atau Anda ingin meminta panggilan kembali?",
+          "start_ms": 11224,
+          "end_ms": 36472
+        },
+        {
+          "speaker": "customer",
+          "text": "Mohon jelaskan tenor",
+          "start_ms": 36972,
+          "end_ms": 39052
+        },
+        {
+          "speaker": "agent",
+          "text": "Informasi simulasi: Tenor adalah jangka waktu pembiayaan dalam perjanjian. Simulasi ini tidak dapat mengubah tenor atau menjanjikan perpanjangan.",
+          "start_ms": 39552,
+          "end_ms": 50800
+        },
+        {
+          "speaker": "customer",
+          "text": "Saya sudah membayar",
+          "start_ms": 51300,
+          "end_ms": 53396
+        },
+        {
+          "speaker": "agent",
+          "text": "Anda menyatakan sudah membayar. Mohon konfirmasi; simulasi ini tidak dapat memverifikasi pembayaran.",
+          "start_ms": 53896,
+          "end_ms": 62136
+        },
+        {
+          "speaker": "customer",
+          "text": "Ya",
+          "start_ms": 62636,
+          "end_ms": 63340
+        },
+        {
+          "speaker": "agent",
+          "text": "Pernyataan Anda bahwa pembayaran sudah dilakukan telah dicatat. Pembayaran belum diverifikasi.",
+          "start_ms": 63840,
+          "end_ms": 70832
+        }
+      ]
+    },
+    {
+      "id": "id_colloquial_mixed",
+      "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+      "scenario": "id_installment",
+      "input_mode": "scripted text; not human microphone calls",
+      "audio_kind": "synthesized from actual executed replies",
+      "observations": [
+        {
+          "input": "Ya",
+          "expected": {
+            "text": "Ya",
+            "expect": "grounded"
+          },
+          "reply": {
+            "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+            "turn_id": "turn_0",
+            "text": "Ini contoh demo, ya: Di contoh demo ini, cicilannya tujuh ratus lima puluh ribu rupiah, bayar paling lambat tanggal lima belas Oktober dua ribu dua puluh enam, ya. Ini bukan tagihan beneran. Ada yang mau ditanyain, atau mau ditelepon lagi?",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [
+              {
+                "record_id": "kb_id_reminder_colloquial_b15bf364ad42d989",
+                "source": "data/raw/id_reminder_colloquial.json",
+                "source_type": "json",
+                "page": null,
+                "section": "reminder",
+                "version": "1.0",
+                "synthetic": true
+              }
+            ],
+            "tools_called": [
+              "search_knowledge"
+            ],
+            "grounded": true,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 3,
+            "scenario": "id_installment",
+            "language_state": {
+              "market": "ID",
+              "primary_language": "id",
+              "register": "colloquial",
+              "last_detected_language": "id-colloquial",
+              "preferred_response_language": "id-colloquial"
+            },
+            "reminder_status": "discussing"
+          },
+          "passed": true,
+          "request_ms": 29
+        },
+        {
+          "input": "Apa DP itu, aku nggak ngerti?",
+          "expected": {
+            "text": "Apa DP itu, aku nggak ngerti?",
+            "expect": "grounded",
+            "language": "id-colloquial"
+          },
+          "reply": {
+            "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+            "turn_id": "turn_1",
+            "text": "Ini contoh demo, ya: DP itu uang muka sesuai perjanjian pembiayaan. Jumlahnya perlu dicek di dokumen; demo ini belum punya info itu.",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [
+              {
+                "record_id": "kb_id_reminder_colloquial_fe52ee3b8d47b27d",
+                "source": "data/raw/id_reminder_colloquial.json",
+                "source_type": "json",
+                "page": null,
+                "section": "DP",
+                "version": "1.0",
+                "synthetic": true
+              }
+            ],
+            "tools_called": [
+              "search_knowledge"
+            ],
+            "grounded": true,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 4,
+            "scenario": "id_installment",
+            "language_state": {
+              "market": "ID",
+              "primary_language": "id",
+              "register": "colloquial",
+              "last_detected_language": "id-colloquial",
+              "preferred_response_language": "id-colloquial"
+            },
+            "reminder_status": "discussing"
+          },
+          "passed": true,
+          "request_ms": 29
+        },
+        {
+          "input": "Cash flow sulit, perlu callback",
+          "expected": {
+            "text": "Cash flow sulit, perlu callback",
+            "expect": "difficulty",
+            "language": "id-en-mixed"
+          },
+          "reply": {
+            "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+            "turn_id": "turn_2",
+            "text": "Saya paham cash flow sedang sulit. Saya tidak bisa menjanjikan fee waiver atau perpanjangan due date. Perlu callback?",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [],
+            "grounded": null,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 5,
+            "scenario": "id_installment",
+            "language_state": {
+              "market": "ID",
+              "primary_language": "id",
+              "register": "mixed",
+              "last_detected_language": "id-en-mixed",
+              "preferred_response_language": "id-en-mixed"
+            },
+            "reminder_status": "discussing"
+          },
+          "passed": true,
+          "request_ms": 9
+        },
+        {
+          "input": "Minta callback",
+          "expected": {
+            "text": "Minta callback",
+            "expect": "callback_prompt"
+          },
+          "reply": {
+            "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+            "turn_id": "turn_3",
+            "text": "Hari dan jam berapa yang cocok untuk callback?",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [],
+            "grounded": null,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 6,
+            "scenario": "id_installment",
+            "language_state": {
+              "market": "ID",
+              "primary_language": "id",
+              "register": "mixed",
+              "last_detected_language": "id-en-mixed",
+              "preferred_response_language": "id-en-mixed"
+            },
+            "reminder_status": "discussing"
+          },
+          "passed": true,
+          "request_ms": 8
+        },
+        {
+          "input": "Besok jam tiga",
+          "expected": {
+            "text": "Besok jam tiga",
+            "expect": "callback"
+          },
+          "reply": {
+            "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+            "turn_id": "turn_4",
+            "text": "Preferensi callback dicatat dalam demo. Jadwal tetap perlu konfirmasi petugas.",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [
+              "schedule_callback"
+            ],
+            "grounded": null,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": "cb_b21bd0ff515b523e8056b63f3f152ad0",
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 7,
+            "scenario": "id_installment",
+            "language_state": {
+              "market": "ID",
+              "primary_language": "id",
+              "register": "mixed",
+              "last_detected_language": "id-en-mixed",
+              "preferred_response_language": "id-en-mixed"
+            },
+            "reminder_status": "callback_requested"
+          },
+          "passed": true,
+          "request_ms": 12
+        },
+        {
+          "input": "xyz zzz",
+          "expected": {
+            "text": "xyz zzz",
+            "expect": "fallback",
+            "language": "id-en-mixed"
+          },
+          "reply": {
+            "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+            "turn_id": "turn_5",
+            "text": "Info itu belum verified. Mau berbicara dengan petugas?",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [],
+            "grounded": false,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 8,
+            "scenario": "id_installment",
+            "language_state": {
+              "market": "ID",
+              "primary_language": "id",
+              "register": "mixed",
+              "last_detected_language": "id-en-mixed",
+              "preferred_response_language": "id-en-mixed"
+            },
+            "reminder_status": "callback_requested"
+          },
+          "passed": true,
+          "request_ms": 8
+        },
+        {
+          "input": "Aku mau petugas",
+          "expected": {
+            "text": "Aku mau petugas",
+            "expect": "escalated",
+            "language": "id-colloquial"
+          },
+          "reply": {
+            "call_id": "call_efae046756c0459794dd31e0fae0d3c4",
+            "turn_id": "turn_6",
+            "text": "Permintaan ngobrol sama petugas sudah dicatat di demo. Belum ada yang dihubungi.",
+            "status": "escalated",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [
+              "request_human_escalation"
+            ],
+            "grounded": null,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": "esc_b21bd0ff515b523e8056b63f3f152ad0",
+            "recording_allowed": false,
+            "revision": 10,
+            "scenario": "id_installment",
+            "language_state": {
+              "market": "ID",
+              "primary_language": "id",
+              "register": "colloquial",
+              "last_detected_language": "id-colloquial",
+              "preferred_response_language": "id-colloquial"
+            },
+            "reminder_status": "escalation_requested"
+          },
+          "passed": true,
+          "request_ms": 10
+        }
+      ],
+      "passed": true,
+      "audio": "data/audio/q3/id_colloquial_mixed.wav",
+      "timeline": [
+        {
+          "speaker": "agent",
+          "text": "Halo, ini demo pengingat cicilan, ya. Boleh kita lanjut?",
+          "start_ms": 0,
+          "end_ms": 4080
+        },
+        {
+          "speaker": "customer",
+          "text": "Ya",
+          "start_ms": 4580,
+          "end_ms": 5284
+        },
+        {
+          "speaker": "agent",
+          "text": "Ini contoh demo, ya: Di contoh demo ini, cicilannya tujuh ratus lima puluh ribu rupiah, bayar paling lambat tanggal lima belas Oktober dua ribu dua puluh enam, ya. Ini bukan tagihan beneran. Ada yang mau ditanyain, atau mau ditelepon lagi?",
+          "start_ms": 5784,
+          "end_ms": 24568
+        },
+        {
+          "speaker": "customer",
+          "text": "Apa DP itu, aku nggak ngerti?",
+          "start_ms": 25068,
+          "end_ms": 27868
+        },
+        {
+          "speaker": "agent",
+          "text": "Ini contoh demo, ya: DP itu uang muka sesuai perjanjian pembiayaan. Jumlahnya perlu dicek di dokumen; demo ini belum punya info itu.",
+          "start_ms": 28368,
+          "end_ms": 37888
+        },
+        {
+          "speaker": "customer",
+          "text": "Cash flow sulit, perlu callback",
+          "start_ms": 38388,
+          "end_ms": 40964
+        },
+        {
+          "speaker": "agent",
+          "text": "Saya paham cash flow sedang sulit. Saya tidak bisa menjanjikan fee waiver atau perpanjangan due date. Perlu callback?",
+          "start_ms": 41464,
+          "end_ms": 51784
+        },
+        {
+          "speaker": "customer",
+          "text": "Minta callback",
+          "start_ms": 52284,
+          "end_ms": 53996
+        },
+        {
+          "speaker": "agent",
+          "text": "Hari dan jam berapa yang cocok untuk callback?",
+          "start_ms": 54496,
+          "end_ms": 58384
+        },
+        {
+          "speaker": "customer",
+          "text": "Besok jam tiga",
+          "start_ms": 58884,
+          "end_ms": 60500
+        },
+        {
+          "speaker": "agent",
+          "text": "Preferensi callback dicatat dalam demo. Jadwal tetap perlu konfirmasi petugas.",
+          "start_ms": 61000,
+          "end_ms": 67784
+        },
+        {
+          "speaker": "customer",
+          "text": "xyz zzz",
+          "start_ms": 68284,
+          "end_ms": 69116
+        },
+        {
+          "speaker": "agent",
+          "text": "Info itu belum verified. Mau berbicara dengan petugas?",
+          "start_ms": 69616,
+          "end_ms": 74112
+        },
+        {
+          "speaker": "customer",
+          "text": "Aku mau petugas",
+          "start_ms": 74612,
+          "end_ms": 76308
+        },
+        {
+          "speaker": "agent",
+          "text": "Permintaan ngobrol sama petugas sudah dicatat di demo. Belum ada yang dihubungi.",
+          "start_ms": 76808,
+          "end_ms": 82648
+        }
+      ]
+    }
+  ],
+  "speech_probes": [
+    {
+      "case": "ph_english",
+      "language": "en",
+      "expected_text": "What is a premium?",
+      "audio": "data/audio/q3/probe_ph_english.wav",
+      "audio_kind": "synthetic speech, not a human accuracy benchmark",
+      "result": {
+        "accepted": true,
+        "confidence": 0.6507005980856972,
+        "audio": {
+          "audio_duration_ms": 1834,
+          "audio_rms_dbfs": -22.2,
+          "audio_peak_dbfs": -1.5,
+          "clipping_fraction": 0.0,
+          "normalization_gain": 1.07
+        },
+        "transcript": "What is a premium?",
+        "reply": {
+          "call_id": "call_b8a5ee7d8ddc4789a9d4331ae2b61447",
+          "turn_id": "probe",
+          "text": "Synthetic demo information: A premium is the amount paid for the policy. This demo cannot verify a payment, renew a policy, or promise that coverage continues.",
+          "status": "active",
+          "qualification": {
+            "fields": {
+              "requested_amount": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_type": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_age_months": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "annual_turnover": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "existing_loan": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "city": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "callback_preference": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              }
+            }
+          },
+          "next_field": "requested_amount",
+          "citations": [
+            {
+              "record_id": "kb_ph_reminder_en_15155c0656cf1312",
+              "source": "data/raw/ph_reminder_en.json",
+              "source_type": "json",
+              "page": null,
+              "section": "premium",
+              "version": "1.0",
+              "synthetic": true
+            }
+          ],
+          "tools_called": [
+            "search_knowledge"
+          ],
+          "grounded": true,
+          "eligibility": null,
+          "lead_id": null,
+          "callback_id": null,
+          "escalation_id": null,
+          "recording_allowed": false,
+          "revision": 4,
+          "scenario": "ph_renewal",
+          "language_state": {
+            "market": "PH",
+            "primary_language": "en",
+            "register": "english",
+            "last_detected_language": "en",
+            "preferred_response_language": "en"
+          },
+          "reminder_status": "discussing"
+        }
+      },
+      "intended_behavior_reached": true,
+      "request_ms": 16171,
+      "word_errors": {
+        "edit_distance": 0,
+        "reference_words": 4,
+        "word_error_rate": 0.0
+      }
+    },
+    {
+      "case": "ph_filipino",
+      "language": "fil",
+      "expected_text": "Ano ang hulog?",
+      "audio": "data/audio/q3/probe_ph_filipino.wav",
+      "audio_kind": "synthetic speech, not a human accuracy benchmark",
+      "result": {
+        "accepted": true,
+        "confidence": 0.6135645449607618,
+        "audio": {
+          "audio_duration_ms": 1280,
+          "audio_rms_dbfs": -20.3,
+          "audio_peak_dbfs": -6.9,
+          "clipping_fraction": 0.0,
+          "normalization_gain": 1.98
+        },
+        "transcript": "No ang hulog.",
+        "reply": {
+          "call_id": "call_33209c94a7e246758dd37289905f34f4",
+          "turn_id": "probe",
+          "text": "Wala po akong beripikadong impormasyon tungkol diyan. Gusto po ba ninyong makausap ang isang kinatawan?",
+          "status": "active",
+          "qualification": {
+            "fields": {
+              "requested_amount": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_type": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_age_months": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "annual_turnover": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "existing_loan": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "city": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "callback_preference": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              }
+            }
+          },
+          "next_field": "requested_amount",
+          "citations": [],
+          "tools_called": [],
+          "grounded": false,
+          "eligibility": null,
+          "lead_id": null,
+          "callback_id": null,
+          "escalation_id": null,
+          "recording_allowed": false,
+          "revision": 4,
+          "scenario": "ph_renewal",
+          "language_state": {
+            "market": "PH",
+            "primary_language": "fil",
+            "register": "filipino",
+            "last_detected_language": "fil",
+            "preferred_response_language": "fil"
+          },
+          "reminder_status": "discussing"
+        }
+      },
+      "intended_behavior_reached": false,
+      "request_ms": 15347,
+      "word_errors": {
+        "edit_distance": 1,
+        "reference_words": 3,
+        "word_error_rate": 0.3333
+      }
+    },
+    {
+      "case": "ph_taglish",
+      "language": "fil-en",
+      "expected_text": "Ano po ang premium?",
+      "audio": "data/audio/q3/probe_ph_taglish.wav",
+      "audio_kind": "synthetic speech, not a human accuracy benchmark",
+      "result": {
+        "accepted": true,
+        "confidence": 0.5393701972671745,
+        "audio": {
+          "audio_duration_ms": 1680,
+          "audio_rms_dbfs": -19.6,
+          "audio_peak_dbfs": -7.2,
+          "clipping_fraction": 0.0,
+          "normalization_gain": 2.07
+        },
+        "transcript": "To po ang pinyo.",
+        "reply": {
+          "call_id": "call_d3af02ad9cba4d8196530f106d30e227",
+          "turn_id": "probe",
+          "text": "Wala po akong verified info tungkol diyan. Gusto po ba ninyong makausap ang isang representative?",
+          "status": "active",
+          "qualification": {
+            "fields": {
+              "requested_amount": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_type": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_age_months": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "annual_turnover": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "existing_loan": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "city": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "callback_preference": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              }
+            }
+          },
+          "next_field": "requested_amount",
+          "citations": [],
+          "tools_called": [],
+          "grounded": false,
+          "eligibility": null,
+          "lead_id": null,
+          "callback_id": null,
+          "escalation_id": null,
+          "recording_allowed": false,
+          "revision": 4,
+          "scenario": "ph_renewal",
+          "language_state": {
+            "market": "PH",
+            "primary_language": "fil",
+            "register": "taglish",
+            "last_detected_language": "fil-en",
+            "preferred_response_language": "fil-en"
+          },
+          "reminder_status": "discussing"
+        }
+      },
+      "intended_behavior_reached": false,
+      "request_ms": 24843,
+      "word_errors": {
+        "edit_distance": 2,
+        "reference_words": 4,
+        "word_error_rate": 0.5
+      }
+    },
+    {
+      "case": "id_formal",
+      "language": "id-formal",
+      "expected_text": "Apa tenor itu?",
+      "audio": "data/audio/q3/probe_id_formal.wav",
+      "audio_kind": "synthetic speech, not a human accuracy benchmark",
+      "result": {
+        "accepted": true,
+        "confidence": 0.6308951342582354,
+        "audio": {
+          "audio_duration_ms": 1312,
+          "audio_rms_dbfs": -17.6,
+          "audio_peak_dbfs": -3.4,
+          "clipping_fraction": 0.0,
+          "normalization_gain": 1.33
+        },
+        "transcript": "Apa tenor itu?",
+        "reply": {
+          "call_id": "call_cef025241c46436496c58c06efbcdd0f",
+          "turn_id": "probe",
+          "text": "Informasi simulasi: Tenor adalah jangka waktu pembiayaan dalam perjanjian. Simulasi ini tidak dapat mengubah tenor atau menjanjikan perpanjangan.",
+          "status": "active",
+          "qualification": {
+            "fields": {
+              "requested_amount": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_type": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_age_months": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "annual_turnover": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "existing_loan": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "city": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "callback_preference": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              }
+            }
+          },
+          "next_field": "requested_amount",
+          "citations": [
+            {
+              "record_id": "kb_id_reminder_formal_04d9fbfac7d082e3",
+              "source": "data/raw/id_reminder_formal.json",
+              "source_type": "json",
+              "page": null,
+              "section": "tenor",
+              "version": "1.0",
+              "synthetic": true
+            }
+          ],
+          "tools_called": [
+            "search_knowledge"
+          ],
+          "grounded": true,
+          "eligibility": null,
+          "lead_id": null,
+          "callback_id": null,
+          "escalation_id": null,
+          "recording_allowed": false,
+          "revision": 4,
+          "scenario": "id_installment",
+          "language_state": {
+            "market": "ID",
+            "primary_language": "id",
+            "register": "formal",
+            "last_detected_language": "id-formal",
+            "preferred_response_language": "id-formal"
+          },
+          "reminder_status": "discussing"
+        }
+      },
+      "intended_behavior_reached": true,
+      "request_ms": 13354,
+      "word_errors": {
+        "edit_distance": 0,
+        "reference_words": 3,
+        "word_error_rate": 0.0
+      }
+    },
+    {
+      "case": "id_colloquial",
+      "language": "id-colloquial",
+      "expected_text": "Apa cicilan itu, aku nggak ngerti?",
+      "audio": "data/audio/q3/probe_id_colloquial.wav",
+      "audio_kind": "synthetic speech, not a human accuracy benchmark",
+      "result": {
+        "accepted": true,
+        "confidence": 0.6742481888881503,
+        "audio": {
+          "audio_duration_ms": 3200,
+          "audio_rms_dbfs": -18.9,
+          "audio_peak_dbfs": -3.5,
+          "clipping_fraction": 0.0,
+          "normalization_gain": 1.35
+        },
+        "transcript": "Apa cicilan itu, aku nggak ngerti.",
+        "reply": {
+          "call_id": "call_a215b9ce702a4d9397c6342d5dc63319",
+          "turn_id": "probe",
+          "text": "Ini contoh demo, ya: Cicilan atau angsuran itu pembayaran rutin sesuai perjanjian pembiayaan. Demo ini nggak bisa menerima atau cek pembayaran.",
+          "status": "active",
+          "qualification": {
+            "fields": {
+              "requested_amount": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_type": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_age_months": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "annual_turnover": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "existing_loan": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "city": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "callback_preference": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              }
+            }
+          },
+          "next_field": "requested_amount",
+          "citations": [
+            {
+              "record_id": "kb_id_reminder_colloquial_d3f3b3e4b1a1607d",
+              "source": "data/raw/id_reminder_colloquial.json",
+              "source_type": "json",
+              "page": null,
+              "section": "cicilan",
+              "version": "1.0",
+              "synthetic": true
+            }
+          ],
+          "tools_called": [
+            "search_knowledge"
+          ],
+          "grounded": true,
+          "eligibility": null,
+          "lead_id": null,
+          "callback_id": null,
+          "escalation_id": null,
+          "recording_allowed": false,
+          "revision": 4,
+          "scenario": "id_installment",
+          "language_state": {
+            "market": "ID",
+            "primary_language": "id",
+            "register": "colloquial",
+            "last_detected_language": "id-colloquial",
+            "preferred_response_language": "id-colloquial"
+          },
+          "reminder_status": "discussing"
+        }
+      },
+      "intended_behavior_reached": true,
+      "request_ms": 13671,
+      "word_errors": {
+        "edit_distance": 0,
+        "reference_words": 6,
+        "word_error_rate": 0.0
+      }
+    },
+    {
+      "case": "id_mixed",
+      "language": "id-en-mixed",
+      "expected_text": "Apa down payment itu?",
+      "audio": "data/audio/q3/probe_id_mixed.wav",
+      "audio_kind": "synthetic speech, not a human accuracy benchmark",
+      "result": {
+        "accepted": true,
+        "confidence": 0.6661226342521361,
+        "audio": {
+          "audio_duration_ms": 1728,
+          "audio_rms_dbfs": -16.4,
+          "audio_peak_dbfs": -2.5,
+          "clipping_fraction": 0.0,
+          "normalization_gain": 1.2
+        },
+        "transcript": "Apa down payment itu?",
+        "reply": {
+          "call_id": "call_7c21b26eb5384cf7aa10e672c2d2eddd",
+          "turn_id": "probe",
+          "text": "Info demo: DP atau down payment adalah uang muka sesuai perjanjian pembiayaan. Amount DP perlu verified document; demo belum punya nominalnya.",
+          "status": "active",
+          "qualification": {
+            "fields": {
+              "requested_amount": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_type": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "business_age_months": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "annual_turnover": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "existing_loan": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "city": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              },
+              "callback_preference": {
+                "value": null,
+                "status": "missing",
+                "source_turn_id": null,
+                "candidates": []
+              }
+            }
+          },
+          "next_field": "requested_amount",
+          "citations": [
+            {
+              "record_id": "kb_id_reminder_mixed_b37a7e840069d3c3",
+              "source": "data/raw/id_reminder_mixed.json",
+              "source_type": "json",
+              "page": null,
+              "section": "DP",
+              "version": "1.0",
+              "synthetic": true
+            }
+          ],
+          "tools_called": [
+            "search_knowledge"
+          ],
+          "grounded": true,
+          "eligibility": null,
+          "lead_id": null,
+          "callback_id": null,
+          "escalation_id": null,
+          "recording_allowed": false,
+          "revision": 4,
+          "scenario": "id_installment",
+          "language_state": {
+            "market": "ID",
+            "primary_language": "id",
+            "register": "mixed",
+            "last_detected_language": "id-en-mixed",
+            "preferred_response_language": "id-en-mixed"
+          },
+          "reminder_status": "discussing"
+        }
+      },
+      "intended_behavior_reached": true,
+      "request_ms": 13256,
+      "word_errors": {
+        "edit_distance": 0,
+        "reference_words": 4,
+        "word_error_rate": 0.0
+      }
+    }
+  ],
+  "regional_accent": {
+    "dataset": "INDspeech_NEWS_LVCSR",
+    "source": "https://github.com/s-sakti/data_indsp_news_lvcsr",
+    "revision": "ecd9b8bb6d6567d1f486dd60c97497788781034c",
+    "license": "CC BY-NC-SA 4.0; publisher prohibits public dataset copies",
+    "citation": "Sakti et al. (2008), Development of Indonesian Large Vocabulary Continuous Speech Recognition System within A-STAR Project",
+    "publisher_sample": "Ind001/Ind001_F_B_C_news_0000.wav",
+    "path": "data/state/accent/Ind001_F_B_C_news_0000.wav",
+    "accent": "Batak",
+    "description": "Original human regional-accent Indonesian clean news speech; not a finance call or synthesized accent.",
+    "duration_seconds": 2.66,
+    "sha256": "10c29b65039b05b26234652ca0b06955ca65d02097ff8bcd04da19fbddfa6f3a",
+    "reference_line": "|S|\nelza\nsyarief\nmengaku\n|E|",
+    "redistributed_audio": false,
+    "status": "run",
+    "asr_provider": "faster-whisper 1.2.1",
+    "model": "medium multilingual",
+    "configured_language": "id",
+    "reference_text": "elza syarief mengaku",
+    "observed_transcript": "Elsa Syarif mengaku.",
+    "decoder_score": 0.6924678970971353,
+    "exact_words_match": false,
+    "word_errors": {
+      "edit_distance": 2,
+      "reference_words": 3,
+      "word_error_rate": 0.6667
+    },
+    "fallback_needed": false,
+    "terminology_errors": "Not applicable: this news utterance has no required finance terms.",
+    "request_ms": 12918,
+    "limitations": "One short clean sample from one speaker; no accent robustness or noisy-finance-call claim. Native-speaker/compliance validation still required."
+  },
+  "providers": {
+    "asr": "faster-whisper 1.2.1, medium multilingual, CPU int8",
+    "tts": "facebook/mms-tts-tgl and facebook/mms-tts-ind; Windows David for English"
+  },
+  "scripted_checks_passed": true,
+  "previous_speech_observations": {
+    "providers": {
+      "asr": "faster-whisper 1.2.1, small multilingual, CPU int8",
+      "tts": "facebook/mms-tts-tgl and facebook/mms-tts-ind; Windows David for English"
+    },
+    "speech_probes": [
+      {
+        "case": "ph_english",
+        "language": "en",
+        "expected_text": "What is a premium?",
+        "audio": "data/audio/q3/probe_ph_english.wav",
+        "audio_kind": "synthetic speech, not a human accuracy benchmark",
+        "result": {
+          "accepted": true,
+          "confidence": 0.6959575221204779,
+          "audio": {
+            "audio_duration_ms": 1834,
+            "audio_rms_dbfs": -22.2,
+            "audio_peak_dbfs": -1.5,
+            "clipping_fraction": 0.0,
+            "normalization_gain": 1.07
+          },
+          "transcript": "What is a premium?",
+          "reply": {
+            "call_id": "call_f7cbff7c085540fc905a72bd36c903cc",
+            "turn_id": "probe",
+            "text": "Synthetic demo information: A premium is the amount paid for the policy. This demo cannot verify a payment, renew a policy, or promise that coverage continues.",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [
+              {
+                "record_id": "kb_ph_reminder_en_15155c0656cf1312",
+                "source": "data/raw/ph_reminder_en.json",
+                "source_type": "json",
+                "page": null,
+                "section": "premium",
+                "version": "1.0",
+                "synthetic": true
+              }
+            ],
+            "tools_called": [
+              "search_knowledge"
+            ],
+            "grounded": true,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 4,
+            "scenario": "ph_renewal",
+            "language_state": {
+              "market": "PH",
+              "primary_language": "en",
+              "register": "english",
+              "last_detected_language": "en",
+              "preferred_response_language": "en"
+            },
+            "reminder_status": "discussing"
+          }
+        },
+        "intended_behavior_reached": true,
+        "request_ms": 3979,
+        "word_errors": {
+          "edit_distance": 0,
+          "reference_words": 4,
+          "word_error_rate": 0.0
+        }
+      },
+      {
+        "case": "ph_filipino",
+        "language": "fil",
+        "expected_text": "Ano ang hulog?",
+        "audio": "data/audio/q3/probe_ph_filipino.wav",
+        "audio_kind": "synthetic speech, not a human accuracy benchmark",
+        "result": {
+          "accepted": true,
+          "confidence": 0.5271870429599194,
+          "audio": {
+            "audio_duration_ms": 1280,
+            "audio_rms_dbfs": -20.3,
+            "audio_peak_dbfs": -6.9,
+            "clipping_fraction": 0.0,
+            "normalization_gain": 1.98
+          },
+          "transcript": "No one hulot.",
+          "reply": {
+            "call_id": "call_34f58cb4c33647babb90155e12a8c956",
+            "turn_id": "probe",
+            "text": "Wala po akong beripikadong impormasyon tungkol diyan. Gusto po ba ninyong makausap ang isang kinatawan?",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [],
+            "grounded": false,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 4,
+            "scenario": "ph_renewal",
+            "language_state": {
+              "market": "PH",
+              "primary_language": "fil",
+              "register": "filipino",
+              "last_detected_language": "fil",
+              "preferred_response_language": "fil"
+            },
+            "reminder_status": "discussing"
+          }
+        },
+        "intended_behavior_reached": false,
+        "request_ms": 4046,
+        "word_errors": {
+          "edit_distance": 3,
+          "reference_words": 3,
+          "word_error_rate": 1.0
+        }
+      },
+      {
+        "case": "ph_taglish",
+        "language": "fil-en",
+        "expected_text": "Ano po ang premium?",
+        "audio": "data/audio/q3/probe_ph_taglish.wav",
+        "audio_kind": "synthetic speech, not a human accuracy benchmark",
+        "result": {
+          "accepted": true,
+          "confidence": 0.5701401026650809,
+          "audio": {
+            "audio_duration_ms": 1680,
+            "audio_rms_dbfs": -19.6,
+            "audio_peak_dbfs": -7.2,
+            "clipping_fraction": 0.0,
+            "normalization_gain": 2.07
+          },
+          "transcript": "Tupo ang piniyo.",
+          "reply": {
+            "call_id": "call_7931a3885321489599d792d700c183ef",
+            "turn_id": "probe",
+            "text": "Wala po akong beripikadong impormasyon tungkol diyan. Gusto po ba ninyong makausap ang isang kinatawan?",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [],
+            "grounded": false,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 4,
+            "scenario": "ph_renewal",
+            "language_state": {
+              "market": "PH",
+              "primary_language": "fil",
+              "register": "filipino",
+              "last_detected_language": "fil",
+              "preferred_response_language": "fil"
+            },
+            "reminder_status": "discussing"
+          }
+        },
+        "intended_behavior_reached": false,
+        "request_ms": 6853,
+        "word_errors": {
+          "edit_distance": 3,
+          "reference_words": 4,
+          "word_error_rate": 0.75
+        }
+      },
+      {
+        "case": "id_formal",
+        "language": "id-formal",
+        "expected_text": "Apa tenor itu?",
+        "audio": "data/audio/q3/probe_id_formal.wav",
+        "audio_kind": "synthetic speech, not a human accuracy benchmark",
+        "result": {
+          "accepted": true,
+          "confidence": 0.6273113415236171,
+          "audio": {
+            "audio_duration_ms": 1312,
+            "audio_rms_dbfs": -17.6,
+            "audio_peak_dbfs": -3.4,
+            "clipping_fraction": 0.0,
+            "normalization_gain": 1.33
+          },
+          "transcript": "Apa tenor itu?",
+          "reply": {
+            "call_id": "call_87b7ec80d7ab4d17aa03bf4a029674dc",
+            "turn_id": "probe",
+            "text": "Informasi simulasi: Tenor adalah jangka waktu pembiayaan dalam perjanjian. Simulasi ini tidak dapat mengubah tenor atau menjanjikan perpanjangan.",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [
+              {
+                "record_id": "kb_id_reminder_formal_04d9fbfac7d082e3",
+                "source": "data/raw/id_reminder_formal.json",
+                "source_type": "json",
+                "page": null,
+                "section": "tenor",
+                "version": "1.0",
+                "synthetic": true
+              }
+            ],
+            "tools_called": [
+              "search_knowledge"
+            ],
+            "grounded": true,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 4,
+            "scenario": "id_installment",
+            "language_state": {
+              "market": "ID",
+              "primary_language": "id",
+              "register": "formal",
+              "last_detected_language": "id-formal",
+              "preferred_response_language": "id-formal"
+            },
+            "reminder_status": "discussing"
+          }
+        },
+        "intended_behavior_reached": true,
+        "request_ms": 4575,
+        "word_errors": {
+          "edit_distance": 0,
+          "reference_words": 3,
+          "word_error_rate": 0.0
+        }
+      },
+      {
+        "case": "id_colloquial",
+        "language": "id-colloquial",
+        "expected_text": "Apa cicilan itu, aku nggak ngerti?",
+        "audio": "data/audio/q3/probe_id_colloquial.wav",
+        "audio_kind": "synthetic speech, not a human accuracy benchmark",
+        "result": {
+          "accepted": true,
+          "confidence": 0.6113973579242348,
+          "audio": {
+            "audio_duration_ms": 3200,
+            "audio_rms_dbfs": -18.9,
+            "audio_peak_dbfs": -3.5,
+            "clipping_fraction": 0.0,
+            "normalization_gain": 1.35
+          },
+          "transcript": "Apakah cicilan itu aku mengerti?",
+          "reply": {
+            "call_id": "call_fb0f31f49e5a4b8aa602011d79e84313",
+            "turn_id": "probe",
+            "text": "Info itu belum bisa aku pastikan. Mau ngobrol sama petugas?",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [],
+            "grounded": false,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 4,
+            "scenario": "id_installment",
+            "language_state": {
+              "market": "ID",
+              "primary_language": "id",
+              "register": "colloquial",
+              "last_detected_language": "id-colloquial",
+              "preferred_response_language": "id-colloquial"
+            },
+            "reminder_status": "discussing"
+          }
+        },
+        "intended_behavior_reached": false,
+        "request_ms": 5385,
+        "word_errors": {
+          "edit_distance": 3,
+          "reference_words": 6,
+          "word_error_rate": 0.5
+        }
+      },
+      {
+        "case": "id_mixed",
+        "language": "id-en-mixed",
+        "expected_text": "Apa down payment itu?",
+        "audio": "data/audio/q3/probe_id_mixed.wav",
+        "audio_kind": "synthetic speech, not a human accuracy benchmark",
+        "result": {
+          "accepted": true,
+          "confidence": 0.5207773405247379,
+          "audio": {
+            "audio_duration_ms": 1728,
+            "audio_rms_dbfs": -16.4,
+            "audio_peak_dbfs": -2.5,
+            "clipping_fraction": 0.0,
+            "normalization_gain": 1.2
+          },
+          "transcript": "Hapadone payment itu.",
+          "reply": {
+            "call_id": "call_29555ae941ff4bb18bcaa900702d5824",
+            "turn_id": "probe",
+            "text": "Info itu belum verified. Mau berbicara dengan petugas?",
+            "status": "active",
+            "qualification": {
+              "fields": {
+                "requested_amount": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_type": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "business_age_months": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "annual_turnover": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "existing_loan": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "city": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                },
+                "callback_preference": {
+                  "value": null,
+                  "status": "missing",
+                  "source_turn_id": null,
+                  "candidates": []
+                }
+              }
+            },
+            "next_field": "requested_amount",
+            "citations": [],
+            "tools_called": [],
+            "grounded": false,
+            "eligibility": null,
+            "lead_id": null,
+            "callback_id": null,
+            "escalation_id": null,
+            "recording_allowed": false,
+            "revision": 4,
+            "scenario": "id_installment",
+            "language_state": {
+              "market": "ID",
+              "primary_language": "id",
+              "register": "mixed",
+              "last_detected_language": "id-en-mixed",
+              "preferred_response_language": "id-en-mixed"
+            },
+            "reminder_status": "discussing"
+          }
+        },
+        "intended_behavior_reached": false,
+        "request_ms": 4399,
+        "word_errors": {
+          "edit_distance": 2,
+          "reference_words": 4,
+          "word_error_rate": 0.5
+        }
+      }
+    ],
+    "regional_accent": {
+      "dataset": "INDspeech_NEWS_LVCSR",
+      "source": "https://github.com/s-sakti/data_indsp_news_lvcsr",
+      "revision": "ecd9b8bb6d6567d1f486dd60c97497788781034c",
+      "license": "CC BY-NC-SA 4.0; publisher prohibits public dataset copies",
+      "citation": "Sakti et al. (2008), Development of Indonesian Large Vocabulary Continuous Speech Recognition System within A-STAR Project",
+      "publisher_sample": "Ind001/Ind001_F_B_C_news_0000.wav",
+      "path": "data/state/accent/Ind001_F_B_C_news_0000.wav",
+      "accent": "Batak",
+      "description": "Original human regional-accent Indonesian clean news speech; not a finance call or synthesized accent.",
+      "duration_seconds": 2.66,
+      "sha256": "10c29b65039b05b26234652ca0b06955ca65d02097ff8bcd04da19fbddfa6f3a",
+      "reference_line": "|S|\nelza\nsyarief\nmengaku\n|E|",
+      "redistributed_audio": false,
+      "status": "run",
+      "asr_provider": "faster-whisper 1.2.1",
+      "model": "small multilingual",
+      "configured_language": "id",
+      "reference_text": "elza syarief mengaku",
+      "observed_transcript": "Elsa Syarif mengaku.",
+      "decoder_score": 0.7238260329431241,
+      "exact_words_match": false,
+      "word_errors": {
+        "edit_distance": 2,
+        "reference_words": 3,
+        "word_error_rate": 0.6667
+      },
+      "fallback_needed": false,
+      "terminology_errors": "Not applicable: this news utterance has no required finance terms.",
+      "request_ms": 4396,
+      "limitations": "One short clean sample from one speaker; no accent robustness or noisy-finance-call claim. Native-speaker/compliance validation still required."
+    }
+  }
+}

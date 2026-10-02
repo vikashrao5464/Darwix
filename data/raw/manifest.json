@@ -6,5 +6,11 @@
   {"document_id":"demo_objections","path":"data/raw/demo_objections.md","source_type":"markdown","product":"business_loan","version":"1.0","language":"en","category":"objection","synthetic":true},
   {"document_id":"demo_support","path":"data/raw/demo_support.csv","source_type":"csv","product":"business_loan","version":"1.0","language":"en","category":"support","synthetic":true},
   {"document_id":"demo_rates","path":"data/raw/demo_rates.txt","source_type":"text","product":"business_loan","version":"1.0","language":"en","category":"policy","synthetic":true},
-  {"document_id":"demo_duplicate","path":"data/raw/demo_duplicate.md","source_type":"markdown","product":"business_loan","version":"1.0","language":"en","category":"qualification","synthetic":true}
+  {"document_id":"demo_duplicate","path":"data/raw/demo_duplicate.md","source_type":"markdown","product":"business_loan","version":"1.0","language":"en","category":"qualification","synthetic":true},
+  {"document_id":"ph_reminder_en","path":"data/raw/ph_reminder_en.json","source_type":"json","product":"life_insurance","version":"1.0","language":"en","category":"faq","synthetic":true},
+  {"document_id":"ph_reminder_fil","path":"data/raw/ph_reminder_fil.json","source_type":"json","product":"life_insurance","version":"1.0","language":"fil","category":"faq","synthetic":true},
+  {"document_id":"ph_reminder_taglish","path":"data/raw/ph_reminder_taglish.json","source_type":"json","product":"life_insurance","version":"1.0","language":"fil-en","category":"faq","synthetic":true},
+  {"document_id":"id_reminder_formal","path":"data/raw/id_reminder_formal.json","source_type":"json","product":"consumer_finance","version":"1.0","language":"id-formal","category":"faq","synthetic":true},
+  {"document_id":"id_reminder_colloquial","path":"data/raw/id_reminder_colloquial.json","source_type":"json","product":"consumer_finance","version":"1.0","language":"id-colloquial","category":"faq","synthetic":true},
+  {"document_id":"id_reminder_mixed","path":"data/raw/id_reminder_mixed.json","source_type":"json","product":"consumer_finance","version":"1.0","language":"id-en-mixed","category":"faq","synthetic":true}
 ]

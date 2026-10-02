@@ -22,3 +22,6 @@ summary { cursor: pointer; font-weight: 600; }
 select { max-width: 100%; padding: 8px; font: inherit; }
 meter { width: 100%; height: 18px; }
 .microphone { padding: 12px; border: 1px solid #d9dfe5; margin: 12px 0; }
+.nudge { padding: 12px; background: #edf5ff; margin: 10px 0; border-left: 4px solid #165aab; }
+.nudge.high { background: #fff2d6; border-color: #a26000; }
+audio { width: 100%; }

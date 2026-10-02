@@ -5,6 +5,11 @@ import KnowledgeDemo from '../components/KnowledgeDemo';
 
 const terminal = new Set(['ended', 'completed', 'escalated', 'declined']);
 const label = value => value.replaceAll('_', ' ');
+const scenarios = {
+  business_loan: {title:'Business-loan qualification', languages:[['en','English']]},
+  ph_renewal: {title:'Philippines: life-insurance renewal', languages:[['en','English'],['fil','Filipino / Tagalog'],['fil-en','Taglish']]},
+  id_installment: {title:'Indonesia: installment reminder', languages:[['id-formal','Formal Bahasa Indonesia'],['id-colloquial','Colloquial Bahasa Indonesia'],['id-en-mixed','Bahasa with English finance terms']]},
+};
 
 export default function CallDemo() {
   const [reply, setReply] = useState(null), [transcript, setTranscript] = useState([]);
@@ -13,6 +18,8 @@ export default function CallDemo() {
   const [devices, setDevices] = useState([]), [deviceId, setDeviceId] = useState('');
   const [noiseReduction, setNoiseReduction] = useState(true), [inputLevel, setInputLevel] = useState(0);
   const [reviewText, setReviewText] = useState(null);
+  const [scenario, setScenario] = useState('business_loan'), [language, setLanguage] = useState('en');
+  const [responseLanguage, setResponseLanguage] = useState('');
   const audio = useRef(null), timer = useRef(null), callId = useRef(null);
   const active = reply && !terminal.has(reply.status);
 
@@ -46,7 +53,8 @@ export default function CallDemo() {
     setBusy(true); setMessage(''); setDownload(null); setTranscript([]); setReviewText(null);
     try {
       audio.current = new BrowserAudio(); await audio.current.open();
-      const next = await api('/api/voice/calls', { recording_consent: record });
+      const next = await api('/api/voice/calls', { recording_consent: record, scenario, response_language:language });
+      setResponseLanguage('');
       callId.current = next.call_id; await apply(next);
     } catch (error) { setMessage(error.message); await audio.current?.close(); audio.current = null; }
     finally { setBusy(false); }
@@ -55,7 +63,8 @@ export default function CallDemo() {
   async function send(value) {
     setBusy(true); setMessage(''); setText(''); setReviewText(null);
     try {
-      const next = await api(`/api/voice/calls/${callId.current}/turn`, { turn_id: 'turn_' + crypto.randomUUID(), text: value });
+      const next = await api(`/api/voice/calls/${callId.current}/turn`, { turn_id: 'turn_' + crypto.randomUUID(), text: value,
+        ...(responseLanguage ? {response_language:responseLanguage} : {}) });
       await apply(next);
     } catch (error) { setMessage(error.message); }
     finally { setBusy(false); }
@@ -94,20 +103,37 @@ export default function CallDemo() {
   }
 
   return <>
-    <h1>Business-loan call demo</h1>
-    <p className="notice">Synthetic assessment content. This demo cannot approve a loan or contact a real representative.</p>
+    <h1>Voice call demo</h1>
+    <p className="notice">Synthetic assessment content. This demo cannot approve loans, verify payments, renew policies or contact a real representative.</p>
     <p>Click "Speak a reply", speak one short answer, then click "Send voice reply". Laptop microphones and headsets are supported. Typed replies are available when recognition is unclear.</p>
     {!active && <>
-      <label className="checkbox"><input type="checkbox" checked={record} onChange={e => setRecord(e.target.checked)} disabled={busy} /> Save a local audio recording after I consent to qualification (up to five minutes).</label>
+      <label htmlFor="scenario">Call scenario</label>
+      <select id="scenario" value={scenario} disabled={busy} onChange={e=>{setScenario(e.target.value);setLanguage(scenarios[e.target.value].languages[0][0]);}}>
+        {Object.entries(scenarios).map(([key,value])=><option key={key} value={key}>{value.title}</option>)}
+      </select>
+      <label htmlFor="language">Starting language / register</label>
+      <select id="language" value={language} disabled={busy} onChange={e=>setLanguage(e.target.value)}>
+        {scenarios[scenario].languages.map(([key,value])=><option key={key} value={key}>{value}</option>)}
+      </select>
+      <label className="checkbox"><input type="checkbox" checked={record} onChange={e => setRecord(e.target.checked)} disabled={busy} /> Save a local audio recording after I consent to continue (up to five minutes).</label>
       <p className="muted">Recordings contain your voice and are stored privately on this computer. Use synthetic details. Closing this page discards unsaved audio.</p>
       <button disabled={busy} onClick={start}>{busy ? 'Connecting...' : 'Start demo call'}</button>
     </>}
     {reply && <>
       <p>Status: <strong>{label(reply.status)}</strong> ? Call <code>{reply.call_id}</code></p>
+      {reply.language_state && <p>Market: {reply.language_state.market} · Reply language: {reply.language_state.preferred_response_language} · Reminder: {label(reply.reminder_status || 'discussing')}</p>}
       <section aria-label="Agent reply" aria-live="polite"><h2>Agent</h2><p>{reply.text}</p>
         {reply.citations.map(c => <p className="muted" key={c.record_id}>Source: {c.source}{c.page ? `, page ${c.page}` : ''}, {c.section}, version {c.version}</p>)}
       </section>
       {active && <>
+        {reply.language_state && <>
+          <label htmlFor="response-language">Reply language (applies with your next typed reply)</label>
+          <select id="response-language" value={responseLanguage} disabled={busy || listening} onChange={e=>setResponseLanguage(e.target.value)}>
+            <option value="">Follow my current language</option>
+            {scenarios[reply.scenario].languages.map(([key,value])=><option key={key} value={key}>{value}</option>)}
+          </select>
+          <p className="muted">For voice, recognition uses the current language. Send a typed reply with your language choice before switching spoken languages.</p>
+        </>}
         <div className="microphone">
           <label htmlFor="microphone">Microphone</label>
           <select id="microphone" value={deviceId} onChange={e=>setDeviceId(e.target.value)} disabled={busy || listening}>
@@ -137,18 +163,18 @@ export default function CallDemo() {
           <button disabled={busy || listening || !text.trim()}>Send reply</button>
         </form>
         {reply.status === 'awaiting_consent' && <div className="actions">
-          <button disabled={busy || listening} onClick={() => send('Yes')}>Yes, continue</button>
-          <button disabled={busy || listening} onClick={() => send('No')}>No, stop</button>
+          <button disabled={busy || listening} onClick={() => send(reply.language_state?.market==='ID' ? 'Ya' : reply.language_state?.primary_language==='fil' ? 'Opo' : 'Yes')}>Yes, continue</button>
+          <button disabled={busy || listening} onClick={() => send(reply.language_state?.market==='ID' ? 'Tidak' : reply.language_state?.primary_language==='fil' ? 'Hindi po' : 'No')}>No, stop</button>
         </div>}
-        <button disabled={busy || listening} onClick={() => send('I want a human representative')}>Request human assistance</button>
+        <button disabled={busy || listening} onClick={() => send(reply.language_state?.market==='ID' ? 'Saya ingin berbicara dengan petugas' : reply.language_state?.primary_language==='fil' ? 'Gusto ko po ng kinatawan' : 'I want a human representative')}>Request human assistance</button>
       </>}
-      <details><summary>Qualification details</summary>
+      {reply.scenario==='business_loan' && <details><summary>Qualification details</summary>
         <table><thead><tr><th>Field</th><th>Value</th><th>Status</th></tr></thead><tbody>
           {Object.entries(reply.qualification.fields).map(([key, field]) => <tr key={key}><td>{label(key)}</td><td>{field.value === null ? '-' : String(field.value)}</td><td>{field.status}</td></tr>)}
         </tbody></table>
         {reply.eligibility && <p>Preliminary result: {label(reply.eligibility.status)}</p>}
         {reply.tools_called.length > 0 && <p>Tools used: {reply.tools_called.join(', ')}</p>}
-      </details>
+      </details>}
       <details open><summary>Redacted transcript</summary>
         {transcript.map((segment, i) => <p key={i}><strong>{segment.speaker === 'agent' ? 'Agent' : 'Customer'}:</strong> {segment.text}</p>)}
       </details>

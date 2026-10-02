@@ -1,0 +1,1112 @@
+{
+  "observer": "Chrome rendered UI acknowledgement (two animation frames)",
+  "events": [
+    {
+      "type": "snapshot",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "fixture_id": "q1_insights",
+        "status": "preparing",
+        "duration_ms": 66000,
+        "elapsed_ms": 0,
+        "counts": {
+          "chunks": 0,
+          "asr_failures": 0,
+          "unacknowledged": 0,
+          "nudges": 0,
+          "queue_high_water": 0
+        },
+        "error": null,
+        "playback_finished_ms": null,
+        "transcripts": [],
+        "signals": [],
+        "nudges": [],
+        "latency": {
+          "sample_count": 0,
+          "metrics": {}
+        },
+        "suppression": []
+      }
+    },
+    {
+      "type": "status",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "fixture_id": "q1_insights",
+        "status": "replaying",
+        "duration_ms": 66000,
+        "elapsed_ms": 5,
+        "counts": {
+          "chunks": 0,
+          "asr_failures": 0,
+          "unacknowledged": 0,
+          "nudges": 0,
+          "queue_high_water": 0
+        },
+        "error": null,
+        "playback_finished_ms": null
+      }
+    },
+    {
+      "type": "transcript",
+      "payload": {
+        "chunk_id": 0,
+        "speaker": "agent",
+        "speaker_source": "registered synthetic recording role annotation; no diarization",
+        "text": "Hello. I am a synthetic demo business loan assistant. May I collect a few bus-",
+        "start_ms": 0,
+        "end_ms": 6000,
+        "final": true,
+        "confidence": 0.6944713232186266,
+        "usable": true
+      }
+    },
+    {
+      "type": "chunk_complete",
+      "payload": {
+        "chunk_id": 0
+      }
+    },
+    {
+      "type": "latency",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "chunk_id": 0,
+        "audio_received_ms": 6001.27969996538,
+        "asr_done_ms": 9126.511799986474,
+        "signal_done_ms": 9126.991100027226,
+        "llm_done_ms": 9126.997199957259,
+        "delivered_ms": 9146.742500015534,
+        "asr_latency_ms": 3125.232100021094,
+        "signal_latency_ms": 0.47930004075169563,
+        "llm_latency_ms": 0.00609993003308773,
+        "delivery_latency_ms": 19.74530005827546,
+        "end_to_end_latency_ms": 3145.4628000501543
+      }
+    },
+    {
+      "type": "warning",
+      "payload": {
+        "chunk_id": 1,
+        "reason": "Uncertain ASR; signals withheld."
+      }
+    },
+    {
+      "type": "transcript",
+      "payload": {
+        "chunk_id": 1,
+        "speaker": "unknown",
+        "speaker_source": "unknown; diarization unavailable or mixed-role chunk",
+        "text": "to assess preliminary qualification? Yes.",
+        "start_ms": 6000,
+        "end_ms": 12000,
+        "final": true,
+        "confidence": 0.26805642914973116,
+        "usable": false
+      }
+    },
+    {
+      "type": "chunk_complete",
+      "payload": {
+        "chunk_id": 1
+      }
+    },
+    {
+      "type": "latency",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "chunk_id": 1,
+        "audio_received_ms": 12001.57780002337,
+        "asr_done_ms": 14810.48230000306,
+        "signal_done_ms": 14810.572699992917,
+        "llm_done_ms": 14810.577300027944,
+        "delivered_ms": 14826.319099985994,
+        "asr_latency_ms": 2808.9044999796897,
+        "signal_latency_ms": 0.09039998985826969,
+        "llm_latency_ms": 0.004600035026669502,
+        "delivery_latency_ms": 15.741799958050251,
+        "end_to_end_latency_ms": 2824.741299962625
+      }
+    },
+    {
+      "type": "transcript",
+      "payload": {
+        "chunk_id": 2,
+        "speaker": "customer",
+        "speaker_source": "registered synthetic recording role annotation; no diarization",
+        "text": "I need another vehicle for my business.",
+        "start_ms": 12000,
+        "end_ms": 18000,
+        "final": true,
+        "confidence": 0.7386567653236022,
+        "usable": true
+      }
+    },
+    {
+      "type": "signal",
+      "payload": {
+        "type": "missed_opportunity",
+        "confidence": 0.9,
+        "evidence": "I need another vehicle for my business.",
+        "speaker": "customer",
+        "priority": "medium",
+        "signal_id": "sig_77ea970138144d048dc47b993e3345b7",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "detected_at_ms": 20605
+      }
+    },
+    {
+      "type": "nudge",
+      "payload": {
+        "nudge_id": "nudge_bdbe4278e29e4e57919886ca2e1c8b4c",
+        "signal_id": "sig_77ea970138144d048dc47b993e3345b7",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "type": "explore_need",
+        "text": "Ask about the additional need and offer a relevant human referral; verify product availability first.",
+        "priority": "medium",
+        "confidence": 0.9,
+        "created_at_ms": 20605,
+        "expires_at_ms": 40605,
+        "suppression_key": "missed_opportunity"
+      }
+    },
+    {
+      "type": "chunk_complete",
+      "payload": {
+        "chunk_id": 2
+      }
+    },
+    {
+      "type": "latency",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "chunk_id": 2,
+        "audio_received_ms": 18001.1203000322,
+        "asr_done_ms": 20604.371699970216,
+        "signal_done_ms": 20605.315599939786,
+        "llm_done_ms": 20605.490099987946,
+        "delivered_ms": 20639.280900009908,
+        "asr_latency_ms": 2603.251399938017,
+        "signal_latency_ms": 0.9438999695703387,
+        "llm_latency_ms": 0.17450004816055298,
+        "delivery_latency_ms": 33.79080002196133,
+        "end_to_end_latency_ms": 2638.1605999777094
+      }
+    },
+    {
+      "type": "transcript",
+      "payload": {
+        "chunk_id": 3,
+        "speaker": "agent",
+        "speaker_source": "registered synthetic recording role annotation; no diarization",
+        "text": "Your approval is guaranteed. No credit check is needed.",
+        "start_ms": 18000,
+        "end_ms": 24000,
+        "final": true,
+        "confidence": 0.6782969775549703,
+        "usable": true
+      }
+    },
+    {
+      "type": "signal",
+      "payload": {
+        "type": "compliance_risk",
+        "confidence": 0.97,
+        "evidence": "Your approval is guaranteed. No credit check is needed.",
+        "speaker": "agent",
+        "priority": "high",
+        "signal_id": "sig_6f37fcc2234446649d0c31c156271077",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "detected_at_ms": 26495
+      }
+    },
+    {
+      "type": "nudge",
+      "payload": {
+        "nudge_id": "nudge_08864ec330a34821a681649be579012e",
+        "signal_id": "sig_6f37fcc2234446649d0c31c156271077",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "type": "compliance_correction",
+        "text": "Correct the guarantee. Explain that approval depends on verified eligibility and review.",
+        "priority": "high",
+        "confidence": 0.97,
+        "created_at_ms": 26495,
+        "expires_at_ms": 46495,
+        "suppression_key": "compliance_risk"
+      }
+    },
+    {
+      "type": "chunk_complete",
+      "payload": {
+        "chunk_id": 3
+      }
+    },
+    {
+      "type": "latency",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "chunk_id": 3,
+        "audio_received_ms": 24001.386899966747,
+        "asr_done_ms": 26494.995299959555,
+        "signal_done_ms": 26495.34709996078,
+        "llm_done_ms": 26495.45709998347,
+        "delivered_ms": 26513.871100032702,
+        "asr_latency_ms": 2493.6083999928087,
+        "signal_latency_ms": 0.35180000122636557,
+        "llm_latency_ms": 0.11000002268701792,
+        "delivery_latency_ms": 18.414000049233437,
+        "end_to_end_latency_ms": 2512.4842000659555
+      }
+    },
+    {
+      "type": "transcript",
+      "payload": {
+        "chunk_id": 4,
+        "speaker": "customer",
+        "speaker_source": "registered synthetic recording role annotation; no diarization",
+        "text": "I already told you twice. This is frustrating.",
+        "start_ms": 24000,
+        "end_ms": 30000,
+        "final": true,
+        "confidence": 0.6092414167200907,
+        "usable": true
+      }
+    },
+    {
+      "type": "signal",
+      "payload": {
+        "type": "rising_frustration",
+        "confidence": 0.91,
+        "evidence": "I already told you twice. This is frustrating.",
+        "speaker": "customer",
+        "priority": "medium",
+        "signal_id": "sig_b5210a33b8e24f9797e568d132914967",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "detected_at_ms": 32542
+      }
+    },
+    {
+      "type": "nudge",
+      "payload": {
+        "nudge_id": "nudge_cabca3f399f7432ea025232380aed6c1",
+        "signal_id": "sig_b5210a33b8e24f9797e568d132914967",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "type": "acknowledge_concern",
+        "text": "Acknowledge the concern and confirm what the customer needs before another question.",
+        "priority": "medium",
+        "confidence": 0.91,
+        "created_at_ms": 32542,
+        "expires_at_ms": 52542,
+        "suppression_key": "rising_frustration"
+      }
+    },
+    {
+      "type": "chunk_complete",
+      "payload": {
+        "chunk_id": 4
+      }
+    },
+    {
+      "type": "latency",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "chunk_id": 4,
+        "audio_received_ms": 30000.80749997869,
+        "asr_done_ms": 32541.690799989738,
+        "signal_done_ms": 32541.926100035198,
+        "llm_done_ms": 32542.06789995078,
+        "delivered_ms": 32562.325299950317,
+        "asr_latency_ms": 2540.8833000110462,
+        "signal_latency_ms": 0.23530004546046257,
+        "llm_latency_ms": 0.1417999155819416,
+        "delivery_latency_ms": 20.257399999536574,
+        "end_to_end_latency_ms": 2561.517799971625
+      }
+    },
+    {
+      "type": "transcript",
+      "payload": {
+        "chunk_id": 5,
+        "speaker": "customer",
+        "speaker_source": "registered synthetic recording role annotation; no diarization",
+        "text": "I cannot pay. Please call me back.",
+        "start_ms": 30000,
+        "end_ms": 36000,
+        "final": true,
+        "confidence": 0.5678626326885229,
+        "usable": true
+      }
+    },
+    {
+      "type": "signal",
+      "payload": {
+        "type": "payment_difficulty",
+        "confidence": 0.94,
+        "evidence": "I cannot pay. Please call me back.",
+        "speaker": "customer",
+        "priority": "high",
+        "signal_id": "sig_d2acede4c1134897907f2eff1b904394",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "detected_at_ms": 38470
+      }
+    },
+    {
+      "type": "signal",
+      "payload": {
+        "type": "callback_need",
+        "confidence": 0.92,
+        "evidence": "I cannot pay. Please call me back.",
+        "speaker": "customer",
+        "priority": "medium",
+        "signal_id": "sig_0387ca072eb9427bb73a3e793729b586",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "detected_at_ms": 38470
+      }
+    },
+    {
+      "type": "nudge",
+      "payload": {
+        "nudge_id": "nudge_eeb6e036278e45ff93730836a12c7291",
+        "signal_id": "sig_d2acede4c1134897907f2eff1b904394",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "type": "payment_support",
+        "text": "Acknowledge payment difficulty and offer an approved support callback; promise no waiver or extension.",
+        "priority": "high",
+        "confidence": 0.94,
+        "created_at_ms": 38470,
+        "expires_at_ms": 58470,
+        "suppression_key": "payment_difficulty"
+      }
+    },
+    {
+      "type": "nudge",
+      "payload": {
+        "nudge_id": "nudge_85c038e4c6c1471b9359e2e568e56aab",
+        "signal_id": "sig_0387ca072eb9427bb73a3e793729b586",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "type": "arrange_callback",
+        "text": "Ask for a convenient callback time and confirm it before recording the request.",
+        "priority": "medium",
+        "confidence": 0.92,
+        "created_at_ms": 38470,
+        "expires_at_ms": 58470,
+        "suppression_key": "callback_need"
+      }
+    },
+    {
+      "type": "chunk_complete",
+      "payload": {
+        "chunk_id": 5
+      }
+    },
+    {
+      "type": "latency",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "chunk_id": 5,
+        "audio_received_ms": 36001.109099946916,
+        "asr_done_ms": 38470.025299931876,
+        "signal_done_ms": 38470.33149993513,
+        "llm_done_ms": 38470.443499973044,
+        "delivered_ms": 38493.84769995231,
+        "asr_latency_ms": 2468.9161999849603,
+        "signal_latency_ms": 0.3062000032514334,
+        "llm_latency_ms": 0.11200003791600466,
+        "delivery_latency_ms": 23.404199979268014,
+        "end_to_end_latency_ms": 2492.7386000053957
+      }
+    },
+    {
+      "type": "suppressed",
+      "payload": {
+        "chunk_id": 6,
+        "type": "payment_difficulty",
+        "reason": "duplicate",
+        "confidence": 0.94
+      }
+    },
+    {
+      "type": "suppressed",
+      "payload": {
+        "chunk_id": 6,
+        "type": "callback_need",
+        "reason": "duplicate",
+        "confidence": 0.92
+      }
+    },
+    {
+      "type": "transcript",
+      "payload": {
+        "chunk_id": 6,
+        "speaker": "customer",
+        "speaker_source": "registered synthetic recording role annotation; no diarization",
+        "text": "I cannot pay. Please call me back.",
+        "start_ms": 36000,
+        "end_ms": 42000,
+        "final": true,
+        "confidence": 0.5678626326885229,
+        "usable": true
+      }
+    },
+    {
+      "type": "chunk_complete",
+      "payload": {
+        "chunk_id": 6
+      }
+    },
+    {
+      "type": "latency",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "chunk_id": 6,
+        "audio_received_ms": 42001.366100041196,
+        "asr_done_ms": 44535.202999948524,
+        "signal_done_ms": 44535.460999934,
+        "llm_done_ms": 44535.595200024545,
+        "delivered_ms": 44555.41599995922,
+        "asr_latency_ms": 2533.836899907328,
+        "signal_latency_ms": 0.2579999854788184,
+        "llm_latency_ms": 0.13420009054243565,
+        "delivery_latency_ms": 19.82079993467778,
+        "end_to_end_latency_ms": 2554.049899918027
+      }
+    },
+    {
+      "type": "transcript",
+      "payload": {
+        "chunk_id": 7,
+        "speaker": "unknown",
+        "speaker_source": "unknown; diarization unavailable or mixed-role chunk",
+        "text": "",
+        "start_ms": 42000,
+        "end_ms": 48000,
+        "final": true,
+        "confidence": 0,
+        "usable": false
+      }
+    },
+    {
+      "type": "chunk_complete",
+      "payload": {
+        "chunk_id": 7
+      }
+    },
+    {
+      "type": "latency",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "chunk_id": 7,
+        "audio_received_ms": 48000.85059995763,
+        "asr_done_ms": 48015.281899948604,
+        "signal_done_ms": 48015.32979996409,
+        "llm_done_ms": 48015.33259998541,
+        "delivered_ms": 48027.59239997249,
+        "asr_latency_ms": 14.431299990974367,
+        "signal_latency_ms": 0.047900015488266945,
+        "llm_latency_ms": 0.002800021320581436,
+        "delivery_latency_ms": 12.259799987077713,
+        "end_to_end_latency_ms": 26.741800014860928
+      }
+    },
+    {
+      "type": "suppressed",
+      "payload": {
+        "chunk_id": 8,
+        "type": "missed_opportunity",
+        "reason": "low_confidence",
+        "confidence": 0.55
+      }
+    },
+    {
+      "type": "transcript",
+      "payload": {
+        "chunk_id": 8,
+        "speaker": "customer",
+        "speaker_source": "registered synthetic recording role annotation; no diarization",
+        "text": "Maybe another option. I am not sure.",
+        "start_ms": 48000,
+        "end_ms": 54000,
+        "final": true,
+        "confidence": 0.6787589035519849,
+        "usable": true
+      }
+    },
+    {
+      "type": "chunk_complete",
+      "payload": {
+        "chunk_id": 8
+      }
+    },
+    {
+      "type": "latency",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "chunk_id": 8,
+        "audio_received_ms": 54000.58180000633,
+        "asr_done_ms": 56469.55689997412,
+        "signal_done_ms": 56469.73390004132,
+        "llm_done_ms": 56469.75970000494,
+        "delivered_ms": 56485.90620001778,
+        "asr_latency_ms": 2468.9750999677926,
+        "signal_latency_ms": 0.1770000671967864,
+        "llm_latency_ms": 0.025799963623285294,
+        "delivery_latency_ms": 16.14650001283735,
+        "end_to_end_latency_ms": 2485.32440001145
+      }
+    },
+    {
+      "type": "transcript",
+      "payload": {
+        "chunk_id": 9,
+        "speaker": "agent",
+        "speaker_source": "registered synthetic recording role annotation; no diarization",
+        "text": "I can explain the process and arrange a callback.",
+        "start_ms": 54000,
+        "end_ms": 60000,
+        "final": true,
+        "confidence": 0.7242326069181213,
+        "usable": true
+      }
+    },
+    {
+      "type": "chunk_complete",
+      "payload": {
+        "chunk_id": 9
+      }
+    },
+    {
+      "type": "latency",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "chunk_id": 9,
+        "audio_received_ms": 60000.994400004856,
+        "asr_done_ms": 62526.043799938634,
+        "signal_done_ms": 62526.18289995007,
+        "llm_done_ms": 62526.18689998053,
+        "delivered_ms": 62541.61519999616,
+        "asr_latency_ms": 2525.0493999337777,
+        "signal_latency_ms": 0.13910001143813133,
+        "llm_latency_ms": 0.00400003045797348,
+        "delivery_latency_ms": 15.428300015628338,
+        "end_to_end_latency_ms": 2540.620799991302
+      }
+    },
+    {
+      "type": "status",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "fixture_id": "q1_insights",
+        "status": "draining",
+        "duration_ms": 66000,
+        "elapsed_ms": 66005,
+        "counts": {
+          "chunks": 10,
+          "asr_failures": 0,
+          "unacknowledged": 0,
+          "nudges": 5,
+          "queue_high_water": 1
+        },
+        "error": null,
+        "playback_finished_ms": 66001.4106000308
+      }
+    },
+    {
+      "type": "transcript",
+      "payload": {
+        "chunk_id": 10,
+        "speaker": "unknown",
+        "speaker_source": "unknown; diarization unavailable or mixed-role chunk",
+        "text": "",
+        "start_ms": 60000,
+        "end_ms": 66000,
+        "final": true,
+        "confidence": 0,
+        "usable": false
+      }
+    },
+    {
+      "type": "chunk_complete",
+      "payload": {
+        "chunk_id": 10
+      }
+    },
+    {
+      "type": "latency",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "chunk_id": 10,
+        "audio_received_ms": 66001.27819995396,
+        "asr_done_ms": 66008.10470001306,
+        "signal_done_ms": 66008.15050001256,
+        "llm_done_ms": 66008.15270002931,
+        "delivered_ms": 66020.64220001921,
+        "asr_latency_ms": 6.826500059105456,
+        "signal_latency_ms": 0.04579999949783087,
+        "llm_latency_ms": 0.002200016751885414,
+        "delivery_latency_ms": 12.489499989897013,
+        "end_to_end_latency_ms": 19.364000065252185
+      }
+    },
+    {
+      "type": "status",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "fixture_id": "q1_insights",
+        "status": "completed",
+        "duration_ms": 66000,
+        "elapsed_ms": 71017,
+        "counts": {
+          "chunks": 11,
+          "asr_failures": 0,
+          "unacknowledged": 0,
+          "nudges": 5,
+          "queue_high_water": 1
+        },
+        "error": null,
+        "playback_finished_ms": 66001.4106000308
+      }
+    },
+    {
+      "type": "snapshot",
+      "payload": {
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "fixture_id": "q1_insights",
+        "status": "completed",
+        "duration_ms": 66000,
+        "elapsed_ms": 71073,
+        "counts": {
+          "chunks": 11,
+          "asr_failures": 0,
+          "unacknowledged": 0,
+          "nudges": 5,
+          "queue_high_water": 1
+        },
+        "error": null,
+        "playback_finished_ms": 66001.4106000308,
+        "transcripts": [
+          {
+            "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_0",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "speaker": "agent",
+            "text": "Hello. I am a synthetic demo business loan assistant. May I collect a few bus-",
+            "start_ms": 0,
+            "end_ms": 6000,
+            "final": true
+          },
+          {
+            "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_1",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "speaker": "unknown",
+            "text": "to assess preliminary qualification? Yes.",
+            "start_ms": 6000,
+            "end_ms": 12000,
+            "final": true
+          },
+          {
+            "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_2",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "speaker": "customer",
+            "text": "I need another vehicle for my business.",
+            "start_ms": 12000,
+            "end_ms": 18000,
+            "final": true
+          },
+          {
+            "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_3",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "speaker": "agent",
+            "text": "Your approval is guaranteed. No credit check is needed.",
+            "start_ms": 18000,
+            "end_ms": 24000,
+            "final": true
+          },
+          {
+            "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_4",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "speaker": "customer",
+            "text": "I already told you twice. This is frustrating.",
+            "start_ms": 24000,
+            "end_ms": 30000,
+            "final": true
+          },
+          {
+            "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_5",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "speaker": "customer",
+            "text": "I cannot pay. Please call me back.",
+            "start_ms": 30000,
+            "end_ms": 36000,
+            "final": true
+          },
+          {
+            "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_6",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "speaker": "customer",
+            "text": "I cannot pay. Please call me back.",
+            "start_ms": 36000,
+            "end_ms": 42000,
+            "final": true
+          },
+          {
+            "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_7",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "speaker": "unknown",
+            "text": "",
+            "start_ms": 42000,
+            "end_ms": 48000,
+            "final": true
+          },
+          {
+            "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_8",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "speaker": "customer",
+            "text": "Maybe another option. I am not sure.",
+            "start_ms": 48000,
+            "end_ms": 54000,
+            "final": true
+          },
+          {
+            "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_9",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "speaker": "agent",
+            "text": "I can explain the process and arrange a callback.",
+            "start_ms": 54000,
+            "end_ms": 60000,
+            "final": true
+          },
+          {
+            "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_10",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "speaker": "unknown",
+            "text": "",
+            "start_ms": 60000,
+            "end_ms": 66000,
+            "final": true
+          }
+        ],
+        "signals": [
+          {
+            "signal_id": "sig_77ea970138144d048dc47b993e3345b7",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "type": "missed_opportunity",
+            "confidence": 0.9,
+            "evidence": "I need another vehicle for my business.",
+            "speaker": "customer",
+            "detected_at_ms": 20605,
+            "priority": "medium"
+          },
+          {
+            "signal_id": "sig_6f37fcc2234446649d0c31c156271077",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "type": "compliance_risk",
+            "confidence": 0.97,
+            "evidence": "Your approval is guaranteed. No credit check is needed.",
+            "speaker": "agent",
+            "detected_at_ms": 26495,
+            "priority": "high"
+          },
+          {
+            "signal_id": "sig_b5210a33b8e24f9797e568d132914967",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "type": "rising_frustration",
+            "confidence": 0.91,
+            "evidence": "I already told you twice. This is frustrating.",
+            "speaker": "customer",
+            "detected_at_ms": 32542,
+            "priority": "medium"
+          },
+          {
+            "signal_id": "sig_d2acede4c1134897907f2eff1b904394",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "type": "payment_difficulty",
+            "confidence": 0.94,
+            "evidence": "I cannot pay. Please call me back.",
+            "speaker": "customer",
+            "detected_at_ms": 38470,
+            "priority": "high"
+          },
+          {
+            "signal_id": "sig_0387ca072eb9427bb73a3e793729b586",
+            "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+            "type": "callback_need",
+            "confidence": 0.92,
+            "evidence": "I cannot pay. Please call me back.",
+            "speaker": "customer",
+            "detected_at_ms": 38470,
+            "priority": "medium"
+          }
+        ],
+        "nudges": [],
+        "latency": {
+          "sample_count": 11,
+          "metrics": {
+            "asr_latency_ms": {
+              "p50_ms": 2525.049,
+              "p95_ms": 2967.068
+            },
+            "signal_latency_ms": {
+              "p50_ms": 0.235,
+              "p95_ms": 0.712
+            },
+            "llm_latency_ms": {
+              "p50_ms": 0.026,
+              "p95_ms": 0.158
+            },
+            "delivery_latency_ms": {
+              "p50_ms": 18.414,
+              "p95_ms": 28.598
+            },
+            "end_to_end_latency_ms": {
+              "p50_ms": 2540.621,
+              "p95_ms": 2985.102
+            }
+          }
+        },
+        "suppression": [
+          {
+            "chunk_id": 6,
+            "type": "payment_difficulty",
+            "reason": "duplicate",
+            "confidence": 0.94
+          },
+          {
+            "chunk_id": 6,
+            "type": "callback_need",
+            "reason": "duplicate",
+            "confidence": 0.92
+          },
+          {
+            "chunk_id": 8,
+            "type": "missed_opportunity",
+            "reason": "low_confidence",
+            "confidence": 0.55
+          }
+        ]
+      }
+    }
+  ],
+  "snapshot": {
+    "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+    "fixture_id": "q1_insights",
+    "status": "completed",
+    "duration_ms": 66000,
+    "elapsed_ms": 71038,
+    "counts": {
+      "chunks": 11,
+      "asr_failures": 0,
+      "unacknowledged": 0,
+      "nudges": 5,
+      "queue_high_water": 1
+    },
+    "error": null,
+    "playback_finished_ms": 66001.4106000308,
+    "transcripts": [
+      {
+        "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_0",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "speaker": "agent",
+        "text": "Hello. I am a synthetic demo business loan assistant. May I collect a few bus-",
+        "start_ms": 0,
+        "end_ms": 6000,
+        "final": true
+      },
+      {
+        "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_1",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "speaker": "unknown",
+        "text": "to assess preliminary qualification? Yes.",
+        "start_ms": 6000,
+        "end_ms": 12000,
+        "final": true
+      },
+      {
+        "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_2",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "speaker": "customer",
+        "text": "I need another vehicle for my business.",
+        "start_ms": 12000,
+        "end_ms": 18000,
+        "final": true
+      },
+      {
+        "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_3",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "speaker": "agent",
+        "text": "Your approval is guaranteed. No credit check is needed.",
+        "start_ms": 18000,
+        "end_ms": 24000,
+        "final": true
+      },
+      {
+        "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_4",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "speaker": "customer",
+        "text": "I already told you twice. This is frustrating.",
+        "start_ms": 24000,
+        "end_ms": 30000,
+        "final": true
+      },
+      {
+        "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_5",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "speaker": "customer",
+        "text": "I cannot pay. Please call me back.",
+        "start_ms": 30000,
+        "end_ms": 36000,
+        "final": true
+      },
+      {
+        "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_6",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "speaker": "customer",
+        "text": "I cannot pay. Please call me back.",
+        "start_ms": 36000,
+        "end_ms": 42000,
+        "final": true
+      },
+      {
+        "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_7",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "speaker": "unknown",
+        "text": "",
+        "start_ms": 42000,
+        "end_ms": 48000,
+        "final": true
+      },
+      {
+        "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_8",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "speaker": "customer",
+        "text": "Maybe another option. I am not sure.",
+        "start_ms": 48000,
+        "end_ms": 54000,
+        "final": true
+      },
+      {
+        "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_9",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "speaker": "agent",
+        "text": "I can explain the process and arrange a callback.",
+        "start_ms": 54000,
+        "end_ms": 60000,
+        "final": true
+      },
+      {
+        "segment_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a_chunk_10",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "speaker": "unknown",
+        "text": "",
+        "start_ms": 60000,
+        "end_ms": 66000,
+        "final": true
+      }
+    ],
+    "signals": [
+      {
+        "signal_id": "sig_77ea970138144d048dc47b993e3345b7",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "type": "missed_opportunity",
+        "confidence": 0.9,
+        "evidence": "I need another vehicle for my business.",
+        "speaker": "customer",
+        "detected_at_ms": 20605,
+        "priority": "medium"
+      },
+      {
+        "signal_id": "sig_6f37fcc2234446649d0c31c156271077",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "type": "compliance_risk",
+        "confidence": 0.97,
+        "evidence": "Your approval is guaranteed. No credit check is needed.",
+        "speaker": "agent",
+        "detected_at_ms": 26495,
+        "priority": "high"
+      },
+      {
+        "signal_id": "sig_b5210a33b8e24f9797e568d132914967",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "type": "rising_frustration",
+        "confidence": 0.91,
+        "evidence": "I already told you twice. This is frustrating.",
+        "speaker": "customer",
+        "detected_at_ms": 32542,
+        "priority": "medium"
+      },
+      {
+        "signal_id": "sig_d2acede4c1134897907f2eff1b904394",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "type": "payment_difficulty",
+        "confidence": 0.94,
+        "evidence": "I cannot pay. Please call me back.",
+        "speaker": "customer",
+        "detected_at_ms": 38470,
+        "priority": "high"
+      },
+      {
+        "signal_id": "sig_0387ca072eb9427bb73a3e793729b586",
+        "call_id": "replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a",
+        "type": "callback_need",
+        "confidence": 0.92,
+        "evidence": "I cannot pay. Please call me back.",
+        "speaker": "customer",
+        "detected_at_ms": 38470,
+        "priority": "medium"
+      }
+    ],
+    "nudges": [],
+    "latency": {
+      "sample_count": 11,
+      "metrics": {
+        "asr_latency_ms": {
+          "p50_ms": 2525.049,
+          "p95_ms": 2967.068
+        },
+        "signal_latency_ms": {
+          "p50_ms": 0.235,
+          "p95_ms": 0.712
+        },
+        "llm_latency_ms": {
+          "p50_ms": 0.026,
+          "p95_ms": 0.158
+        },
+        "delivery_latency_ms": {
+          "p50_ms": 18.414,
+          "p95_ms": 28.598
+        },
+        "end_to_end_latency_ms": {
+          "p50_ms": 2540.621,
+          "p95_ms": 2985.102
+        }
+      }
+    },
+    "suppression": [
+      {
+        "chunk_id": 6,
+        "type": "payment_difficulty",
+        "reason": "duplicate",
+        "confidence": 0.94
+      },
+      {
+        "chunk_id": 6,
+        "type": "callback_need",
+        "reason": "duplicate",
+        "confidence": 0.92
+      },
+      {
+        "chunk_id": 8,
+        "type": "missed_opportunity",
+        "reason": "low_confidence",
+        "confidence": 0.55
+      }
+    ]
+  },
+  "checks": [
+    "Actual cited Q1 FAQ shown in demo video",
+    "Unsupported Q1 question returns explicit fallback",
+    "Actual ASR nudge rendered while recording is replaying",
+    "All five signal types, duplicate/weak suppression and acknowledged latency observed",
+    "Reconnect restores state and excludes expired nudges"
+  ],
+  "page_errors": [],
+  "status_at_first_nudge": "Call: replaying · connected · replay_dba7ac144b3c4e9bbf9cb0ee1f2d8b6a"
+}

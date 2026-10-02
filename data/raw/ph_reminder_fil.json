@@ -1,0 +1,10 @@
+[
+  {"title":"reminder", "content":"Sa kathang-isip na halimbawa, ang hulog sa seguro sa buhay ay isang libo at limang daang piso. Takda ito sa ika-labinlima ng Oktubre, dalawang libo dalawampu't anim. Hindi ito tunay na account o singilan."},
+  {"title":"premium", "content":"Ang premium o hulog ay ang halagang ibinabayad para sa seguro. Hindi kayang beripikahin ng halimbawang ito ang bayad, mag-renew ng polisa, o tiyaking tuloy ang saklaw."},
+  {"title":"policy", "content":"Ang policy o polisa ay ang kasunduan ng seguro. Kailangang suriin ang tunay na mga tuntunin sa beripikadong dokumento kasama ang awtorisadong kinatawan."},
+  {"title":"beneficiary", "content":"Ang beneficiary o benepisyaryo ay ang itinalagang tatanggap ng benepisyo ayon sa polisa. Kinatawan ang kailangang lapitan para sa pagbabago; hindi ito mababago sa halimbawa."},
+  {"title":"rider", "content":"Ang rider ay karagdagang proteksiyong maaaring idagdag sa polisa. Kailangang beripikahin kung may ganitong opsiyon at kung ano ang saklaw nito."},
+  {"title":"lapse", "content":"Ang lapse ay posibleng pagkawala ng bisa ng polisa ayon sa mga tuntunin nito. Hindi matutukoy dito ang katayuan, palugit sa bayad, o posibilidad ng muling pagpapabisa."},
+  {"title":"coverage", "content":"Ang coverage o saklaw ay ang proteksiyong nakasaad sa polisa. Para sa tiyak na benepisyo at mga hindi saklaw, kailangan ang beripikadong dokumento at kinatawan."},
+  {"title":"bank referral", "content":"Ang bank referral ay pagpapakilala ng bangko sa awtorisadong kinatawan ng seguro. Hindi ito garantiya ng proteksiyon at hindi kailangang ibigay ang lihim na detalye ng bangko."}
+]

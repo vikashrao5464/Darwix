@@ -28,6 +28,17 @@ class QualificationState(StrictModel):
 class CallCreate(StrictModel):
     call_id: str | None = Field(default=None, pattern=r"^[A-Za-z0-9_-]{1,80}$")
     recording_consent: StrictBool = False
+    scenario: Literal["business_loan", "ph_renewal", "id_installment"] = "business_loan"
+    response_language: str | None = None
+
+    @model_validator(mode="after")
+    def validate_language(self):
+        from app.localization.language_state import LanguageState
+        if self.scenario != "business_loan":
+            LanguageState.create("PH" if self.scenario == "ph_renewal" else "ID", self.response_language)
+        elif self.response_language not in {None, "en"}:
+            raise ValueError("business_loan_is_english")
+        return self
 
 
 class CallReference(StrictModel):
@@ -52,6 +63,7 @@ class TurnRequest(StrictModel):
     start_ms: int = Field(default=0, ge=0)
     end_ms: int = Field(default=0, ge=0)
     require_confirmation: StrictBool = False
+    response_language: str | None = None
 
     @model_validator(mode="after")
     def validate_turn(self):
@@ -121,3 +133,6 @@ class CallReply(StrictModel):
     escalation_id: str | None = None
     recording_allowed: bool = False
     revision: int
+    scenario: str = "business_loan"
+    language_state: dict | None = None
+    reminder_status: str | None = None

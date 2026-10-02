@@ -1,0 +1,31 @@
+{
+  "backend_tests": {
+    "tests": 167,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "retrieval": {
+    "sample_count": 11,
+    "verdict_counts": {
+      "correct": 10,
+      "incorrect": 1
+    }
+  },
+  "localization": {
+    "scripted_calls_passed": true,
+    "speech_probes": 6,
+    "intended_behaviors": 4
+  },
+  "realtime": {
+    "passed": true,
+    "runs": 3,
+    "latency_samples": 34
+  },
+  "manual_remaining": [
+    "Native-speaker/compliance review",
+    "Consented human calls per market and broader accent/noise testing",
+    "Real contact coordination",
+    "Owner submission/publication and any exposed-key rotation"
+  ]
+}

@@ -1,5 +1,30 @@
 import json
+from types import SimpleNamespace
 from pathlib import Path
+
+def test_remote_filter_index_migration_and_staging(indexed_client, monkeypatch):
+    index = indexed_client.app.state.knowledge.index
+    index.remote = True
+    created = []
+    async def info(collection): return SimpleNamespace(payload_schema={})
+    async def create(**kwargs): created.append(kwargs)
+    monkeypatch.setattr(index.client, 'get_collection', info)
+    monkeypatch.setattr(index.client, 'create_payload_index', create)
+    indexed_client.portal.call(index.ensure)
+    assert {c['field_name'] for c in created} == {'product', 'language'}
+    assert all(c['wait'] and c['field_schema'].value == 'keyword' for c in created)
+    created.clear()
+    assert indexed_client.post('/api/knowledge/ingest',json={'paths':['data/raw/demo_policy.pdf']}).json()['status']=='success'
+    assert {c['field_name'] for c in created} == {'product', 'language'}
+
+def test_filter_index_failure_preserves_active_alias(indexed_client, monkeypatch):
+    index = indexed_client.app.state.knowledge.index
+    original = indexed_client.portal.call(index._active_collection)
+    async def failed(collection): raise ConnectionError('synthetic index failure')
+    monkeypatch.setattr(index, 'ensure_filter_indexes', failed)
+    assert indexed_client.post('/api/knowledge/ingest',json={'paths':['data/raw/demo_policy.pdf']}).json()['status']=='failed'
+    assert indexed_client.portal.call(index._active_collection)==original
+    assert indexed_client.post('/api/knowledge/answer',json={'query':'processing fee'}).json()['grounded']
 
 
 def test_incremental_duplicates_not_indexed_twice(client):

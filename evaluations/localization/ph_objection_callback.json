@@ -1,0 +1,590 @@
+{
+  "id": "ph_objection_callback",
+  "call_id": "call_a17f6db6d2ea4c85bbdc942f061a7cf6",
+  "scenario": "ph_renewal",
+  "input_mode": "scripted text; not human microphone calls",
+  "audio_kind": "synthesized from actual executed replies",
+  "observations": [
+    {
+      "input": "Opo",
+      "expected": {
+        "text": "Opo",
+        "expect": "grounded"
+      },
+      "reply": {
+        "call_id": "call_a17f6db6d2ea4c85bbdc942f061a7cf6",
+        "turn_id": "turn_0",
+        "text": "Kathang-isip na halimbawa: Sa kathang-isip na halimbawa, ang hulog sa seguro sa buhay ay isang libo at limang daang piso. Takda ito sa ika-labinlima ng Oktubre, dalawang libo dalawampu't anim. Hindi ito tunay na account o singilan. May tanong po ba kayo, o gusto ninyong magpatawag muli?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [
+          {
+            "record_id": "kb_ph_reminder_fil_d976b23db7c4d816",
+            "source": "data/raw/ph_reminder_fil.json",
+            "source_type": "json",
+            "page": null,
+            "section": "reminder",
+            "version": "1.0",
+            "synthetic": true
+          }
+        ],
+        "tools_called": [
+          "search_knowledge"
+        ],
+        "grounded": true,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 3,
+        "scenario": "ph_renewal",
+        "language_state": {
+          "market": "PH",
+          "primary_language": "fil",
+          "register": "filipino",
+          "last_detected_language": "fil",
+          "preferred_response_language": "fil"
+        },
+        "reminder_status": "discussing"
+      },
+      "passed": true,
+      "request_ms": 19
+    },
+    {
+      "input": "xyz zzz",
+      "expected": {
+        "text": "xyz zzz",
+        "expect": "fallback",
+        "language": "fil"
+      },
+      "reply": {
+        "call_id": "call_a17f6db6d2ea4c85bbdc942f061a7cf6",
+        "turn_id": "turn_1",
+        "text": "Wala po akong beripikadong impormasyon tungkol diyan. Gusto po ba ninyong makausap ang isang kinatawan?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [],
+        "grounded": false,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 4,
+        "scenario": "ph_renewal",
+        "language_state": {
+          "market": "PH",
+          "primary_language": "fil",
+          "register": "filipino",
+          "last_detected_language": "fil",
+          "preferred_response_language": "fil"
+        },
+        "reminder_status": "discussing"
+      },
+      "passed": true,
+      "request_ms": 19
+    },
+    {
+      "input": "Wala po akong pera ngayon",
+      "expected": {
+        "text": "Wala po akong pera ngayon",
+        "expect": "difficulty"
+      },
+      "reply": {
+        "call_id": "call_a17f6db6d2ea4c85bbdc942f061a7cf6",
+        "turn_id": "turn_2",
+        "text": "Naiintindihan ko po na mahirap magbayad ngayon. Hindi ako makapangangako ng palugit o pagbabago sa saklaw ng seguro. Gusto po ba ninyong magpatawag muli?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 5,
+        "scenario": "ph_renewal",
+        "language_state": {
+          "market": "PH",
+          "primary_language": "fil",
+          "register": "filipino",
+          "last_detected_language": "fil",
+          "preferred_response_language": "fil"
+        },
+        "reminder_status": "discussing"
+      },
+      "passed": true,
+      "request_ms": 9
+    },
+    {
+      "input": "Pwede po bang callback?",
+      "expected": {
+        "text": "Pwede po bang callback?",
+        "expect": "callback_prompt",
+        "language": "fil-en"
+      },
+      "reply": {
+        "call_id": "call_a17f6db6d2ea4c85bbdc942f061a7cf6",
+        "turn_id": "turn_3",
+        "text": "Anong araw at oras po kayo available for a callback?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 6,
+        "scenario": "ph_renewal",
+        "language_state": {
+          "market": "PH",
+          "primary_language": "fil",
+          "register": "taglish",
+          "last_detected_language": "fil-en",
+          "preferred_response_language": "fil-en"
+        },
+        "reminder_status": "discussing"
+      },
+      "passed": true,
+      "request_ms": 8
+    },
+    {
+      "input": "Bukas alas tres",
+      "expected": {
+        "text": "Bukas alas tres",
+        "expect": "callback",
+        "language": "fil"
+      },
+      "reply": {
+        "call_id": "call_a17f6db6d2ea4c85bbdc942f061a7cf6",
+        "turn_id": "turn_4",
+        "text": "Naitala ang gusto ninyong oras sa halimbawang kahilingan. Kailangan pa itong kumpirmahin ng tagapag-ugnay.",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [
+          "schedule_callback"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": "cb_a6717d95c670550a9f4dec9eb72d84d0",
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 8,
+        "scenario": "ph_renewal",
+        "language_state": {
+          "market": "PH",
+          "primary_language": "fil",
+          "register": "filipino",
+          "last_detected_language": "fil",
+          "preferred_response_language": "fil"
+        },
+        "reminder_status": "callback_requested"
+      },
+      "passed": true,
+      "request_ms": 12
+    },
+    {
+      "input": "Gusto ko po ng kinatawan",
+      "expected": {
+        "text": "Gusto ko po ng kinatawan",
+        "expect": "escalated"
+      },
+      "reply": {
+        "call_id": "call_a17f6db6d2ea4c85bbdc942f061a7cf6",
+        "turn_id": "turn_5",
+        "text": "Naitala ko po ang halimbawang kahilingang makausap ang kinatawan. Wala pang taong nakontak.",
+        "status": "escalated",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [
+          "request_human_escalation"
+        ],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": "esc_a6717d95c670550a9f4dec9eb72d84d0",
+        "recording_allowed": false,
+        "revision": 9,
+        "scenario": "ph_renewal",
+        "language_state": {
+          "market": "PH",
+          "primary_language": "fil",
+          "register": "filipino",
+          "last_detected_language": "fil",
+          "preferred_response_language": "fil"
+        },
+        "reminder_status": "escalation_requested"
+      },
+      "passed": true,
+      "request_ms": 12
+    }
+  ],
+  "passed": true,
+  "audio": "data/audio/q3/ph_objection_callback.wav",
+  "timeline": [
+    {
+      "speaker": "agent",
+      "text": "Magandang araw po. Paalala ito para sa pag-renew ng seguro sa buhay sa isang kathang-isip na halimbawa. Maaari po ba tayong magpatuloy?",
+      "start_ms": 0,
+      "end_ms": 8800
+    },
+    {
+      "speaker": "customer",
+      "text": "Opo",
+      "start_ms": 9300,
+      "end_ms": 10068
+    },
+    {
+      "speaker": "agent",
+      "text": "Kathang-isip na halimbawa: Sa kathang-isip na halimbawa, ang hulog sa seguro sa buhay ay isang libo at limang daang piso. Takda ito sa ika-labinlima ng Oktubre, dalawang libo dalawampu't anim. Hindi ito tunay na account o singilan. May tanong po ba kayo, o gusto ninyong magpatawag muli?",
+      "start_ms": 10568,
+      "end_ms": 33288
+    },
+    {
+      "speaker": "customer",
+      "text": "xyz zzz",
+      "start_ms": 33788,
+      "end_ms": 34716
+    },
+    {
+      "speaker": "agent",
+      "text": "Wala po akong beripikadong impormasyon tungkol diyan. Gusto po ba ninyong makausap ang isang kinatawan?",
+      "start_ms": 35216,
+      "end_ms": 43136
+    },
+    {
+      "speaker": "customer",
+      "text": "Wala po akong pera ngayon",
+      "start_ms": 43636,
+      "end_ms": 45764
+    },
+    {
+      "speaker": "agent",
+      "text": "Naiintindihan ko po na mahirap magbayad ngayon. Hindi ako makapangangako ng palugit o pagbabago sa saklaw ng seguro. Gusto po ba ninyong magpatawag muli?",
+      "start_ms": 46264,
+      "end_ms": 56920
+    },
+    {
+      "speaker": "customer",
+      "text": "Pwede po bang callback?",
+      "start_ms": 57420,
+      "end_ms": 59372
+    },
+    {
+      "speaker": "agent",
+      "text": "Anong araw at oras po kayo available for a callback?",
+      "start_ms": 59872,
+      "end_ms": 64688
+    },
+    {
+      "speaker": "customer",
+      "text": "Bukas alas tres",
+      "start_ms": 65188,
+      "end_ms": 66980
+    },
+    {
+      "speaker": "agent",
+      "text": "Naitala ang gusto ninyong oras sa halimbawang kahilingan. Kailangan pa itong kumpirmahin ng tagapag-ugnay.",
+      "start_ms": 67480,
+      "end_ms": 74616
+    },
+    {
+      "speaker": "customer",
+      "text": "Gusto ko po ng kinatawan",
+      "start_ms": 75116,
+      "end_ms": 77356
+    },
+    {
+      "speaker": "agent",
+      "text": "Naitala ko po ang halimbawang kahilingang makausap ang kinatawan. Wala pang taong nakontak.",
+      "start_ms": 77856,
+      "end_ms": 84464
+    }
+  ]
+}

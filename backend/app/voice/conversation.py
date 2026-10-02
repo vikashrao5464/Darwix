@@ -21,12 +21,18 @@ logger = logging.getLogger("darwix.voice.conversation")
 class ConversationService:
     def __init__(self, tools, llm, settings):
         self.tools, self.llm, self.settings = tools, llm, settings
+        from app.localization.reminders import ReminderService
+        self.reminders = ReminderService(self)
 
     def start_call(self, request):
+        if request.scenario != "business_loan":
+            return self.reminders.start(request)
         call_id = request.call_id or "call_" + uuid.uuid4().hex
         with self.tools.sessions() as session:
             existing = session.get(Call, call_id)
             if existing is not None:
+                if existing.state.get("scenario", "business_loan") != request.scenario:
+                    raise HTTPException(409, "Call ID belongs to another scenario.")
                 if "last_reply" not in existing.state:
                     raise HTTPException(409, "This ID belongs to a legacy call. Start a call with a new ID.")
                 return CallReply.model_validate(existing.state["last_reply"])
@@ -83,6 +89,13 @@ class ConversationService:
         return reply
 
     async def turn(self, call_id, request):
+        with self.tools.sessions() as session:
+            call = self.tools.call(session, call_id)
+            localized = call.state.get("scenario", "business_loan") != "business_loan"
+        if localized:
+            return await self.reminders.turn(call_id, request)
+        if request.response_language not in {None, "en"}:
+            raise HTTPException(422, "The business-loan scenario supports English.")
         fingerprint = hashlib.sha256(request.model_dump_json().encode()).hexdigest()
         with self.tools.sessions() as session:
             call = self.tools.call(session, call_id)

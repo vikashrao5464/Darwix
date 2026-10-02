@@ -2,7 +2,7 @@ from typing import AsyncIterator, Protocol
 
 
 class ASRProvider(Protocol):
-    """Utterance ASR in Phase 2; streaming is a separate Phase 4 contract."""
+    """Utterance recognition for interactive calls."""
     async def transcribe(self, audio: bytes): ...
 
 
@@ -15,7 +15,7 @@ def create_asr_provider(settings):
 
 
 class StreamingASRProvider(Protocol):
-    """Contract reserved for the streaming implementation in Phase 4."""
+    """Continuous fixed-chunk stream implemented by LocalStreamingASR."""
     async def open_stream(self) -> None: ...
     async def send_audio(self, chunk: bytes) -> None: ...
     def receive_events(self) -> AsyncIterator[dict]: ...

@@ -15,7 +15,7 @@ Verdicts check source, section, category, rank, required facts, citations and th
 | objection_documents: I do not want to share documents. | objection | data/raw/demo_objections.md / Do not want to share documents | 0.7500 | True | correct | Expected source/section ranked first, supplied required facts and was cited. |
 | unknown_faq: What is the cashback promotion for lunar tourism? | unsupported | data/raw/demo_objections.md / Do not want to share documents | 0.1443 | False | correct | Insufficient evidence produced a fallback. |
 | unsupported_language: What is the processing fee? | unsupported | No results | — | False | correct | Insufficient evidence produced a fallback. |
-| unsupported_product: What is the processing fee? | unsupported | No results | — | False | correct | Insufficient evidence produced a fallback. |
+| unsupported_product: What is the processing fee? | unsupported | data/raw/ph_reminder_en.json / policy | 0.0000 | False | correct | Insufficient evidence produced a fallback. |
 | short_paraphrase: How old must my business be? | qualification | data/raw/demo_eligibility.md / Minimum business age | 0.5571 | True | correct | Expected source/section ranked first, supplied required facts and was cited. |
 | semantic_paraphrase: What paperwork should I bring to apply? | faq | data/raw/demo_eligibility.md / Existing borrowing | 0.4082 | False | incorrect | Expected source/section was absent from top-k. |
 | mixed_unsupported_topic: What is the processing fee for lunar tourism? | unsupported | data/raw/demo_policy.pdf / Processing fees | 0.4725 | False | correct | Insufficient evidence produced a fallback. |

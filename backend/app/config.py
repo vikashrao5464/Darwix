@@ -51,6 +51,23 @@ class Settings(BaseSettings):
     whisper_cpu_threads: int = Field(default=2, ge=1, le=8)
     asr_timeout_seconds: float = Field(default=30, gt=0, le=120)
     whisper_min_score: float = Field(default=0.37, ge=0, le=1)
+    localization_whisper_model_name: Literal["small", "medium"] = "medium"
+    localization_whisper_model_dir: Path = ROOT / "data/state/models/whisper-medium"
+    localization_asr_timeout_seconds: float = Field(default=60, gt=0, le=120)
+    localization_tts_provider: Literal["mms"] = "mms"
+    localization_tts_model_dir: Path = ROOT / "data/state/models/mms-tts"
+    localization_tts_timeout_seconds: float = Field(default=60, gt=0, le=120)
+    realtime_chunk_seconds: int = Field(default=6, ge=2, le=12)
+    realtime_window_seconds: int = Field(default=45, ge=10, le=120)
+    realtime_queue_size: int = Field(default=3, ge=1, le=8)
+    realtime_max_subscribers: int = Field(default=8, ge=1, le=32)
+    realtime_min_confidence: float = Field(default=0.75, ge=0, le=1)
+    realtime_nudge_expiry_seconds: int = Field(default=20, ge=2, le=120)
+    realtime_duplicate_seconds: int = Field(default=120, ge=10, le=600)
+    realtime_cooldowns: dict[str, int] = {"compliance_risk":15, "payment_difficulty":30,
+        "callback_need":30, "rising_frustration":20, "missed_opportunity":30}
+    realtime_llm_enabled: bool = False
+    realtime_ack_timeout_seconds: float = Field(default=5, gt=0, le=30)
 
     @model_validator(mode="after")
     def validate_configuration(self):

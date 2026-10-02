@@ -1,0 +1,518 @@
+{
+  "id": "ph_cooperative",
+  "call_id": "call_c839ff0c57a54778aab390eabe46fbd2",
+  "scenario": "ph_renewal",
+  "input_mode": "scripted text; not human microphone calls",
+  "audio_kind": "synthesized from actual executed replies",
+  "observations": [
+    {
+      "input": "Yes",
+      "expected": {
+        "text": "Yes",
+        "expect": "grounded"
+      },
+      "reply": {
+        "call_id": "call_c839ff0c57a54778aab390eabe46fbd2",
+        "turn_id": "turn_0",
+        "text": "Synthetic demo information: In this synthetic example, the life-insurance premium is one thousand five hundred Philippine pesos, due on October fifteenth, two thousand twenty-six. This is not a real account or payment request. Would you like to discuss the reminder or request a callback?",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [
+          {
+            "record_id": "kb_ph_reminder_en_07f327dd44587b90",
+            "source": "data/raw/ph_reminder_en.json",
+            "source_type": "json",
+            "page": null,
+            "section": "reminder",
+            "version": "1.0",
+            "synthetic": true
+          }
+        ],
+        "tools_called": [
+          "search_knowledge"
+        ],
+        "grounded": true,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 3,
+        "scenario": "ph_renewal",
+        "language_state": {
+          "market": "PH",
+          "primary_language": "en",
+          "register": "english",
+          "last_detected_language": "en",
+          "preferred_response_language": "en"
+        },
+        "reminder_status": "discussing"
+      },
+      "passed": true,
+      "request_ms": 33
+    },
+    {
+      "input": "What is a premium?",
+      "expected": {
+        "text": "What is a premium?",
+        "expect": "grounded"
+      },
+      "reply": {
+        "call_id": "call_c839ff0c57a54778aab390eabe46fbd2",
+        "turn_id": "turn_1",
+        "text": "Synthetic demo information: A premium is the amount paid for the policy. This demo cannot verify a payment, renew a policy, or promise that coverage continues.",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [
+          {
+            "record_id": "kb_ph_reminder_en_15155c0656cf1312",
+            "source": "data/raw/ph_reminder_en.json",
+            "source_type": "json",
+            "page": null,
+            "section": "premium",
+            "version": "1.0",
+            "synthetic": true
+          }
+        ],
+        "tools_called": [
+          "search_knowledge"
+        ],
+        "grounded": true,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 4,
+        "scenario": "ph_renewal",
+        "language_state": {
+          "market": "PH",
+          "primary_language": "en",
+          "register": "english",
+          "last_detected_language": "en",
+          "preferred_response_language": "en"
+        },
+        "reminder_status": "discussing"
+      },
+      "passed": true,
+      "request_ms": 19
+    },
+    {
+      "input": "Ano po ang beneficiary?",
+      "expected": {
+        "text": "Ano po ang beneficiary?",
+        "expect": "grounded",
+        "language": "fil-en"
+      },
+      "reply": {
+        "call_id": "call_c839ff0c57a54778aab390eabe46fbd2",
+        "turn_id": "turn_2",
+        "text": "Demo lang po ito: Ang beneficiary po ang taong pinili ninyong tumanggap ng benefits ayon sa policy. Representative ang kailangan para mag-update; hindi ito kayang baguhin ng demo.",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [
+          {
+            "record_id": "kb_ph_reminder_taglish_5d36237e7c0c6ad8",
+            "source": "data/raw/ph_reminder_taglish.json",
+            "source_type": "json",
+            "page": null,
+            "section": "beneficiary",
+            "version": "1.0",
+            "synthetic": true
+          }
+        ],
+        "tools_called": [
+          "search_knowledge"
+        ],
+        "grounded": true,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 5,
+        "scenario": "ph_renewal",
+        "language_state": {
+          "market": "PH",
+          "primary_language": "fil",
+          "register": "taglish",
+          "last_detected_language": "fil-en",
+          "preferred_response_language": "fil-en"
+        },
+        "reminder_status": "discussing"
+      },
+      "passed": true,
+      "request_ms": 27
+    },
+    {
+      "input": "Bayad na po",
+      "expected": {
+        "text": "Bayad na po",
+        "expect": "active",
+        "language": "fil"
+      },
+      "reply": {
+        "call_id": "call_c839ff0c57a54778aab390eabe46fbd2",
+        "turn_id": "turn_3",
+        "text": "Sinabi ninyong nakapagbayad na. Pakikumpirma po; hindi kayang beripikahin ng halimbawang ito ang bayad.",
+        "status": "active",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 6,
+        "scenario": "ph_renewal",
+        "language_state": {
+          "market": "PH",
+          "primary_language": "fil",
+          "register": "filipino",
+          "last_detected_language": "fil",
+          "preferred_response_language": "fil"
+        },
+        "reminder_status": "discussing"
+      },
+      "passed": true,
+      "request_ms": 9
+    },
+    {
+      "input": "Opo",
+      "expected": {
+        "text": "Opo",
+        "expect": "completed",
+        "language": "fil"
+      },
+      "reply": {
+        "call_id": "call_c839ff0c57a54778aab390eabe46fbd2",
+        "turn_id": "turn_4",
+        "text": "Naitala ang sinabi ninyong nakapagbayad na. Hindi pa beripikado ang bayad at walang segurong na-renew dito.",
+        "status": "completed",
+        "qualification": {
+          "fields": {
+            "requested_amount": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_type": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "business_age_months": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "annual_turnover": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "existing_loan": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "city": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            },
+            "callback_preference": {
+              "value": null,
+              "status": "missing",
+              "source_turn_id": null,
+              "candidates": []
+            }
+          }
+        },
+        "next_field": "requested_amount",
+        "citations": [],
+        "tools_called": [],
+        "grounded": null,
+        "eligibility": null,
+        "lead_id": null,
+        "callback_id": null,
+        "escalation_id": null,
+        "recording_allowed": false,
+        "revision": 7,
+        "scenario": "ph_renewal",
+        "language_state": {
+          "market": "PH",
+          "primary_language": "fil",
+          "register": "filipino",
+          "last_detected_language": "fil",
+          "preferred_response_language": "fil"
+        },
+        "reminder_status": "customer_reports_paid"
+      },
+      "passed": true,
+      "request_ms": 9
+    }
+  ],
+  "passed": true,
+  "audio": "data/audio/q3/ph_cooperative.wav",
+  "timeline": [
+    {
+      "speaker": "agent",
+      "text": "Hello. This is a synthetic life-insurance renewal reminder. May we continue? Please say yes or no.",
+      "start_ms": 0,
+      "end_ms": 8808
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes",
+      "start_ms": 9308,
+      "end_ms": 10583
+    },
+    {
+      "speaker": "agent",
+      "text": "Synthetic demo information: In this synthetic example, the life-insurance premium is one thousand five hundred Philippine pesos, due on October fifteenth, two thousand twenty-six. This is not a real account or payment request. Would you like to discuss the reminder or request a callback?",
+      "start_ms": 11083,
+      "end_ms": 31149
+    },
+    {
+      "speaker": "customer",
+      "text": "What is a premium?",
+      "start_ms": 31649,
+      "end_ms": 33483
+    },
+    {
+      "speaker": "agent",
+      "text": "Synthetic demo information: A premium is the amount paid for the policy. This demo cannot verify a payment, renew a policy, or promise that coverage continues.",
+      "start_ms": 33983,
+      "end_ms": 45836
+    },
+    {
+      "speaker": "customer",
+      "text": "Ano po ang beneficiary?",
+      "start_ms": 46336,
+      "end_ms": 48352
+    },
+    {
+      "speaker": "agent",
+      "text": "Demo lang po ito: Ang beneficiary po ang taong pinili ninyong tumanggap ng benefits ayon sa policy. Representative ang kailangan para mag-update; hindi ito kayang baguhin ng demo.",
+      "start_ms": 48852,
+      "end_ms": 61620
+    },
+    {
+      "speaker": "customer",
+      "text": "Bayad na po",
+      "start_ms": 62120,
+      "end_ms": 63288
+    },
+    {
+      "speaker": "agent",
+      "text": "Sinabi ninyong nakapagbayad na. Pakikumpirma po; hindi kayang beripikahin ng halimbawang ito ang bayad.",
+      "start_ms": 63788,
+      "end_ms": 70988
+    },
+    {
+      "speaker": "customer",
+      "text": "Opo",
+      "start_ms": 71488,
+      "end_ms": 72256
+    },
+    {
+      "speaker": "agent",
+      "text": "Naitala ang sinabi ninyong nakapagbayad na. Hindi pa beripikado ang bayad at walang segurong na-renew dito.",
+      "start_ms": 72756,
+      "end_ms": 80036
+    }
+  ]
+}

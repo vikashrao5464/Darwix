@@ -1,0 +1,32 @@
+[
+  {"id":"ph_cooperative", "scenario":"ph_renewal", "language":"en", "turns":[
+    {"text":"Yes", "expect":"grounded"},
+    {"text":"What is a premium?", "expect":"grounded"},
+    {"text":"Ano po ang beneficiary?", "expect":"grounded", "language":"fil-en"},
+    {"text":"Bayad na po", "expect":"active", "language":"fil"},
+    {"text":"Opo", "expect":"completed", "language":"fil"}
+  ]},
+  {"id":"ph_objection_callback", "scenario":"ph_renewal", "language":"fil", "turns":[
+    {"text":"Opo", "expect":"grounded"},
+    {"text":"xyz zzz", "expect":"fallback", "language":"fil"},
+    {"text":"Wala po akong pera ngayon", "expect":"difficulty"},
+    {"text":"Pwede po bang callback?", "expect":"callback_prompt", "language":"fil-en"},
+    {"text":"Bukas alas tres", "expect":"callback", "language":"fil"},
+    {"text":"Gusto ko po ng kinatawan", "expect":"escalated"}
+  ]},
+  {"id":"id_cooperative_formal", "scenario":"id_installment", "language":"id-formal", "turns":[
+    {"text":"Ya", "expect":"grounded"},
+    {"text":"Mohon jelaskan tenor", "expect":"grounded", "language":"id-formal"},
+    {"text":"Saya sudah membayar", "expect":"active"},
+    {"text":"Ya", "expect":"completed"}
+  ]},
+  {"id":"id_colloquial_mixed", "scenario":"id_installment", "language":"id-colloquial", "turns":[
+    {"text":"Ya", "expect":"grounded"},
+    {"text":"Apa DP itu, aku nggak ngerti?", "expect":"grounded", "language":"id-colloquial"},
+    {"text":"Cash flow sulit, perlu callback", "expect":"difficulty", "language":"id-en-mixed"},
+    {"text":"Minta callback", "expect":"callback_prompt"},
+    {"text":"Besok jam tiga", "expect":"callback"},
+    {"text":"xyz zzz", "expect":"fallback", "language":"id-en-mixed"},
+    {"text":"Aku mau petugas", "expect":"escalated", "language":"id-colloquial"}
+  ]}
+]

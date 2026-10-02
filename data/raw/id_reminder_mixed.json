@@ -1,0 +1,9 @@
+[
+  {"title":"reminder", "content":"Dalam demo ini, payment cicilan tujuh ratus lima puluh ribu rupiah, due date tanggal lima belas Oktober dua ribu dua puluh enam. Ini bukan tagihan nyata."},
+  {"title":"cicilan", "content":"Cicilan atau installment adalah payment berkala sesuai perjanjian pembiayaan. Demo tidak memproses atau verify payment."},
+  {"title":"tenor", "content":"Tenor adalah durasi financing yang tertulis dalam perjanjian. Demo tidak bisa ubah tenor atau promise perpanjangan."},
+  {"title":"denda", "content":"Denda atau late fee perlu dicek dalam perjanjian verified. Nominalnya belum tersedia di demo, dan fee waiver tidak bisa dijanjikan."},
+  {"title":"DP", "content":"DP atau down payment adalah uang muka sesuai perjanjian pembiayaan. Amount DP perlu verified document; demo belum punya nominalnya."},
+  {"title":"jatuh tempo", "content":"Jatuh tempo atau due date adalah tanggal payment sesuai perjanjian. Petugas perlu verify tanggal rekening nyata; demo tidak bisa mengubahnya."},
+  {"title":"pembiayaan", "content":"Pembiayaan atau financing adalah fasilitas keuangan berdasarkan perjanjian. Detail biaya dan tenor perlu verified document dan petugas resmi."}
+]

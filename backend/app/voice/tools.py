@@ -58,6 +58,8 @@ class VoiceTools:
         log_tool("update_qualification")
         with self.sessions() as session:
             call = self.call(session, request.call_id, consent=True, active=True)
+            if call.product != "business_loan":
+                raise HTTPException(409, "Qualification tools apply only to business-loan calls.")
             state = self.qualification(call)
             try:
                 value = self.scrub(request.value) if isinstance(request.value, str) else request.value
@@ -73,9 +75,13 @@ class VoiceTools:
         log_tool("evaluate_preliminary_eligibility")
         with self.sessions() as session:
             call = self.call(session, call_id, consent=True)
+            if call.product != "business_loan":
+                raise HTTPException(409, "Eligibility tools apply only to business-loan calls.")
             return await evaluate_eligibility(self.qualification(call), self.knowledge, self.settings)
 
     async def lead(self, session, call):
+        if call.product != "business_loan":
+            raise HTTPException(409, "Lead tools apply only to business-loan calls.")
         log_tool("create_lead")
         if not call.consent_obtained:
             raise HTTPException(403, "Consent is required before creating a mock lead.")

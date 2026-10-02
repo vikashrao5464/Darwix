@@ -1,0 +1,10 @@
+[
+  {"title":"reminder", "content":"Sa demo, ang premium ninyo ay one thousand five hundred pesos, due sa October fifteen, two thousand twenty-six. Example lang po ito, walang real account o payment request."},
+  {"title":"premium", "content":"Ang premium po ang bayad para sa policy. Hindi kayang i-verify ng demo ang payment, mag-renew ng policy, o mag-promise na tuloy ang coverage."},
+  {"title":"policy", "content":"Ang policy po ang insurance contract ninyo. Para sa actual terms, i-check ang verified policy document kasama ang authorized representative."},
+  {"title":"beneficiary", "content":"Ang beneficiary po ang taong pinili ninyong tumanggap ng benefits ayon sa policy. Representative ang kailangan para mag-update; hindi ito kayang baguhin ng demo."},
+  {"title":"rider", "content":"Ang rider po ay optional na dagdag sa policy. Kailangan munang i-verify kung available ito at kung ano ang covered; hindi kayang mag-confirm ng demo ng benefits."},
+  {"title":"lapse", "content":"Kapag nag-lapse ang policy, posibleng hindi na active ang coverage ayon sa terms. Hindi kayang i-check ng demo ang status, grace period, o reinstatement."},
+  {"title":"coverage", "content":"Ang coverage po ang protection na nasa policy. Para sa specific benefits at exclusions, kailangan ang verified document at representative."},
+  {"title":"bank referral", "content":"Ang bank referral po ay pag-connect sa authorized insurance representative. Hindi ito coverage guarantee, at huwag mag-share ng bank password o OTP."}
+]

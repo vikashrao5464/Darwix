@@ -1,0 +1,9 @@
+[
+  {"title":"reminder", "content":"Di contoh demo ini, cicilannya tujuh ratus lima puluh ribu rupiah, bayar paling lambat tanggal lima belas Oktober dua ribu dua puluh enam, ya. Ini bukan tagihan beneran."},
+  {"title":"cicilan", "content":"Cicilan atau angsuran itu pembayaran rutin sesuai perjanjian pembiayaan. Demo ini nggak bisa menerima atau cek pembayaran."},
+  {"title":"tenor", "content":"Tenor itu lama waktu pembiayaan yang tertulis di perjanjian. Demo ini nggak bisa ubah tenor atau janji tambah waktu."},
+  {"title":"denda", "content":"Soal denda telat bayar, harus cek perjanjian yang benar dulu. Demo ini nggak punya nominal dendanya dan nggak bisa janji menghapus denda."},
+  {"title":"DP", "content":"DP itu uang muka sesuai perjanjian pembiayaan. Jumlahnya perlu dicek di dokumen; demo ini belum punya info itu."},
+  {"title":"jatuh tempo", "content":"Jatuh tempo itu batas tanggal bayar di perjanjian. Buat rekening asli, tanggalnya perlu dicek petugas; demo ini nggak bisa ubah."},
+  {"title":"pembiayaan", "content":"Pembiayaan itu fasilitas keuangan sesuai perjanjian. Biaya dan aturan rekening asli harus dicek dari dokumen yang benar sama petugas."}
+]

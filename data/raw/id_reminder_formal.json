@@ -1,0 +1,9 @@
+[
+  {"title":"reminder", "content":"Dalam contoh simulasi, angsuran pembiayaan konsumen sebesar tujuh ratus lima puluh ribu rupiah jatuh tempo pada tanggal lima belas Oktober dua ribu dua puluh enam. Ini bukan rekening atau tagihan nyata."},
+  {"title":"cicilan", "content":"Cicilan atau angsuran adalah pembayaran berkala sesuai perjanjian pembiayaan. Simulasi ini tidak memproses atau memverifikasi pembayaran."},
+  {"title":"tenor", "content":"Tenor adalah jangka waktu pembiayaan dalam perjanjian. Simulasi ini tidak dapat mengubah tenor atau menjanjikan perpanjangan."},
+  {"title":"denda", "content":"Denda keterlambatan harus diperiksa dalam perjanjian pembiayaan yang terverifikasi. Simulasi ini tidak memiliki nominal denda dan tidak dapat menjanjikan penghapusan denda."},
+  {"title":"DP", "content":"DP atau uang muka adalah pembayaran awal menurut perjanjian pembiayaan. Besaran DP harus diverifikasi dalam dokumen; tidak tersedia dalam simulasi ini."},
+  {"title":"jatuh tempo", "content":"Jatuh tempo adalah tanggal pembayaran yang ditetapkan dalam perjanjian. Tanggal untuk rekening nyata harus diverifikasi oleh petugas; simulasi tidak dapat mengubahnya."},
+  {"title":"pembiayaan", "content":"Pembiayaan adalah fasilitas keuangan berdasarkan perjanjian. Biaya, tenor, dan ketentuan rekening nyata memerlukan dokumen terverifikasi dan petugas resmi."}
+]

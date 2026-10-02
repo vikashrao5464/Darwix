@@ -1,0 +1,10 @@
+[
+  {"title":"reminder", "content":"In this synthetic example, the life-insurance premium is one thousand five hundred Philippine pesos, due on October fifteenth, two thousand twenty-six. This is not a real account or payment request."},
+  {"title":"premium", "content":"A premium is the amount paid for the policy. This demo cannot verify a payment, renew a policy, or promise that coverage continues."},
+  {"title":"policy", "content":"A policy is the insurance contract. Actual terms must be checked in the verified policy document with an authorized representative."},
+  {"title":"beneficiary", "content":"A beneficiary is the person designated to receive benefits under the policy terms. Changes require an authorized representative; this demo cannot change a beneficiary."},
+  {"title":"rider", "content":"A rider is an optional addition to a policy. Whether a particular rider is available or covers a condition must be verified; this demo cannot confirm benefits."},
+  {"title":"lapse", "content":"Lapse means that a policy may no longer be active under its terms. This demo cannot determine policy status, grace periods, or reinstatement eligibility."},
+  {"title":"coverage", "content":"Coverage describes the protection provided under the policy terms. Specific benefits and exclusions require verified policy documents and a representative."},
+  {"title":"bank referral", "content":"A bank referral directs you to an authorized insurance representative. A referral is not a guarantee of coverage or a request to share bank credentials."}
+]

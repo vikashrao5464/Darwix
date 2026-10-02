@@ -9,7 +9,8 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from app.api import callbacks, escalations, health, knowledge, leads, speech, voice_tools
+from app.api import callbacks, escalations, health, knowledge, leads, speech, voice_tools, realtime
+from app.realtime.service import RealtimeManager
 from app.config import Settings
 from app.db.session import initialize_database
 from app.knowledge.index import KnowledgeIndex
@@ -20,6 +21,8 @@ from app.providers.embeddings import create_embedding_provider
 from app.providers.llm import create_llm_provider
 from app.providers.windows_speech import WindowsSpeechProvider
 from app.providers.asr import create_asr_provider
+from app.providers.whisper_asr import WhisperASRProvider
+from app.providers.mms_tts import MMSTTSProvider
 from app.providers.voice import BrowserVoiceProvider
 from app.voice.conversation import ConversationService
 from app.voice.tools import VoiceTools
@@ -53,14 +56,20 @@ def create_app(settings=None):
             app.state.voice = BrowserVoiceProvider(app.state.conversation)
             app.state.asr = create_asr_provider(settings)
             app.state.tts = WindowsSpeechProvider(settings)
+            localized_settings = settings.model_copy(update={"whisper_model_dir":settings.localization_whisper_model_dir,
+                "asr_timeout_seconds":settings.localization_asr_timeout_seconds})
+            app.state.localized_asr = WhisperASRProvider(localized_settings)
+            app.state.localized_tts = MMSTTSProvider(settings, app.state.tts)
+            app.state.realtime = RealtimeManager(settings, sessions, llm)
             yield
         finally:
+            if hasattr(app.state, 'realtime'): await app.state.realtime.close()
             await index.close()
             await embedding.close()
             await llm.close()
             engine.dispose()
 
-    app = FastAPI(title="Darwix assessment — Phases 0–2", lifespan=lifespan)
+    app = FastAPI(title="Darwix assessment - Phases 0-7", lifespan=lifespan)
     app.add_middleware(CORSMiddleware, allow_origins=settings.cors_origins,
                        allow_methods=["GET", "POST"], allow_headers=["Content-Type"])
 
@@ -92,7 +101,7 @@ def create_app(settings=None):
 
     app.include_router(health.router)
     app.include_router(knowledge.router)
-    for router in (voice_tools.router, leads.router, callbacks.router, escalations.router, speech.router):
+    for router in (voice_tools.router, leads.router, callbacks.router, escalations.router, speech.router, realtime.router):
         app.include_router(router)
     return app
 
